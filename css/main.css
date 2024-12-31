@@ -22,14 +22,14 @@
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #212529; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #32353a; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #704FCC; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color: #f50808; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #000000;  /* The default color of the main navmenu links */
+  --nav-color: #fafafa;  /* The default color of the main navmenu links */
   --nav-hover-color: #e84545; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
@@ -145,10 +145,11 @@ h6 {
 --------------------------------------------------------------*/
 .header {
   color: var(--default-color-secondary);
-  background-color: rgb(238, 255, 0);;
+  background-color: #000000;
   padding: 20px 0;
   transition: all 0.5s;
   z-index: 997;
+  box-shadow: 0 5px #f00;
 }
 
 .header .logo {
@@ -216,8 +217,8 @@ h6 {
 .index-page .header {
   --background-color: rgba(255, 255, 255, 0);
   --heading-color: #ffffff;
-  --nav-color: rgb(0, 0, 0);
-  --nav-hover-color: #2a2dee;
+  --nav-color: rgb(255, 255, 255);
+  --nav-hover-color: #ff0404;
 }
 
 /* Index Page Header on Scroll
@@ -225,7 +226,7 @@ h6 {
 .index-page.scrolled .header {
   --background-color: #ffffff;
   --heading-color: #32353a;
-  --nav-color: #000000;
+  --nav-color: #ffffff;
   --nav-hover-color: #2a2dee;
 }
 
