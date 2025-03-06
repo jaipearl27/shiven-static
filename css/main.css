@@ -910,7 +910,7 @@ section,
   font-weight: 500;
   line-height: 19px;
   padding: 10px 20px;
-  background: color-mix(in srgb, var(--accent-color), transparent 95%);
+  background: co+lor-mix(in srgb, var(--accent-color), transparent 95%);
   color: var(--accent-color);
   border-radius: 7px;
   display: inline-block;
@@ -3003,4 +3003,16 @@ section,
 
 .read-more:hover::after {
   transform: translateX(4px);
+}
+
+.whatsThisAbout {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.whatsThisAbout div {
+  padding: 20px;
 }
