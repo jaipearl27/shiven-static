@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+
+    <!-- aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- TailwindCSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- FontAwesome CDN (Free Version) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+</head>
+
+<body>
+
+
+    <main class="relative w-full h-screen bg-[url('/images/hero-bg.jpg')] bg-cover bg-center bg-no-repeat">
+        <!-- Background Overlay -->
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+
+        <!-- Navbar -->
+        <header class="relative w-full py-4 px-4 shadow bg-white fixed top-0 z-50">
+            <nav class="w-full flex justify-between items-center">
+                <div class="w-[100px]">
+                    <img src="images/logo1.png" alt="Shiven Technology" class="w-full">
+                </div>
+                <div class="hidden md:flex gap-12 text-blue-800">
+                    <a href="/" class="hover:text-orange-500">Home</a>
+                    <a href="/about.html" class="hover:text-orange-500">About</a>
+                    <a href="/services.html" class="hover:text-orange-500">Services</a>
+
+                    <!-- Dropdown Fix -->
+                    <div class="relative group">
+                        <button class="hover:text-orange-500">Our Features ▾</button>
+                        <div
+                            class="absolute left-0 top-full hidden group-hover:block bg-white shadow-md w-40 text-gray-800">
+                            <a href="/features-for-consultant.html" class="block px-4 py-2 hover:bg-gray-100">Features
+                                for Consultants</a>
+                            <a href="/features-for-customer.html" class="block px-4 py-2 hover:bg-gray-100">Features for
+                                Customers</a>
+                        </div>
+                    </div>
+
+                    <a href="" class="hover:text-orange-500">Contact</a>
+
+                    <!-- Another Dropdown Fix -->
+                    <div class="relative group">
+                        <button class="hover:text-orange-500">More Info ▾</button>
+                        <div
+                            class="absolute left-0 top-full hidden group-hover:block bg-white shadow-md w-40 text-gray-800">
+                            <a href="/blogs.html" class="block px-4 py-2 hover:bg-gray-100">Blogs</a>
+
+                        </div>
+                    </div>
+                </div>
+                <button class="bg-orange-400 text-white px-4 py-2 rounded-md">Get Started</button>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="relative h-full flex items-center justify-start z-10">
+            <div class="px-8 text-white max-w-2xl p-6 rounded-md text-center">
+                <h1 class="text-4xl font-bold">Welcome to Shiven Infotech—</h1>
+                <h2 class="text-4xl font-bold mt-2">Asset Management Solutions</h2>
+            </div>
+        </section>
+
+        <section class="py-2 px-16 md:px-16 flex flex-col gap-12 font-semibold">
+
+            <!-- Financial CRM for Growth -->
+            <div class="px-6">
+                <div class="text-center mt-12 flex gap-4 justify-center items-center w-full">
+                    <span class="w-14 bg-blue-700 h-[2px]"></span>
+                    <h2 class="text-2xl font-bold pb-1">Financial CRM for Growth</h2>
+                    <span class="w-14 bg-blue-700 h-[2px]"></span>
+                </div>
+                <ol class="list-decimal text-gray-600 mt-4 text-lg w-4xl max-w-full mx-auto">
+                    <li>
+                        The versatile nature of financial CRM loaded with advanced tools provides growth.
+                    </li>
+                    <li>
+                        The lead management system helps in boosting the lead generation remarkably.
+
+                    </li>
+                    <li>
+                        The automated workflow is made in a way that it discards any manual task, all of the workflow-
+                        related tasks could be done with our financial CRM with ease.
+
+                    </li>
+                    <li>
+                        This empowers the financial consultants & Advisor to manage clients, policies, and
+                        investments
+                        effortlessly. Shiven Infotech, make sure that there is an all-round performance considering
+                        safety, insurance, accuracy.
+                    </li>
+                </ol>
+
+
+
+
+
+            </div>
+
+            <!--Why Choose Shiven Infotech  -->
+            <div class="px-6 max-w-5xl mx-auto text-center">
+
+                <div class="text-center mt-12 flex gap-4 justify-center items-center w-full">
+                    <span class="w-14 bg-blue-700 h-[2px]"></span>
+                    <h2 class="text-2xl font-bold pb-1">Services We Provide</h2>
+                    <span class="w-14 bg-blue-700 h-[2px]"></span>
+                </div>
+
+                <!-- Features Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Loans Card -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex items-start mb-4">
+                            <div class="bg-gray-100 p-2 rounded-md mr-3">
+                                <i class="fas fa-dollar-sign fa-xl  text-2xl  text-gray-800"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800">Loans</h3>
+                        </div>
+                        <p class="text-gray-600 text-base">
+                            Shiven’s financial loan management system works in a way that reduces the burden regarding
+                            loan
+                            management. As our loans management CRM makes the task of managing loans easier. The entire
+                            process is utterly simple, just in a few clicks one could understand the process. This is
+                            due to the
+                            interface of our loan management CRM, which is user-friendly and easy to use.
+                        </p>
+                    </div>
+
+                    <!-- Insurance Card -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex items-start mb-4">
+                            <div class="bg-gray-100 p-2 rounded-md mr-3">
+                                <i class="fas fa-plus-square fa-xl  text-2xl  text-gray-800"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800">Insurance</h3>
+                        </div>
+                        <p class="text-gray-600 text-base">
+                            Our Insurance CRM is designed to streamline customer interactions, manage policies, and
+                            simplify
+                            claims processing for brokers and agents. Whether handling health, travel, or auto
+                            insurance, the system
+                            optimizes workflows at every stage—from lead acquisition to policy renewal. With an
+                            intuitive and user-
+                            friendly interface, agents can efficiently communicate with clients, track policies, and
+                            automate routine
+                            tasks, making daily operations smoother and more effective.
+                        </p>
+                    </div>
+
+                    <!-- Stocks/Exchange Card -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex items-start mb-4">
+                            <div class="bg-gray-100 p-2 rounded-md mr-3">
+                                <i class="fas fa-chart-line fa-xl  text-2xl text-gray-800"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800">Stocks/Exchange</h3>
+                        </div>
+                        <p class="text-gray-600 text-base">
+                            Our CRM is designed in a way that it facilitates the Stock brokers. This is made capable
+                            with our
+                            System that provides smooth client management, trade tracking, and compliance. It has been
+                            crafted for
+                            equity, commodity, and Forex markets. The workflow is optimized in a manner that enhances
+                            everything
+                            from lead generation to trade execution. The user-friendly interface makes the client broker
+                            relationship
+                            even stronger.
+                        </p>
+                    </div>
+
+                    <!-- Mutual Funds Card -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex items-start mb-4">
+                            <div class="bg-gray-100 p-2 rounded-md mr-3">
+                                <i class="fas fa-coins fa-xl  text-2xl  text-gray-800"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800">Mutual Funds</h3>
+                        </div>
+                        <p class="text-gray-600 text-base">
+                            Our financial CRM is capable of simplifying the tasks of investing, tracking, and
+                            compliance, this
+                            improves the process of advisor client interaction and hence creates a better communication
+                            bridge.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Benefits of a Centralized Service -->
+            <div class="px-6">
+                <div class="text-center mt-12 flex gap-4 justify-center items-center w-full">
+                    <span class="w-14 bg-blue-700 h-[2px]"></span>
+                    <h2 class="text-2xl font-bold pb-1">Benefits of a Centralized Service</h2>
+                    <span class="w-14 bg-blue-700 h-[2px]"></span>
+                </div>
+                <p class="text-center text-gray-600 mt-4 max-w-4xl mx-auto">
+                    A centralized system keeps all the customers in one place, this makes it easier to access and use
+                    it. Our
+                    centralized system helps the business to track customer interactions since it is connected, making
+                    the
+                    team work better and saving the overall time with the help of automation with shiven infotech’s CRM,
+                    the consultants are empowered by having all the tasks like managing customer policies, loans, and
+                    documents in one place. The user interface makes it possible to access all the features at once. And
+                    thus
+                    making the process streamlined and smooth. This makes the entire process efficient and time is not
+                    wasted on unnecessary involvement of gathering different features from different platforms.
+                </p>
+
+                <p class="text-center text-gray-600 mt-4 max-w-3xl mx-auto">
+                    Our CRM is capable of doing tasks like financial calculations, managing notifications and
+                    Thus you stay upgraded without missing important details along with the accuracy of the financial
+                    details.
+                </p>
+
+
+            </div>
+
+
+
+
+
+
+
+            <!-- How does it work? -->
+            <div class="flex flex-col px-16 md:flex-row items-center gap-8 text-justify !text-xl mx-auto">
+                <!-- Text Content -->
+                <div class="md:w-1/2 text-center md:text-left">
+                    <!-- <h2 class="text-2xl font-bold mb-4">What's This About?</h2> -->
+                    <p class="text-gray-700 ">
+                        Shiven’s automated features discard the manual tasks of doing all the financial management
+                        burden.
+                        The data is encrypted in the secured folders providing an extra layer of safety.
+                        The tasks such as the interest calculations, the loan tracking are done with an automated
+                        system. All
+                        these things together give a premium workflow experience which makes things smoother and
+                        effortless.
+                        With these features, Shiven Infotech provides better customer satisfaction, smooth
+                        communication, and
+                        highly scalable solutions.
+                    </p>
+                </div>
+                <!-- Image -->
+                <div class="md:w-1/2">
+                    <img src="images/services/howDoesItWork.png" alt="How does it work" class="rounded-lg shadow-lg ">
+                </div>
+            </div>
+            <div class="px-16 !text-xl text-center">
+                <p class="text-gray-700">Our Financial CRM works in a way that it adapts the nature of the work, which
+                    gives an enhanced and
+                    crafted workflow experience.
+                </p>
+            </div>
+
+            <!-- Who Can Benefit? Section -->
+            <div class="text-center mt-12">
+                <h2 class="text-2xl font-bold">Who Can Benefit?</h2>
+                <p class="text-gray-600 mt-4 max-w-3xl mx-auto">
+                    Shiven Infotech's Financial CRM is designed for financial advisors & consultants, insurance agents,
+                    loan advisors, stock brokers, and mutual fund distributors. If you manage client relationships,
+                    policies, loans,
+                    or investments, our CRM helps you streamline operations and grow your business efficiently.
+                </p>
+            </div>
+
+
+
+
+            <!--Why Choose Shiven Infotech  -->
+            <div class="px-6 max-w-5xl mx-auto text-center">
+
+                <div class="text-center mt-12 flex gap-4 justify-center items-center w-full">
+                    <span class="w-14 bg-blue-700 h-[2px]"></span>
+                    <h2 class="text-2xl font-bold pb-1">Why Choose Shiven Infotech Financial CRM</h2>
+                    <span class="w-14 bg-blue-700 h-[2px]"></span>
+                </div>
+
+                <!-- Features Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Loans Card -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex items-start mb-4">
+                            <div class="bg-gray-100 p-2 rounded-md mr-3">
+                                <i class="fas fa-dollar-sign fa-xl  text-2xl  text-gray-800"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800">Increased Efficiency</h3>
+                        </div>
+                        <p class="text-gray-600 text-base">
+                            The automation that Shiven offers discards the task of manual work, thus it helps in
+                            managing time, and
+                            increasing productivity.
+                        </p>
+                    </div>
+
+                    <!-- Insurance Card -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex items-start mb-4">
+                            <div class="bg-gray-100 p-2 rounded-md mr-3">
+                                <i class="fas fa-plus-square fa-xl  text-2xl  text-gray-800"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800">Better Customer Engagement</h3>
+                        </div>
+                        <p class="text-gray-600 text-base">
+                            Customer communication could be managed with ease using the CRM This is due to the
+                            personalized
+                            one gets with the CRM. Everything is curated and crafted according to the needs and nature
+                            of the
+                            customer.
+                        </p>
+                    </div>
+
+                    <!-- Stocks/Exchange Card -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex items-start mb-4">
+                            <div class="bg-gray-100 p-2 rounded-md mr-3">
+                                <i class="fas fa-chart-line fa-xl  text-2xl text-gray-800"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800">Smooth Communication</h3>
+                        </div>
+                        <p class="text-gray-600 text-base">
+                            The CRM ensures that all the members of the team are on the same page, this is through the
+                            seamless
+                            and easy communication gate that the platform offers. This discards discrepancies and other
+                            issues,
+                            increasing the overall productivity.
+                        </p>
+                    </div>
+
+                    <!-- Mutual Funds Card -->
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <div class="flex items-start mb-4">
+                            <div class="bg-gray-100 p-2 rounded-md mr-3">
+                                <i class="fas fa-coins fa-xl  text-2xl  text-gray-800"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-800">Scalable Solutions</h3>
+                        </div>
+                        <p class="text-gray-600 text-base">
+                            It does not matter how big or small your business is, we provide the handcrafted solutions
+                            depending on
+                            the nature of the work. As our CRM makes the workflow flexible for everyone’s needs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+            <!-- faq -->
+            <div class="max-w-4xl mx-auto px-4">
+                <!-- Heading -->
+                <h2 class="text-center text-3xl font-semibold">
+                    Frequently Asked <span class="text-orange-500">Questions</span>
+                </h2>
+                <p class="text-center text-gray-500 mt-2">
+                    Answered all frequently asked questions. Still confused? Feel free to contact us.
+                </p>
+
+                <!-- FAQ Container -->
+                <div class="mt-6 space-y-4 flex flex-col justify-center items-center">
+
+                    <!-- FAQ Item 1 -->
+                    <div class="bg-white shadow-md rounded-lg w-5xl">
+                        <button
+                            class="w-full flex justify-between items-center p-4 font-semibold border-b border-gray-200 transition-colors hover:text-blue-600"
+                            onclick="toggleFAQ(1)">
+                            <span id="question-1" class="text-gray-700">1. What are the Key features of Shiven Infotech’s CRM?</span>
+                            <i id="icon-1"
+                                class="fa-solid fa-circle-chevron-right text-gray-400 transition-transform duration-300"></i>
+                        </button>
+                        <div id="faq-1" class="hidden p-4 text-gray-600">
+                            CRM is like a secret weapon. It allows you to stay organized, keep track of your clients,
+                            manage your finances, and even send automated messages.
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 2 -->
+                    <div class="bg-white shadow-md rounded-lg w-5xl">
+                        <button
+                            class="w-full flex justify-between items-center p-4 font-semibold border-b border-gray-200 transition-colors hover:text-blue-600"
+                            onclick="toggleFAQ(2)">
+                            <span id="question-2" class="text-gray-700">2. How does the CRM help with lead management?</span>
+                            <i id="icon-2"
+                                class="fa-solid fa-circle-chevron-right text-gray-400 transition-transform duration-300"></i>
+                        </button>
+                        <div id="faq-2" class="hidden p-4 text-gray-600">
+                            Yes, our CRM ensures data security with advanced encryption and compliance with financial
+                            regulations.
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 3 -->
+                    <div class="bg-white shadow-md rounded-lg w-5xl">
+                        <button
+                            class="w-full flex justify-between items-center p-4 font-semibold border-b border-gray-200 transition-colors hover:text-blue-600"
+                            onclick="toggleFAQ(3)">
+                            <span id="question-3" class="text-gray-700">3. Can I Automate Client Communication?</span>
+                            <i id="icon-3"
+                                class="fa-solid fa-circle-chevron-right text-gray-400 transition-transform duration-300"></i>
+                        </button>
+                        <div id="faq-3" class="hidden p-4 text-gray-600">
+                            Absolutely! Our CRM enables automated messaging, email scheduling, and follow-up reminders.
+                        </div>
+                    </div>
+                  
+
+                </div>
+            </div>
+
+            <!-- contact us -->
+            <div class="container mx-auto px-4 max-w-6xl">
+                <!-- Header -->
+                <div class="text-center mb-8">
+                    <h1 class="text-3xl font-bold text-gray-800">Contact</h1>
+                    <div class="w-12 h-1 bg-blue-600 mx-auto my-2"></div>
+                    <!-- <p class="text-gray-600 mt-2">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
+                        consectetur velit</p> -->
+                </div>
+
+                <!-- Contact Content -->
+                <div class="flex flex-col md:flex-row gap-6">
+                    <!-- Left Side - Contact Info -->
+                    <div class="w-full md:w-1/2 grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Address -->
+                        <div class="bg-gray-50 p-6 rounded-lg">
+                            <div class="text-blue-600  mb-4">
+                                <i class="fas fa-map-marker-alt text-2xl"></i>
+                            </div>
+                            <h3 class="text-blue-600 font-bold  mb-2">Address</h3>
+                            <p class="text-gray-600  text-sm">A108 Adam Street</p>
+                            <p class="text-gray-600  text-sm">New York, NY 535022</p>
+                        </div>
+
+                        <!-- Call Us -->
+                        <div class="bg-gray-50 p-6 rounded-lg">
+                            <div class="text-blue-600  mb-4">
+                                <i class="fas fa-phone text-2xl"></i>
+                            </div>
+                            <h3 class="text-blue-600 font-bold  mb-2">Call Us</h3>
+                            <p class="text-gray-600  text-sm">+1 5589 55488 55</p>
+                            <p class="text-gray-600  text-sm">+1 6678 254445 41</p>
+                        </div>
+
+                        <!-- Email Us -->
+                        <div class="bg-gray-50 p-6 rounded-lg">
+                            <div class="text-blue-600  mb-4">
+                                <i class="fas fa-envelope text-2xl"></i>
+                            </div>
+                            <h3 class="text-blue-600 font-bold  mb-2">Email Us</h3>
+                            <p class="text-gray-600  text-sm">info@example.com</p>
+                            <p class="text-gray-600  text-sm">contact@example.com</p>
+                        </div>
+
+                        <!-- Open Hours -->
+                        <div class="bg-gray-50 p-6 rounded-lg">
+                            <div class="text-blue-600  mb-4">
+                                <i class="fas fa-clock text-2xl"></i>
+                            </div>
+                            <h3 class="text-blue-600 font-bold  mb-2">Open Hours</h3>
+                            <p class="text-gray-600  text-sm">Monday - Friday</p>
+                            <p class="text-gray-600  text-sm">9:00AM - 05:00PM</p>
+                        </div>
+                    </div>
+
+                    <!-- Right Side - Contact Form -->
+                    <div class="w-full md:w-1/2">
+                        <div class="bg-gray-50 p-6 rounded-lg">
+                            <form>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                                    <input type="text" placeholder="Your Name"
+                                        class="w-full p-2 border border-gray-300 rounded">
+                                    <input type="email" placeholder="Your Email"
+                                        class="w-full p-2 border border-gray-300 rounded">
+                                </div>
+                                <div class="mb-4">
+                                    <input type="text" placeholder="Subject"
+                                        class="w-full p-2 border border-gray-300 rounded">
+                                </div>
+                                <div class="mb-4">
+                                    <textarea rows="6" placeholder="Message"
+                                        class="w-full p-2 border border-gray-300 rounded"></textarea>
+                                </div>
+                                <div class="text-center">
+                                    <button type="submit"
+                                        class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition-colors">Send
+                                        Message</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            </div>
+
+
+        </section>
+
+
+        <!-- Footer -->
+        <footer class="bg-gray-100 py-8">
+            <div class="container mx-auto px-4 md:px-8 lg:px-16">
+                <div
+                    class="flex flex-col md:flex-row justify-between items-center md:items-start space-y-6 md:space-y-0">
+
+                    <div class="text-center md:text-left">
+                        <h2 class="text-3xl text-gray-700 font-bold">Shiven Tech</h2>
+                        <div class="flex justify-center md:justify-start space-x-4 mt-3">
+                            <a href="#" class="py-2 px-4  bg-gray-200 rounded-full hover:bg-gray-300">
+                                <i class="fa-brands fa-x-twitter"></i>
+                            </a>
+                            <a href="#" class="py-2 px-4 bg-gray-200 rounded-full hover:bg-gray-300">
+                                <i class="fa-brands fa-facebook"></i>
+                            </a>
+                            <a href="#" class="py-2 px-4 bg-gray-200 rounded-full hover:bg-gray-300">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="py-2 px-4 bg-gray-200 rounded-full hover:bg-gray-300">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="text-center md:text-left">
+                        <h2 class="text-lg text-gray-700 font-bold">Useful Links</h2>
+                        <ul class="space-y-2 mt-2 text-gray-600">
+                            <li><a href="#" class="hover:underline">Home</a></li>
+                            <li><a href="#" class="hover:underline">About Us</a></li>
+                            <li><a href="#" class="hover:underline">Services</a></li>
+                            <li><a href="#" class="hover:underline">Our Feature</a></li>
+                            <li><a href="#" class="hover:underline">Sitemap</a></li>
+                        </ul>
+                    </div>
+
+
+
+                    <div class="text-center
+                     md:text-left">
+                        <h2 class="text-lg text-gray-700 font-bold">Contact Us</h2>
+                        <ul class="space-y-2 mt-2 text-gray-600">
+                            <li><a href="#" class="text-gray-600 hover:underline">Address</a></li>
+                            <li><a href="#" class="text-gray-600 hover:underline">City</a></li>
+                            <li><a href="#" class="text-gray-600 hover:underline">Country</a></li>
+                            <br>
+                            <li><a href="#" class="text-gray-600 hover:underline"><span
+                                        class="font-bold text-black">Phone:</span> +91</a></li>
+                            <li><a href="#" class="text-gray-600 hover:underline"><span
+                                        class="font-bold text-black">Email:</span> info@example.com</a></li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <div class="mt-6 p-4 text-center bg-gray-300 text-gray-600 text-sm">
+                    <p>© Copyright <strong class="text-gray-700">Shiven Tech</strong> All Rights Reserved</p>
+                    <p>Designed by</p>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+
+
+    <!-- aos -->
+    <script>
+        AOS.init();
+        function toggleFAQ(id) {
+            const content = document.getElementById(`faq-${id}`);
+            const icon = document.getElementById(`icon-${id}`);
+            const question = document.getElementById(`question-${id}`);
+
+            if (content.classList.contains("hidden")) {
+                // Show answer, rotate icon, and change text color
+                content.classList.remove("hidden");
+                question.classList.add("text-blue-600");
+                icon.classList.add("rotate-90");
+                icon.classList.replace("text-black", "text-blue-600");
+            } else {
+                // Hide answer, reset icon, and text color
+                content.classList.add("hidden");
+                question.classList.remove("text-blue-600");
+                icon.classList.remove("rotate-90");
+                icon.classList.replace("text-blue-600", "text-black");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
