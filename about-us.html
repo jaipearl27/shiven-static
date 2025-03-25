@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asset-Managment</title>
+
+    <!-- aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- TailwindCSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- FontAwesome CDN (Free Version) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+</head>
+
+<body>
+
+
+    <main class="relative w-full h-screen bg-[url('/images/hero-bg.jpg')] bg-cover bg-center bg-no-repeat">
+        <!-- Background Overlay -->
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+
+        <!-- Navbar -->
+        <header class="relative w-full py-4 px-4 shadow bg-white fixed top-0 z-50">
+            <nav class="w-full flex justify-between items-center">
+                <div class="w-[100px]">
+                    <img src="images/logo1.png" alt="Shiven Technology" class="w-full">
+                </div>
+                <div class="hidden md:flex gap-12 text-blue-800">
+                    <a href="/" class="hover:text-orange-500">Home</a>
+                    <a href="/about-us.html" class="hover:text-orange-500">About</a>
+                    <a href="/services.html" class="hover:text-orange-500">Services</a>
+
+                    <!-- Dropdown Fix -->
+                    <div class="relative group">
+                        <button class="hover:text-orange-500">Our Features ▾</button>
+                        <div
+                            class="absolute left-0 top-full hidden group-hover:block bg-white shadow-md w-40 text-gray-800">
+                            <a href="/features-for-consultants.html" class="block px-4 py-2 hover:bg-gray-100">Features
+                                for Consultants</a>
+                            <a href="/features-for-customers.html" class="block px-4 py-2 hover:bg-gray-100">Features
+                                for
+                                Customers</a>
+                        </div>
+                    </div>
+
+                    <a href="/contact-us.html" class="hover:text-orange-500">Contact</a>
+
+                    <!-- Another Dropdown Fix -->
+                    <div class="relative group">
+                        <button class="hover:text-orange-500">More Info ▾</button>
+                        <div
+                            class="absolute left-0 top-full hidden group-hover:block bg-white shadow-md w-40 text-gray-800">
+                            <a href="/blogs.html" class="block px-4 py-2 hover:bg-gray-100">Blogs</a>
+
+                        </div>
+                    </div>
+                </div>
+                <button class="bg-orange-400 text-white px-4 py-2 rounded-md">Get Started</button>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="relative h-full flex items-center justify-start z-10">
+            <div class="px-8 text-white max-w-2xl p-6 rounded-md text-center">
+                <h1 class="text-4xl font-bold">Welcome to Shiven Infotech—</h1>
+                <h2 class="text-4xl font-bold mt-2">Asset Management Solutions</h2>
+            </div>
+        </section>
+
+        <section class="py-2 px-16 md:px-16">
+            <!-- What's This About? Section -->
+            <div class="flex flex-col px-16 md:flex-row items-center gap-8">
+                <!-- Text Content -->
+                <div class="md:w-1/2 text-center md:text-left">
+                    <h2 class="text-2xl font-bold mb-4">What's This About?</h2>
+                    <p class="text-gray-700">
+                        Shiven Infotech provides a powerful Financial CRM solution designed to streamline client
+                        management, automate workflows, and enhance business efficiency for financial consultants. Our
+                        platform helps you manage leads, policies, loans, investments, and customer interactions—all in
+                        one place.
+
+                        Founded with a vision to revolutionize how financial professionals manage their client
+                        relationships, we've grown to become a trusted partner for hundreds of financial advisors,
+                        insurance agents, and investment consultants across the globe.
+
+                        Our team of experienced developers and financial industry experts work together to create
+                        solutions that address the unique challenges faced by modern financial service providers.
+
+
+                    </p>
+                </div>
+                <!-- Image -->
+                <div class="md:w-1/2">
+                    <img src="images/meeting.png" alt="Business Meeting" class="rounded-lg shadow-lg ">
+                </div>
+            </div>
+
+
+            <!-- Services We Provide -->
+            <div class="py-12 px-6">
+                <h2 class="text-center text-3xl font-bold">
+                    <span class="border-b-2 border-blue-600 pb-1">Services We Provide</span>
+                </h2>
+                <p class="text-center text-gray-600 mt-4 max-w-3xl mx-auto">
+                    At Shiven Infotech, we provide a Complete Financial CRM solution designed to help financial
+                    consultants efficiently manage their client relationships. Whether you offer services such as
+                    insurance, loans, mutual funds, or other financial products, our CRM system streamlines your
+                    operations, enhances client engagement, and supports business growth.
+                </p>
+
+                <!-- Grid Layout for 3 Cards per Row -->
+                <div class="mt-8 grid mx-28 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Insurance -->
+                    <div class="bg-white p-4 rounded-lg ">
+                        <h3 class="text-blue-600 font-semibold mt-2">Insurance</h3>
+                        <img src="images/services1.png" alt="Insurance" class="w-full h-40 object-cover rounded-md">
+                        <p class="text-gray-600 text-sm mt-2">
+                            Our insurance CRM streamlines customer interactions, policy management, and claims
+                            processing for brokers and agents.
+                        </p>
+                    </div>
+
+                    <!-- Mutual Fund -->
+                    <div class="bg-white p-4 rounded-lg ">
+                        <h3 class="text-blue-600 font-semibold mt-2">Mutual Fund</h3>
+                        <img src="images/services2.png" alt="Mutual Fund" class="w-full h-40 object-cover rounded-md">
+                        <p class="text-gray-600 text-sm mt-2">
+                            Our CRM simplifies mutual fund client management, investment tracking, and compliance.
+                        </p>
+                    </div>
+
+                    <!-- Loans -->
+                    <div class="bg-white p-4 rounded-lg ">
+                        <h3 class="text-blue-600 font-semibold mt-2">Loans</h3>
+                        <img src="images/services3.png" alt="Loans" class="w-full h-40 object-cover rounded-md">
+                        <p class="text-gray-600 text-sm mt-2">
+                            Our loan management CRM simplifies interactions and procedures, streamlining loan
+                            applications.
+                        </p>
+                    </div>
+
+                    <!-- Stocks/Exchange -->
+                    <div class="bg-white p-4 rounded-lg ">
+                        <h3 class="text-blue-600 font-semibold mt-2">Stocks/Exchange</h3>
+                        <img src="images/services4.png" alt="Stocks/Exchange"
+                            class="w-full h-40 object-cover rounded-md">
+                        <p class="text-gray-600 text-sm mt-2">
+                            Our CRM solution is tailored for stock brokers, streamlining trade tracking and compliance.
+                        </p>
+                    </div>
+
+                    <!-- Travel Insurance -->
+                    <div class="bg-white p-4 rounded-lg ">
+                        <h3 class="text-blue-600 font-semibold mt-2">Travel Insurance</h3>
+                        <img src="images/services5.png" alt="Travel Insurance"
+                            class="w-full h-40 object-cover rounded-md">
+                        <p class="text-gray-600 text-sm mt-2">
+                            Provides extensive coverage options for travelers, ensuring financial protection.
+                        </p>
+                    </div>
+
+                    <!-- Business Insurance -->
+                    <div class="bg-white p-4 rounded-lg ">
+                        <h3 class="text-blue-600 font-semibold mt-2">Business Insurance</h3>
+                        <img src="images/services6.png" alt="Business Insurance"
+                            class="w-full h-40 object-cover rounded-md">
+                        <p class="text-gray-600 text-sm mt-2">
+                            Offers financial security for businesses against risks like property damage and liability.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Features for Consultant -->
+            <div class="py-8 px-4 max-w-6xl mx-auto">
+                <h2 class="text-center text-xl font-semibold">
+                    <span class="border-b-2 border-blue-600 pb-1">Features for Consultant</span>
+                </h2>
+
+                <!-- Grid Layout for Features -->
+                <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 ">
+                    <!-- File/Folder Management -->
+                    <div class="text-center p-3 bg-white  rounded-lg">
+                        <img src="images/feature1.png" alt="File/Folder Management" class="w-full h-40 object-cover ">
+                        <p class="text-blue-600 font-medium mt-2">File/Folder Management</p>
+                    </div>
+
+                    <!-- Calculate Funds / Interest -->
+                    <div class="text-center p-3 bg-white  rounded-lg">
+                        <img src="images/feature2.png" alt="Calculate Funds / Interest"
+                            class="w-full h-40 object-cover ">
+                        <p class="text-blue-600 font-medium mt-2">Calculate Funds / Interest</p>
+                    </div>
+
+                    <!-- Customer Data Management -->
+                    <div class="text-center p-3 bg-white  rounded-lg">
+                        <img src="images/feature3.png" alt="Customer Data Management" class="w-full h-40 object-cover ">
+                        <p class="text-blue-600 font-medium mt-2">Customer Data Management</p>
+                    </div>
+
+                    <!-- Staff Management -->
+                    <div class="text-center p-3 bg-white  rounded-lg">
+                        <img src="images/feature4.png" alt="Staff Management" class="w-full h-40 object-cover ">
+                        <p class="text-blue-600 font-medium mt-2">Staff Management</p>
+                    </div>
+
+                    <!-- Ads Plan & Policy -->
+                    <div class="text-center p-3 bg-white  rounded-lg">
+                        <img src="images/feature5.png" alt="Ads Plan & Policy" class="w-full h-40 object-cover ">
+                        <p class="text-blue-600 font-medium mt-2">Ads Plan & Policy</p>
+                    </div>
+
+                    <!-- Customized Reminders -->
+                    <div class="text-center p-3 bg-white  rounded-lg">
+                        <img src="images/feature6.png" alt="Customized Reminders" class="w-full h-40 object-cover ">
+                        <p class="text-blue-600 font-medium mt-2">Customized Reminders</p>
+                    </div>
+
+                    <!-- Extra Feature (Centered & Smaller) -->
+                    <div class="text-center p-3 bg-white  rounded-lg w-full  ">
+                        <img src="images/feature7.png" alt="Additional Feature" class="w-full h-40 object-cover ">
+                        <p class="text-blue-600 font-medium mt-2">Customized Reminders</p>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+            <!-- Features for Customers -->
+            <div class="py-12 px-6 max-w-6xl mx-auto ">
+                <h2 class="text-2xl font-semibold text-center flex justify-center items-center">
+                    <span class="pb-1 border-b-2 border-blue-600">Features for Customers</span>
+                </h2>
+
+                <!-- Features Grid -->
+                <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                    <!-- Feature 1 -->
+                    <div class="bg-white shadow-lg rounded-lg p-4 ">
+                        <img src="images/features/customers/wohoo.png" alt="Personalized Experience"
+                            class="w-full h-48 object-cover rounded-md">
+                        <p class="text-blue-600 font-medium mt-3">Personalized Experience:</p>
+                        <p class="text-gray-600 text-sm">Tailored interactions to meet individual client needs.</p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="bg-white shadow-lg rounded-lg p-4">
+                        <img src="images/features/customers/dataSecurity.png" alt="Data Security"
+                            class="w-full h-48 object-cover rounded-md">
+                        <p class="text-blue-600 font-medium mt-3">Data Security:</p>
+                        <p class="text-gray-600 text-sm">Advanced encryption to protect sensitive financial information.
+                        </p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="bg-white shadow-lg rounded-lg p-4">
+                        <img src="images/features/customers/meetGood.png" alt="Multi-Insurance Type Support"
+                            class="w-full h-48 object-cover rounded-md">
+                        <p class="text-blue-600 font-medium mt-3">Multi-Insurance Type Support:</p>
+                        <p class="text-gray-600 text-sm">Manage various insurance products within a single platform.</p>
+                    </div>
+
+                    <!-- Feature 4 -->
+                    <div class="bg-white shadow-lg rounded-lg p-4">
+                        <img src="images/features/customers/coins.png" alt="Calculate Funds / Interest"
+                            class="w-full h-48 object-cover rounded-md">
+                        <p class="text-blue-600 font-medium mt-3">Calculate Funds / Interest:</p>
+                        <p class="text-gray-600 text-sm">Automated calculations for accurate financial assessments.</p>
+                    </div>
+
+                    <!-- Feature 5 -->
+                    <div class="bg-white shadow-lg rounded-lg p-4">
+                        <img src="images/features/customers/fileNFolder.png" alt="File/Folder Management"
+                            class="w-full h-48 object-cover rounded-md">
+                        <p class="text-blue-600 font-medium mt-3">File/Folder Management:</p>
+                        <p class="text-gray-600 text-sm">Organize and access documents efficiently.</p>
+                    </div>
+
+                    <!-- Feature 6 -->
+                    <div class="bg-white shadow-lg rounded-lg p-4">
+                        <img src="images/features/customers/customerSupport.png" alt="Customer Support and Assistance"
+                            class="w-full h-48 object-cover rounded-md">
+                        <p class="text-blue-600 font-medium mt-3">Customer Support and Assistance:</p>
+                        <p class="text-gray-600 text-sm">Dedicated support to address client inquiries.</p>
+                    </div>
+                    <!-- Feature 1 -->
+                    <div class="bg-white shadow-lg rounded-lg p-4">
+                        <img src="images/features/customers/phone.png" alt="Personalized Experience"
+                            class="w-full h-48 object-cover rounded-md">
+                        <p class="text-blue-600 font-medium mt-3">Notifications & Alerts:</p>
+                        <p class="text-gray-600 text-sm">Timely updates on policy changes and important dates.</p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="bg-white shadow-lg rounded-lg p-4">
+                        <img src="images/features/customers/policyManagement.png" alt="Data Security"
+                            class="w-full h-48 object-cover rounded-md">
+                        <p class="text-blue-600 font-medium mt-3">Policy Management:</p>
+                        <p class="text-gray-600 text-sm">Comprehensive tools for managing and storing policy
+                            information.
+                        </p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="bg-white shadow-lg rounded-lg p-4">
+                        <img src="images/features/customers/smartCalender.png" alt="Multi-Insurance Type Support"
+                            class="w-full h-48 object-cover rounded-md">
+                        <p class="text-blue-600 font-medium mt-3">Smart Calendar</p>
+                        <p class="text-gray-600 text-sm">Our Smart Calender application for financial CRM makers
+                            scheduling, task
+                            management, and tracking of finances is a hassle-free affair with a smooth client
+                            interaction.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- contact us -->
+            <div class="container mx-auto px-4 py-12 max-w-6xl">
+                <!-- Header -->
+                <div class="text-center mb-8">
+                    <h1 class="text-3xl font-bold text-gray-800">Contact</h1>
+                    <div class="w-12 h-1 bg-blue-600 mx-auto my-2"></div>
+                    <p class="text-gray-600 mt-2">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
+                        consectetur velit</p>
+                </div>
+
+                <!-- Contact Content -->
+                <div class="flex flex-col md:flex-row gap-6">
+                    <!-- Left Side - Contact Info -->
+                    <div class="w-full md:w-1/2 grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Address -->
+                        <div class="bg-gray-50 p-6 rounded-lg">
+                            <div class="text-blue-600  mb-4">
+                                <i class="fas fa-map-marker-alt text-2xl"></i>
+                            </div>
+                            <h3 class="text-blue-600 font-bold  mb-2">Address</h3>
+                            <p class="text-gray-600  text-sm">A108 Adam Street</p>
+                            <p class="text-gray-600  text-sm">New York, NY 535022</p>
+                        </div>
+
+                        <!-- Call Us -->
+                        <div class="bg-gray-50 p-6 rounded-lg">
+                            <div class="text-blue-600  mb-4">
+                                <i class="fas fa-phone text-2xl"></i>
+                            </div>
+                            <h3 class="text-blue-600 font-bold  mb-2">Call Us</h3>
+                            <p class="text-gray-600  text-sm">+1 5589 55488 55</p>
+                            <p class="text-gray-600  text-sm">+1 6678 254445 41</p>
+                        </div>
+
+                        <!-- Email Us -->
+                        <div class="bg-gray-50 p-6 rounded-lg">
+                            <div class="text-blue-600  mb-4">
+                                <i class="fas fa-envelope text-2xl"></i>
+                            </div>
+                            <h3 class="text-blue-600 font-bold  mb-2">Email Us</h3>
+                            <p class="text-gray-600  text-sm">info@example.com</p>
+                            <p class="text-gray-600  text-sm">contact@example.com</p>
+                        </div>
+
+                        <!-- Open Hours -->
+                        <div class="bg-gray-50 p-6 rounded-lg">
+                            <div class="text-blue-600  mb-4">
+                                <i class="fas fa-clock text-2xl"></i>
+                            </div>
+                            <h3 class="text-blue-600 font-bold  mb-2">Open Hours</h3>
+                            <p class="text-gray-600  text-sm">Monday - Friday</p>
+                            <p class="text-gray-600  text-sm">9:00AM - 05:00PM</p>
+                        </div>
+                    </div>
+
+                    <!-- Right Side - Contact Form -->
+                    <div class="w-full md:w-1/2">
+                        <div class="bg-gray-50 p-6 rounded-lg">
+                            <form>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                                    <input type="text" placeholder="Your Name"
+                                        class="w-full p-2 border border-gray-300 rounded">
+                                    <input type="email" placeholder="Your Email"
+                                        class="w-full p-2 border border-gray-300 rounded">
+                                </div>
+                                <div class="mb-4">
+                                    <input type="text" placeholder="Subject"
+                                        class="w-full p-2 border border-gray-300 rounded">
+                                </div>
+                                <div class="mb-4">
+                                    <textarea rows="6" placeholder="Message"
+                                        class="w-full p-2 border border-gray-300 rounded"></textarea>
+                                </div>
+                                <div class="text-center">
+                                    <button type="submit"
+                                        class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition-colors">Send
+                                        Message</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            </div>
+
+
+        </section>
+
+
+        <!-- Footer -->
+        <footer class="bg-gray-100 py-8">
+            <div class="container mx-auto px-4 md:px-8 lg:px-16">
+                <div
+                    class="flex flex-col md:flex-row justify-between items-center md:items-start space-y-6 md:space-y-0">
+
+                    <div class="text-center md:text-left">
+                        <h2 class="text-3xl text-gray-700 font-bold">Shiven Tech</h2>
+                        <div class="flex justify-center md:justify-start space-x-4 mt-3">
+                            <a href="#" class="py-2 px-4  bg-gray-200 rounded-full hover:bg-gray-300">
+                                <i class="fa-brands fa-x-twitter"></i>
+                            </a>
+                            <a href="#" class="py-2 px-4 bg-gray-200 rounded-full hover:bg-gray-300">
+                                <i class="fa-brands fa-facebook"></i>
+                            </a>
+                            <a href="#" class="py-2 px-4 bg-gray-200 rounded-full hover:bg-gray-300">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="#" class="py-2 px-4 bg-gray-200 rounded-full hover:bg-gray-300">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="text-center md:text-left">
+                        <h2 class="text-lg text-gray-700 font-bold">Useful Links</h2>
+                        <ul class="space-y-2 mt-2 text-gray-600">
+                            <li><a href="/" class="hover:underline">Home</a></li>
+                            <li><a href="/about-us.html" class="hover:underline">About Us</a></li>
+                            <li><a href="/services.html" class="hover:underline">Services</a></li>
+                            <li><a href="/features-for-consultants.html" class="hover:underline">Features for
+                                    Consultants</a></li>
+                            <li><a href=".features-for-customers.html" class="hover:underline">Features for
+                                    Customers</a></li>
+                            <!-- <li><a href="#" class="hover:underline">Sitemap</a></li> -->
+                        </ul>
+                    </div>
+
+
+
+                    <div class="text-center
+                     md:text-left">
+                        <h2 class="text-lg text-gray-700 font-bold">Contact Us</h2>
+                        <ul class="space-y-2 mt-2 text-gray-600">
+                            <li><a href="#" class="text-gray-600 hover:underline">Address</a></li>
+                            <li><a href="#" class="text-gray-600 hover:underline">City</a></li>
+                            <li><a href="#" class="text-gray-600 hover:underline">Country</a></li>
+                            <br>
+                            <li><a href="#" class="text-gray-600 hover:underline"><span
+                                        class="font-bold text-black">Phone:</span> +91</a></li>
+                            <li><a href="#" class="text-gray-600 hover:underline"><span
+                                        class="font-bold text-black">Email:</span> info@example.com</a></li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <div class="mt-6 p-4 text-center bg-gray-300 text-gray-600 text-sm">
+                    <p>© Copyright <strong class="text-gray-700">Shiven Tech</strong> All Rights Reserved</p>
+                    <p>Designed by</p>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+
+
+    <!-- aos -->
+    <script>
+        AOS.init();
+        function toggleFAQ(id) {
+            const content = document.getElementById(`faq-${id}`);
+            const icon = document.getElementById(`icon-${id}`);
+            const question = document.getElementById(`question-${id}`);
+
+            if (content.classList.contains("hidden")) {
+                // Show answer, rotate icon, and change text color
+                content.classList.remove("hidden");
+                question.classList.add("text-blue-600");
+                icon.classList.add("rotate-90");
+                icon.classList.replace("text-black", "text-blue-600");
+            } else {
+                // Hide answer, reset icon, and text color
+                content.classList.add("hidden");
+                question.classList.remove("text-blue-600");
+                icon.classList.remove("rotate-90");
+                icon.classList.replace("text-blue-600", "text-black");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
