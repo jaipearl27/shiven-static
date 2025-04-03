@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact-Us</title>
+    <title>Asset-Managment</title>
 
     <!-- aos -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -34,6 +34,8 @@
                     <a href="/services.html" class="hover:text-orange-500">Services</a>
                     <a href="/features-for-consultants.html" class="hover:text-orange-500">Features for Consultants</a>
                     <a href="/features-for-customers.html" class="hover:text-orange-500">Features for Customers</a>
+
+                    <!-- Dropdown Fix -->
                     <!-- <div class="relative group">
                         <button class="hover:text-orange-500">Our Features ▾</button>
                         <div
@@ -56,9 +58,11 @@
                             class="absolute left-0 top-full hidden group-hover:block bg-white shadow-md w-40 text-gray-800">
                             <a href="/blogs.html" class="block px-4 py-2 hover:bg-gray-100">Blogs</a>
                             <!-- <a href="/articles.html" class="block px-4 py-2 hover:bg-gray-100">Articles</a> -->
-
                         </div>
                     </div>
+
+
+
                 </div>
                 <a href="https://app.assetmanagment.in" class="bg-orange-400 text-white px-4 py-2 rounded-md">Get
                     Started</a>
@@ -70,23 +74,80 @@
             class="relative h-[65vh] flex items-center justify-start z-10 w-full bg-[url('/images/hero-bg.jpg')] bg-cover bg-center bg-no-repeat">
             <!-- Background Overlay -->
             <div class="absolute inset-0 bg-black opacity-50"></div>
-            <div class="px-8 text-white max-w-2xl p-6 rounded-md text-center z-10">
-                <h1 class="text-4xl font-bold">Contact Us</h1>
+            <div class="px-8 text-white max-w-2xl p-6 rounded-md text-left z-10">
+                <h1 class="text-4xl font-bold">Blogs</h1>
                 <!-- <h2 class="text-4xl font-bold mt-2">Asset Management Solutions</h2> -->
             </div>
         </section>
 
-        <section class="py-2 pb-12 px-16 md:px-16 flex flex-col gap-12 font-semibold">
+        <section class="py-2 px-16 md:px-16">
 
+
+
+            <!-- blogs -->
+            <div class="py-12 px-6 max-w-6xl mx-auto">
+                <!-- Heading -->
+                <div class="flex justify-between items-center">
+                    <h2 class="text-3xl font-bold">Latest From the <span class="text-green-600">Blog</span></h2>
+                    <!-- <button class="bg-yellow-400 text-black px-4 py-2 font-semibold ">OUR BLOG</button> -->
+                </div>
+
+                <!-- Blog Grid -->
+                <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                    <!-- Blog 1 -->
+                    <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                        <img src="images/blog1.png" alt="Blog 1" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <p class="text-gray-500 text-sm">UI DESIGN <span class="text-red-500">•</span> MAY 24, 2022
+                            </p>
+                            <h3 class="font-semibold text-lg mt-1">Designers are meant to be loved, not to be
+                                understood.</h3>
+                            <a href="#" class="text-green-600 font-medium mt-2 flex items-center">
+                                READ MORE <span class="ml-2">→</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Blog 2 -->
+                    <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                        <img src="images/blog2.png" alt="Blog 2" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <p class="text-gray-500 text-sm">UI DESIGN <span class="text-red-500">•</span> MAY 24, 2022
+                            </p>
+                            <h3 class="font-semibold text-lg mt-1">Designers are meant to be loved, not to be
+                                understood.</h3>
+                            <a href="#" class="text-green-600 font-medium mt-2 flex items-center">
+                                READ MORE <span class="ml-2">→</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Blog 3 -->
+                    <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                        <img src="images/blog3.png" alt="Blog 3" class="w-full h-48 object-cover">
+                        <div class="p-4">
+                            <p class="text-gray-500 text-sm">UI DESIGN <span class="text-red-500">•</span> MAY 24, 2022
+                            </p>
+                            <h3 class="font-semibold text-lg mt-1">Designers are meant to be loved, not to be
+                                understood.</h3>
+                            <a href="#" class="text-green-600 font-medium mt-2 flex items-center">
+                                READ MORE <span class="ml-2">→</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
 
 
             <!-- contact us -->
-            <div class="container mx-auto px-2 max-w-6xl">
+            <div class="container mx-auto px-4 py-12 max-w-6xl">
                 <!-- Header -->
                 <div class="text-center mb-8">
-                    <h1 class="text-3xl font-bold text-gray-800">Contact Us:</h1>
+                    <h1 class="text-3xl font-bold text-gray-800">Contact</h1>
                     <div class="w-12 h-1 bg-blue-600 mx-auto my-2"></div>
-                    <!--  -->
+
                 </div>
 
                 <!-- Contact Content -->
@@ -194,7 +255,6 @@
                             </a>
                         </div>
                     </div>
-
                     <div class="text-center md:text-left">
                         <h2 class="text-lg text-gray-700 font-bold">Useful Links</h2>
                         <ul class="space-y-2 mt-2 text-gray-600">
@@ -203,9 +263,9 @@
                             <li><a href="/services.html" class="hover:underline">Services</a></li>
                             <li><a href="/features-for-consultants.html" class="hover:underline">Features for
                                     Consultants</a></li>
-                            <li><a href=".features-for-customers.html" class="hover:underline">Features for
+                            <li><a href="/features-for-customers.html" class="hover:underline">Features for
                                     Customers</a></li>
-                            <li><a href="#" class="hover:underline">Sitemap</a></li>
+                            <!-- <li><a href="#" class="hover:underline">Sitemap</a></li> -->
                         </ul>
                     </div>
 
