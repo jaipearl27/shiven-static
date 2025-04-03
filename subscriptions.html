@@ -14,7 +14,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- FontAwesome CDN (Free Version) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 
 
 </head>
@@ -23,8 +23,6 @@
 
 
     <main class="relative ">
-
-
         <!-- Navbar -->
         <header class="relative w-full py-4 px-4 shadow bg-white fixed top-0 z-50">
             <nav class="w-full flex justify-between items-center">
@@ -70,29 +68,28 @@
 
         <!-- Hero Section -->
         <section
-            class="relative h-[65vh] flex items-center justify-start z-10 w-full bg-[url('/images/hero-bg.jpg')] bg-cover bg-center bg-no-repeat" >
+            class="relative h-[65vh] flex items-center justify-start z-10 w-full bg-[url('/images/hero-bg.jpg')] bg-cover bg-center bg-no-repeat">
             <!-- Background Overlay -->
             <div class="absolute inset-0 bg-black opacity-50"></div>
             <div class="px-8 text-white max-w-2xl p-6 rounded-md text-center z-10" data-aos="fade-up">
-                <h1 class="text-4xl font-bold">Subscriptions</h1>
+                <h1 class="text-4xl font-bold">Subscription Plans</h1>
                 <!-- <h2 class="text-4xl font-bold mt-2">Asset Management Solutions</h2> -->
             </div>
         </section>
 
         <section class="py-2 px-16 md:px-16">
-            <div class="max-w-6xl mx-auto flex flex-col md:flex-row gap-4">
+            <div class="max-w-6xl mx-auto grid sm:grid-cols-2 md:grid-cols-3 gap-4 p-10 bg-gray-200 rounded-xl">
                 <!-- Lite Plan -->
                 <div class="bg-white p-6 rounded-lg shadow-md flex-1">
-                    <h2 class="text-2xl font-bold mb-1">Lite</h2>
-                    <p class="text-sm text-gray-600 mb-2">Essential data for small and personal projects.</p>
-                    <div class="text-3xl font-bold mb-4">₹100<span class="text-lg font-normal text-gray-600">/mo</span>
+                    <div class="h-[130px] ">
+                        <h2 class="text-2xl font-bold mb-1">Lite</h2>
+                        <p class="text-sm text-gray-600 mb-2">Essential data for small and personal projects.</p>
+                        <div class="text-3xl font-bold mb-4">₹100 <span
+                                class="text-lg font-normal text-gray-600">/mo</span></div>
                     </div>
-
                     <button
-                        class="bg-orange-500 hover:bg-orange-600 text-white font-medium py-2 px-4 rounded w-full mb-6">
-                        Get Started
-                    </button>
-
+                        class="bg-orange-500 hover:bg-orange-600 text-white font-medium py-2 px-4 rounded w-fit mb-6">Get
+                        Started</button>
                     <ul class="space-y-2">
                         <li class="flex items-start">
                             <svg class="h-5 w-5 text-orange-500 mr-2 mt-0.5" fill="none" stroke="currentColor"
@@ -116,7 +113,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M5 13l4 4L19 7"></path>
                             </svg>
-                            <span>750 Cracked keywords</span>
+                            <span>750 Tracked keywords</span>
                         </li>
                         <li class="flex items-start">
                             <svg class="h-5 w-5 text-orange-500 mr-2 mt-0.5" fill="none" stroke="currentColor"
@@ -124,7 +121,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M5 13l4 4L19 7"></path>
                             </svg>
-                            <span>100,000 Crawl credits</span>
+                            <span>Email Support</span>
                         </li>
                         <li class="flex items-start">
                             <svg class="h-5 w-5 text-orange-500 mr-2 mt-0.5" fill="none" stroke="currentColor"
@@ -132,39 +129,85 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M5 13l4 4L19 7"></path>
                             </svg>
-                            <span>500 Credits per user</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="h-5 w-5 text-orange-500 mr-2 mt-0.5" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            <span>1 User included</span>
-                        </li>
-                        <li class="flex items-start">
-                            <svg class="h-5 w-5 text-orange-500 mr-2 mt-0.5" fill="none" stroke="currentColor"
-                                viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                    d="M5 13l4 4L19 7"></path>
-                            </svg>
-                            <span>Add 2 more user at <strong>₹100/mo</strong> each</span>
+                            <span>Basic Analytics</span>
                         </li>
                     </ul>
                 </div>
 
-                <!-- Standard Plan -->
+                <!-- Basic Plan -->
                 <div class="bg-white p-6 rounded-lg shadow-md flex-1">
-                    <h2 class="text-2xl font-bold mb-1">Standard</h2>
-                    <p class="text-sm text-gray-600 mb-2">Perfect for freelance SEOs and marketing consultant.</p>
-                    <div class="text-3xl font-bold mb-4">₹500<span class="text-lg font-normal text-gray-600">/mo</span>
+                    <div class="h-[130px] ">
+                        <h2 class="text-2xl font-bold mb-1">Basic</h2>
+                        <p class="text-sm text-gray-600 mb-2">Great for growing businesses.</p>
+                        <div class="text-3xl font-bold mb-4">₹500 <span
+                                class="text-lg font-normal text-gray-600">/mo</span></div>
                     </div>
-
                     <button
-                        class="bg-orange-500 hover:bg-orange-600 text-white font-medium py-2 px-4 rounded w-full mb-6">
-                        Get Started
-                    </button>
+                        class="bg-orange-500 hover:bg-orange-600 text-white font-medium py-2 px-4 rounded w-fit mb-6">Get
+                        Started</button>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-orange-500 mr-2 mt-0.5" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>10 Projects</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-orange-500 mr-2 mt-0.5" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>12 Months of historical data</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-orange-500 mr-2 mt-0.5" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>1,500 Tracked keywords</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-orange-500 mr-2 mt-0.5" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Email & Chat Support</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-orange-500 mr-2 mt-0.5" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Advanced Analytics</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-orange-500 mr-2 mt-0.5" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Custom Reports</span>
+                        </li>
+                    </ul>
+                </div>
 
+                <!-- Pro Plan -->
+                <div class="bg-white p-6 rounded-lg shadow-md flex-1">
+                    <div class="h-[130px] ">
+                        <h2 class="text-2xl font-bold mb-1">Pro</h2>
+                        <p class="text-sm text-gray-600 mb-2">Advanced features for professionals.</p>
+                        <div class="text-3xl font-bold mb-4">₹1,000 <span
+                                class="text-lg font-normal text-gray-600">/mo</span></div>
+                    </div>
+                    <button
+                        class="bg-orange-500 hover:bg-orange-600 text-white font-medium py-2 px-4 rounded w-fit mb-6">Get
+                        Started</button>
                     <ul class="space-y-2">
                         <li class="flex items-start">
                             <svg class="h-5 w-5 text-orange-500 mr-2 mt-0.5" fill="none" stroke="currentColor"
@@ -180,7 +223,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M5 13l4 4L19 7"></path>
                             </svg>
-                            <span>2 Years of historical data</span>
+                            <span>24 Months of historical data</span>
                         </li>
                         <li class="flex items-start">
                             <svg class="h-5 w-5 text-orange-500 mr-2 mt-0.5" fill="none" stroke="currentColor"
@@ -188,7 +231,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M5 13l4 4L19 7"></path>
                             </svg>
-                            <span>2,000 Cracked keywords</span>
+                            <span>3,000 Tracked keywords</span>
                         </li>
                         <li class="flex items-start">
                             <svg class="h-5 w-5 text-orange-500 mr-2 mt-0.5" fill="none" stroke="currentColor"
@@ -196,7 +239,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M5 13l4 4L19 7"></path>
                             </svg>
-                            <span>500,000 Crawl credits</span>
+                            <span>Priority Support</span>
                         </li>
                         <li class="flex items-start">
                             <svg class="h-5 w-5 text-orange-500 mr-2 mt-0.5" fill="none" stroke="currentColor"
@@ -204,7 +247,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M5 13l4 4L19 7"></path>
                             </svg>
-                            <span>Unlimited credits per user</span>
+                            <span>AI-Powered Insights</span>
                         </li>
                         <li class="flex items-start">
                             <svg class="h-5 w-5 text-orange-500 mr-2 mt-0.5" fill="none" stroke="currentColor"
@@ -212,7 +255,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M5 13l4 4L19 7"></path>
                             </svg>
-                            <span>1 User included</span>
+                            <span>Competitor Analysis</span>
                         </li>
                         <li class="flex items-start">
                             <svg class="h-5 w-5 text-orange-500 mr-2 mt-0.5" fill="none" stroke="currentColor"
@@ -220,23 +263,22 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M5 13l4 4L19 7"></path>
                             </svg>
-                            <span>Add 5 more user at <strong>₹100/mo</strong> each</span>
+                            <span>Integration with Third-Party Apps</span>
                         </li>
                     </ul>
                 </div>
 
-                <!-- Advance Plan -->
+                <!-- Business Plan -->
                 <div class="bg-white p-6 rounded-lg shadow-md flex-1">
-                    <h2 class="text-2xl font-bold mb-1">Advance</h2>
-                    <p class="text-sm text-gray-600 mb-2">More tools and data for lean in-house marketing teams.</p>
-                    <div class="text-3xl font-bold mb-4">₹100<span class="text-lg font-normal text-gray-600">/mo</span>
+                    <div class="h-[130px] ">
+                        <h2 class="text-2xl font-bold mb-1">Business</h2>
+                        <p class="text-sm text-gray-600 mb-2">Ideal for large-scale enterprises.</p>
+                        <div class="text-3xl font-bold mb-4">₹5,000 <span
+                                class="text-lg font-normal text-gray-600">/mo</span></div>
                     </div>
-
                     <button
-                        class="bg-orange-500 hover:bg-orange-600 text-white font-medium py-2 px-4 rounded w-full mb-6">
-                        Get Started
-                    </button>
-
+                        class="bg-orange-500 hover:bg-orange-600 text-white font-medium py-2 px-4 rounded w-fit mb-6">Get
+                        Started</button>
                     <ul class="space-y-2">
                         <li class="flex items-start">
                             <svg class="h-5 w-5 text-orange-500 mr-2 mt-0.5" fill="none" stroke="currentColor"
@@ -252,7 +294,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M5 13l4 4L19 7"></path>
                             </svg>
-                            <span>5 Years of historical data</span>
+                            <span>Unlimited historical data</span>
                         </li>
                         <li class="flex items-start">
                             <svg class="h-5 w-5 text-orange-500 mr-2 mt-0.5" fill="none" stroke="currentColor"
@@ -260,7 +302,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M5 13l4 4L19 7"></path>
                             </svg>
-                            <span>5,000 Cracked keywords</span>
+                            <span>10,000 Tracked keywords</span>
                         </li>
                         <li class="flex items-start">
                             <svg class="h-5 w-5 text-orange-500 mr-2 mt-0.5" fill="none" stroke="currentColor"
@@ -268,7 +310,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M5 13l4 4L19 7"></path>
                             </svg>
-                            <span>1,500,000 Crawl credits</span>
+                            <span>Dedicated Account Manager</span>
                         </li>
                         <li class="flex items-start">
                             <svg class="h-5 w-5 text-orange-500 mr-2 mt-0.5" fill="none" stroke="currentColor"
@@ -276,7 +318,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M5 13l4 4L19 7"></path>
                             </svg>
-                            <span>Unlimited credits per user</span>
+                            <span>Custom Dashboard</span>
                         </li>
                         <li class="flex items-start">
                             <svg class="h-5 w-5 text-orange-500 mr-2 mt-0.5" fill="none" stroke="currentColor"
@@ -284,7 +326,7 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M5 13l4 4L19 7"></path>
                             </svg>
-                            <span>1 User included</span>
+                            <span>API Access</span>
                         </li>
                         <li class="flex items-start">
                             <svg class="h-5 w-5 text-orange-500 mr-2 mt-0.5" fill="none" stroke="currentColor"
@@ -292,7 +334,77 @@
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                     d="M5 13l4 4L19 7"></path>
                             </svg>
-                            <span>Add 10 more user at <strong>₹100/mo</strong> each</span>
+                            <span>Multi-User Support</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="bg-white p-6 rounded-lg shadow-md flex-1">
+                    <div class="h-[130px] ">
+                        <h2 class="text-2xl font-bold mb-1">Enterprise</h2>
+                        <p class="text-sm text-gray-600 mb-2">Custom solutions for large organizations.</p>
+                        <div class="text-3xl font-bold mb-4">Custom Pricing</div>
+                    </div>
+                    <button
+                        class="bg-orange-500 hover:bg-orange-600 text-white font-medium py-2 px-4 rounded w-fit mb-6">Contact
+                        Us</button>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-orange-500 mr-2 mt-0.5" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Unlimited Projects</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-orange-500 mr-2 mt-0.5" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Unlimited historical data</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-orange-500 mr-2 mt-0.5" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Custom Tracked keywords</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-orange-500 mr-2 mt-0.5" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>24/7 Dedicated Support</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-orange-500 mr-2 mt-0.5" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Exclusive AI Features</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-orange-500 mr-2 mt-0.5" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Enterprise-Level Security</span>
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="h-5 w-5 text-orange-500 mr-2 mt-0.5" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Custom API & Integrations</span>
                         </li>
                     </ul>
                 </div>
@@ -327,14 +439,56 @@
                     <div class="text-center md:text-left">
                         <h2 class="text-lg text-gray-700 font-bold">Useful Links</h2>
                         <ul class="space-y-2 mt-2 text-gray-600">
-                            <li><a href="/" class="hover:underline">Home</a></li>
-                            <li><a href="/about-us.html" class="hover:underline">About Us</a></li>
-                            <li><a href="/services.html" class="hover:underline">Services</a></li>
-                            <li><a href="/features-for-consultants.html" class="hover:underline">Features for
-                                    Consultants</a></li>
-                            <li><a href=".features-for-customers.html" class="hover:underline">Features for
-                                    Customers</a></li>
-                            <!-- <li><a href="#" class="hover:underline">Sitemap</a></li> -->
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 text-orange-500 mr-2 mt-0.5" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span><a href="/" class="hover:underline">Home</a></span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 text-orange-500 mr-2 mt-0.5" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span><a href="/about-us.html" class="hover:underline">About Us</a></span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 text-orange-500 mr-2 mt-0.5" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span><a href="/services.html" class="hover:underline">Services</a></span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 text-orange-500 mr-2 mt-0.5" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span><a href="/features-for-consultants.html" class="hover:underline">Feature</span>s
+                                for
+                                Consultants</a>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 text-orange-500 mr-2 mt-0.5" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span><a href=".features-for-customers.html" class="hover:underline">Feature</span>s for
+                                Customers</a>
+                            </li>
+                            <!-- <li class="flex items-start">
+                                <svg class="h-5 w-5 text-orange-500 mr-2 mt-0.5" fill="none" stroke="currentColor"
+                                viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 13l4 4L19 7"></path>
+                            </svg>
+                                <span><a href="#" class="hover:underline">Sitemap</a></li</span>> -->
                         </ul>
                     </div>
 
@@ -344,14 +498,51 @@
                      md:text-left">
                         <h2 class="text-lg text-gray-700 font-bold">Contact Us</h2>
                         <ul class="space-y-2 mt-2 text-gray-600">
-                            <li><a href="/contact-us.html" class="text-gray-600 hover:underline">Address</a></li>
-                            <li><a href="/contact-us.html" class="text-gray-600 hover:underline">City</a></li>
-                            <li><a href="/contact-us.html" class="text-gray-600 hover:underline">Country</a></li>
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 text-orange-500 mr-2 mt-0.5" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span><a href="/contact-us.html"
+                                        class="text-gray-600 hover:underline">Address</a></span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 text-orange-500 mr-2 mt-0.5" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span><a href="/contact-us.html" class="text-gray-600 hover:underline">City</a></span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 text-orange-500 mr-2 mt-0.5" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span><a href="/contact-us.html"
+                                        class="text-gray-600 hover:underline">Country</a></span>
+                            </li>
                             <br>
-                            <li><a href="#" class="text-gray-600 hover:underline"><span
-                                        class="font-bold text-black">Phone:</span> +91</a></li>
-                            <li><a href="#" class="text-gray-600 hover:underline"><span
-                                        class="font-bold text-black">Email:</span> info@example.com</a></li>
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 text-orange-500 mr-2 mt-0.5" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span><a href="#" class="text-gray-600 hover:underline"></span><span
+                                    class="font-bold text-black">Phone:</span> +91</a>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="h-5 w-5 text-orange-500 mr-2 mt-0.5" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M5 13l4 4L19 7"></path>
+                                </svg>
+                                <span><a href="#" class="text-gray-600 hover:underline"></span><span
+                                    class="font-bold text-black">Email:</span> info@example.com</a>
+                            </li>
                         </ul>
 
                     </div>
