@@ -4,3 +4,17 @@
     font-family: "Inter", 'Courier New', Courier, monospace;
     scroll-behavior: smooth;
 }
+.provider-logo {
+    width: 60px;       /* Smaller than 100px */
+    height: auto;      /* Keeps the image aspect ratio */
+    margin: 8px;
+    border-radius: 6px;
+    object-fit: contain;
+    border-radius: 0%;
+  }
+  #serviceProviderList {
+    display: flex;
+ flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+  }

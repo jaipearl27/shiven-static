@@ -9,14 +9,14 @@
     <!-- aos -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <!-- TailwindCSS -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- FontAwesome CDN (Free Version) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
 
-
+  
 </head>
 
 <body>
@@ -29,6 +29,9 @@
                 <div class="w-[100px]">
                     <img src="images/logo1.png" alt="Shiven Technology" class="w-full">
                 </div>
+                <!-- <div id="serviceProviderList">Loading...</div> -->
+
+           
                 <div class="hidden md:flex gap-12 text-blue-800">
                     <a href="/" class="hover:text-orange-500">Home</a>
                     <a href="/about-us.html" class="hover:text-orange-500">About</a>
@@ -138,9 +141,41 @@
 
                 <div class="text-center mt-12 flex gap-4 justify-center items-center w-full">
                     <span class="w-14 bg-blue-700 h-[2px]"></span>
-                    <h3 class="text-2xl font-bold pb-1">Service Providers</h3> <span
+                    <h3 class="text-2xl font-bold pb-1 mb-8">Service Providers</h3> <span
                         class="w-14 bg-blue-700 h-[2px]"></span></h3>
                 </div>
+
+                
+          
+                <div id="serviceProviderList" class="flex flex-row gap-20 rounded-full justify-center">
+              
+                </div>
+              
+                <script>
+                  axios.get('https://api.assetmanagment.in/api/v1/serviceProvider')
+                    .then(response => {
+                      const providers = response.data?.data || [];
+                      const container = document.getElementById('serviceProviderList');
+                      container.innerHTML = ''; // Clear loading message
+              
+                      providers.forEach(provider => {
+                        const img = document.createElement('img');
+                        img.src = provider.logo.secure_url;
+                        img.alt = provider.serviceProviderName;
+                        img.className = 'provider-logo';
+                        img.style.width = '120px'; // Force size
+                        img.style.height = '120px'; // Force size
+                        container.appendChild(img);
+                      });
+                    }) 
+                    .catch(error => {
+                      document.getElementById('serviceProviderList').innerHTML = '<p>Error loading logos.</p>';
+                      console.error('Error fetching providers:', error);
+                    });
+                </script>
+
+
+
 
                 <div class="mt-8 flex justify-evenly lg:mx-24 gap-3 md:mx-14 md:mx-6">
                     <!-- Financial Advisor -->
@@ -255,42 +290,52 @@
                     </a>
 
                     <!-- Calculate Funds / Interest -->
+                    <a href="/features-for-consultants.html#Calculate-Funds-Interest">
                     <div class="text-center p-3 bg-white  rounded-lg" data-aos="fade-up" data-aos-duration="400">
                         <img src="images/feature2.png" alt="Calculate Funds / Interest"
                             class="w-full h-40 object-cover ">
                         <p class="text-blue-600 font-medium mt-2">Calculate Funds / Interest</p>
                     </div>
-
+</a>
                     <!-- Customer Data Management -->
+                    <a href="/features-for-consultants.html#Customer-Data-Management">
                     <div class="text-center p-3 bg-white  rounded-lg" data-aos="fade-up" data-aos-duration="600">
                         <img src="images/feature3.png" alt="Customer Data Management" class="w-full h-40 object-cover ">
                         <p class="text-blue-600 font-medium mt-2">Customer Data Management</p>
-                    </div>
+                    </div></a>
+
 
                     <!-- Staff Management -->
+                    <a href="/features-for-consultants.html#Staff-Management">
                     <div class="text-center p-3 bg-white  rounded-lg" data-aos="fade-up" data-aos-duration="200">
                         <img src="images/feature4.png" alt="Staff Management" class="w-full h-40 object-cover ">
                         <p class="text-blue-600 font-medium mt-2">Staff Management</p>
                     </div>
-
+</a>
                     <!-- Ads Plan & Policy -->
+                    <a href="/features-for-consultants.html#plan-policy">
+
                     <div class="text-center p-3 bg-white  rounded-lg" data-aos="fade-up" data-aos-duration="400">
                         <img src="images/feature5.png" alt="Ads Plan & Policy" class="w-full h-40 object-cover ">
                         <p class="text-blue-600 font-medium mt-2">Ads Plan & Policy</p>
-                    </div>
+                    </div></a>
 
                     <!-- Customized Reminders -->
+                    <a href="/features-for-consultants.html#Customized-Reminders">
                     <div class="text-center p-3 bg-white  rounded-lg" data-aos="fade-up" data-aos-duration="600">
                         <img src="images/feature6.png" alt="Customized Reminders" class="w-full h-40 object-cover ">
                         <p class="text-blue-600 font-medium mt-2">Customized Reminders</p>
-                    </div>
+                    </div></a>
 
                     <!-- Extra Feature (Centered & Smaller) -->
+                    <a href="/features-for-consultants.html#Extra-Feature-Centered ">
+
                     <div class="text-center p-3 bg-white  rounded-lg w-full  " data-aos="fade-up"
-                        data-aos-duration="200">
+                        data-aos-duration="200" id="Extra-Feature-Centered">
                         <img src="images/feature7.png" alt="Additional Feature" class="w-full h-40 object-cover ">
-                        <p class="text-blue-600 font-medium mt-2">Customized Reminders</p>
-                    </div>
+                        <p class="text-blue-600 font-medium mt-2 ">
+                         Extra Feature (Centered & Smaller) </p>
+                    </div></a>
                 </div>
 
 
@@ -551,31 +596,39 @@
                 <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
                     <!-- Feature 1 -->
+                     <a href="/features-for-customers.html#Personalized-experience">
                     <div class="bg-white shadow-lg rounded-lg p-4 ">
                         <img src="images/features/customers/wohoo.png" alt="Personalized Experience"
                             class="w-full h-48 object-cover rounded-md">
                         <p class="text-blue-600 font-medium mt-3">Personalized Experience:</p>
                         <p class="text-gray-600 text-sm">Tailored interactions to meet individual client needs.</p>
-                    </div>
+                    </div></a>
+
 
                     <!-- Feature 2 -->
+                    <a href="/features-for-customers.html#data-security">
+
                     <div class="bg-white shadow-lg rounded-lg p-4">
                         <img src="images/features/customers/dataSecurity.png" alt="Data Security"
                             class="w-full h-48 object-cover rounded-md">
                         <p class="text-blue-600 font-medium mt-3">Data Security:</p>
                         <p class="text-gray-600 text-sm">Advanced encryption to protect sensitive financial information.
                         </p>
-                    </div>
+                    </div></a>
 
                     <!-- Feature 3 -->
+                    <a href="/features-for-customers.html#multi-insurance-type-support">
+ 
                     <div class="bg-white shadow-lg rounded-lg p-4">
                         <img src="images/features/customers/meetGood.png" alt="Multi-Insurance Type Support"
                             class="w-full h-48 object-cover rounded-md">
                         <p class="text-blue-600 font-medium mt-3">Multi-Insurance Type Support:</p>
                         <p class="text-gray-600 text-sm">Manage various insurance products within a single platform.</p>
-                    </div>
+                    </div></a>
 
                     <!-- Feature 4 -->
+                    <a href="/features-for-customers.html#calculate-funds-interest">
+
                     <div class="bg-white shadow-lg rounded-lg p-4">
                         <img src="images/features/customers/coins.png" alt="Calculate Funds / Interest"
                             class="w-full h-48 object-cover rounded-md">
@@ -584,39 +637,48 @@
                     </div>
 
                     <!-- Feature 5 -->
+                    <a href="/features-for-customers.html#file-folder-management">
                     <div class="bg-white shadow-lg rounded-lg p-4">
                         <img src="images/features/customers/fileNFolder.png" alt="File/Folder Management"
                             class="w-full h-48 object-cover rounded-md">
                         <p class="text-blue-600 font-medium mt-3">File/Folder Management:</p>
                         <p class="text-gray-600 text-sm">Organize and access documents efficiently.</p>
-                    </div>
+                    </div></a>
 
                     <!-- Feature 6 -->
+                    <a href="/features-for-customers.html#customer-support-and-assistance">
+
                     <div class="bg-white shadow-lg rounded-lg p-4">
                         <img src="images/features/customers/customerSupport.png" alt="Customer Support and Assistance"
                             class="w-full h-48 object-cover rounded-md">
                         <p class="text-blue-600 font-medium mt-3">Customer Support and Assistance:</p>
                         <p class="text-gray-600 text-sm">Dedicated support to address client inquiries.</p>
-                    </div>
+                    </div></a>
                     <!-- Feature 1 -->
+                    <a href="/features-for-customers.html#personal-experience">
+
                     <div class="bg-white shadow-lg rounded-lg p-4">
-                        <img src="images/features/customers/phone.png" alt="Personalized Experience"
+                        <img src="images/features/customers/phone.png" alt="Personal Experience"
                             class="w-full h-48 object-cover rounded-md">
                         <p class="text-blue-600 font-medium mt-3">Notifications & Alerts:</p>
                         <p class="text-gray-600 text-sm">Timely updates on policy changes and important dates.</p>
-                    </div>
+                    </div></a>
+
 
                     <!-- Feature 2 -->
-                    <div class="bg-white shadow-lg rounded-lg p-4">
+                    <a href="/features-for-customers.html#data-security">
+                    <div class="bg-white shadow-lg rounded-lg p-4">                  
+
                         <img src="images/features/customers/policyManagement.png" alt="Data Security"
                             class="w-full h-48 object-cover rounded-md">
                         <p class="text-blue-600 font-medium mt-3">Policy Management:</p>
                         <p class="text-gray-600 text-sm">Comprehensive tools for managing and storing policy
                             information.
                         </p>
-                    </div>
+                    </div></a>
 
                     <!-- Feature 3 -->
+                    <a href="/features-for-customers.html#customer-support-and-assistance">
                     <div class="bg-white shadow-lg rounded-lg p-4">
                         <img src="images/features/customers/smartCalender.png" alt="Multi-Insurance Type Support"
                             class="w-full h-48 object-cover rounded-md">
@@ -625,7 +687,7 @@
                             scheduling, task
                             management, and tracking of finances is a hassle-free affair with a smooth client
                             interaction.</p>
-                    </div>
+                    </div></a>
                 </div>
             </div>
 
@@ -938,7 +1000,7 @@
 
             </div>
 
-
+         
         </section>
 
 
