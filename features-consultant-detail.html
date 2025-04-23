@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us</title>
+
+    <!-- aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- TailwindCSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- FontAwesome CDN (Free Version) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    
+  </head>
+
+  <body>
+    <main class="relative">
+      <!-- Navbar -->
+
+      <header
+        class="relative w-full py-4 px-4 shadow bg-white top-0 z-50"
+        id="navbar"
+      ></header>
+  
+      
+      <div id="featureclass" class="max-w-6xl mx-auto"></div>
+    </main>
+
+    <!-- aos -->
+    <script>
+      AOS.init();
+      function toggleFAQ(id) {
+        const content = document.getElementById(`faq-${id}`);
+        const icon = document.getElementById(`icon-${id}`);
+        const question = document.getElementById(`question-${id}`);
+
+        if (content.classList.contains("hidden")) {
+          // Show answer, rotate icon, and change text color
+          content.classList.remove("hidden");
+          question.classList.add("text-blue-600");
+          icon.classList.add("rotate-90");
+          icon.classList.replace("text-black", "text-blue-600");
+        } else {
+          // Hide answer, reset icon, and text color
+          content.classList.add("hidden");
+          question.classList.remove("text-blue-600");
+          icon.classList.remove("rotate-90");
+          icon.classList.replace("text-blue-600", "text-black");
+        }
+      }
+    </script>
+        <script src="./js/index.js"></script>
+        <script src="./js/features.js" defer></script>
+        <!-- <!-- <script>
+          const params = new URLSearchParams(window.location.search);
+          const slug = params.get("slug");
+          console.log("front",slug)
+          renderFeatureDetail(slug);
+        </script> -->
+  </body> -->
+</html>

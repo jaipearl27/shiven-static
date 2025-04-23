@@ -24,46 +24,8 @@
 
     <main class="relative ">
         <!-- Navbar -->
-        <header class="relative w-full py-4 px-4 shadow bg-white fixed top-0 z-50">
-            <nav class="w-full flex justify-between items-center">
-                <div class="w-[100px]">
-                    <img src="images/logo1.png" alt="Shiven Technology" class="w-full">
-                </div>
-                <div class="hidden md:flex gap-12 text-blue-800">
-                    <a href="/" class="hover:text-orange-500">Home</a>
-                    <a href="/about-us.html" class="hover:text-orange-500">About</a>
-                    <a href="/services.html" class="hover:text-orange-500">Services</a>
-                    <a href="/features-for-consultants.html" class="hover:text-orange-500">Features for Consultants</a>
-                    <a href="/features-for-customers.html" class="hover:text-orange-500">Features for Customers</a>
-                    <!-- <div class="relative group">
-                        <button class="hover:text-orange-500">Our Features ▾</button>
-                        <div
-                            class="absolute left-0 top-full hidden group-hover:block bg-white shadow-md w-40 text-gray-800">
-                            <a href="/features-for-consultants.html" class="block px-4 py-2 hover:bg-gray-100">Features
-                                for Consultants</a>
-                            <a href="/features-for-customers.html" class="block px-4 py-2 hover:bg-gray-100">Features
-                                for
-                                Customers</a>
-                        </div>
-                    </div> -->
-
-                    <a href="/contact-us.html" class="hover:text-orange-500">Contact</a>
-                    <a href="/subscriptions.html" class="hover:text-orange-500">Subscriptions</a>
-
-                    <!-- Another Dropdown Fix -->
-                    <div class="relative group">
-                        <button class="hover:text-orange-500">More Info ▾</button>
-                        <div
-                            class="absolute left-0 top-full hidden group-hover:block bg-white shadow-md w-40 text-gray-800">
-                            <a href="/blogs.html" class="block px-4 py-2 hover:bg-gray-100">Blogs</a>
-                            <!-- <a href="/articles.html" class="block px-4 py-2 hover:bg-gray-100">Articles</a> -->
-
-                        </div>
-                    </div>
-                </div>
-                <a href="https://app.assetmanagment.in" class="bg-orange-400 text-white px-4 py-2 rounded-md">Get
-                    Started</a>
-            </nav>
+        <header class="relative w-full py-4 px-4 shadow bg-white fixed top-0 z-50" id="navbar">
+            
         </header>
 
         <!-- Hero Section -->
@@ -205,64 +167,10 @@
 
 
             <!-- Features for Consultant -->
-            <div class="py-8 px-4 max-w-6xl mx-auto" data-aos="fade-up" data-aos-duration="0">
-                <h2 class="text-center text-xl font-semibold">
-                    <span class="border-b-2 border-blue-600 pb-1">Features for Consultant</span>
-                </h2>
+         
 
-                <!-- Grid Layout for Features -->
-                <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 ">
-                    <!-- File/Folder Management -->
-                    
-                        <div class="text-center p-3 bg-white  rounded-lg" data-aos="fade-up" data-aos-duration="200" id="file-folder-management">
-                            <img src="images/feature1.png" alt="File/Folder Management"
-                                class="w-full h-40 object-cover ">
-                            <p class="text-blue-600 font-medium mt-2">File/Folder Management</p>
-                        </div>
+            <div id="featureclass" class="max-w-6xl mx-auto"></div>
 
-                    
-
-                    <!-- Calculate Funds / Interest -->
-                    <div class="text-center p-3 bg-white  rounded-lg" data-aos="fade-up" data-aos-duration="400" id="Calculate-Funds-Interest">
-                        <img src="images/feature2.png" alt="Calculate Funds / Interest"
-                            class="w-full h-40 object-cover ">
-                        <p class="text-blue-600 font-medium mt-2">Calculate Funds / Interest</p>
-                    </div>
-
-                    <!-- Customer Data Management -->
-                    <div class="text-center p-3 bg-white  rounded-lg" data-aos="fade-up" data-aos-duration="600" id="Customer-Data-Management">
-                        <img src="images/feature3.png" alt="Customer Data Management" class="w-full h-40 object-cover ">
-                        <p class="text-blue-600 font-medium mt-2">Customer Data Management</p>
-                    </div>
-
-                    <!-- Staff Management -->
-                    <div class="text-center p-3 bg-white  rounded-lg" data-aos="fade-up" data-aos-duration="200" id="Staff-Management">
-                        <img src="images/feature4.png" alt="Staff Management" class="w-full h-40 object-cover ">
-                        <p class="text-blue-600 font-medium mt-2">Staff Management</p>
-                    </div>
-
-                    <!-- Ads Plan & Policy -->
-                    <div class="text-center p-3 bg-white  rounded-lg" data-aos="fade-up" data-aos-duration="400" id="plan-policy">
-                        <img src="images/feature5.png" alt="Ads Plan & Policy" class="w-full h-40 object-cover ">
-                        <p class="text-blue-600 font-medium mt-2">Ads Plan & Policy</p>
-                    </div>
-
-                    <!-- Customized Reminders -->
-                    <div class="text-center p-3 bg-white  rounded-lg" data-aos="fade-up" data-aos-duration="600" id="Customized-Reminders">
-                        <img src="images/feature6.png" alt="Customized Reminders" class="w-full h-40 object-cover ">
-                        <p class="text-blue-600 font-medium mt-2">Customized Reminders</p>
-                    </div>
-
-                    <!-- Extra Feature (Centered & Smaller) -->
-                    <div class="text-center p-3 bg-white  rounded-lg w-full" data-aos="fade-up"
-                        data-aos-duration="200" id="Extra-Feature-Centered">
-                        <img src="images/feature7.png" alt="Additional Feature" class="w-full h-40 object-cover ">
-                        <p class="text-blue-600 font-medium mt-2">Extra Feature Centered</p>
-                    </div>
-                </div>
-
-
-            </div>
 
 
             <!-- How Does It Work -->
@@ -745,7 +653,8 @@
             }
         }
     </script>
-
+   <script src="./js/index.js"></script>
+   <script src="./js/features.js" defer></script>
 </body>
 
 </html>

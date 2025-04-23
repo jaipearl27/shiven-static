@@ -24,46 +24,8 @@
 
     <main class="relative ">
         <!-- Navbar -->
-        <header class="relative w-full py-4 px-4 shadow bg-white fixed top-0 z-50">
-            <nav class="w-full flex justify-between items-center">
-                <div class="w-[100px]">
-                    <img src="images/logo1.png" alt="Shiven Technology" class="w-full">
-                </div>
-                <div class="hidden md:flex gap-12 text-blue-800">
-                    <a href="/" class="hover:text-orange-500">Home</a>
-                    <a href="/about-us.html" class="hover:text-orange-500">About</a>
-                    <a href="/services.html" class="hover:text-orange-500">Services</a>
-                    <a href="/features-for-consultants.html" class="hover:text-orange-500">Features for Consultants</a>
-                    <a href="/features-for-customers.html" class="hover:text-orange-500">Features for Customers</a>
-                    <!-- <div class="relative group">
-                        <button class="hover:text-orange-500">Our Features ▾</button>
-                        <div
-                            class="absolute left-0 top-full hidden group-hover:block bg-white shadow-md w-40 text-gray-800">
-                            <a href="/features-for-consultants.html" class="block px-4 py-2 hover:bg-gray-100">Features
-                                for Consultants</a>
-                            <a href="/features-for-customers.html" class="block px-4 py-2 hover:bg-gray-100">Features
-                                for
-                                Customers</a>
-                        </div>
-                    </div> -->
+        <header class="relative w-full py-4 px-4 shadow bg-white top-0 z-50" id="navbar">
 
-                    <a href="/contact-us.html" class="hover:text-orange-500">Contact</a>
-                    <a href="/subscriptions.html" class="hover:text-orange-500">Subscriptions</a>
-
-                    <!-- Another Dropdown Fix -->
-                    <div class="relative group">
-                        <button class="hover:text-orange-500">More Info ▾</button>
-                        <div
-                            class="absolute left-0 top-full hidden group-hover:block bg-white shadow-md w-40 text-gray-800">
-                            <a href="/blogs.html" class="block px-4 py-2 hover:bg-gray-100">Blogs</a>
-                            <!-- <a href="/articles.html" class="block px-4 py-2 hover:bg-gray-100">Articles</a> -->
-
-                        </div>
-                    </div>
-                </div>
-                <a href="https://app.assetmanagment.in" class="bg-orange-400 text-white px-4 py-2 rounded-md">Get
-                    Started</a>
-            </nav>
         </header>
 
         <!-- Hero Section -->
@@ -434,91 +396,9 @@
                 </h2>
 
                 <!-- Features Grid -->
-                <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div id="featureclass" class="max-w-6xl mx-auto"></div>
+                <div id="featurecustomer"  ></div>      
 
-                    <!-- Feature 1 -->
-                    <div class="bg-white shadow-lg rounded-lg p-4 " id="personalized-experience">
-                        <img src="images/features/customers/wohoo.png" alt="Personalized Experience"
-                            class="w-full h-48 object-cover rounded-md">
-                        <p class="text-blue-600 font-medium mt-3">Personalized Experience:</p>
-                        <p class="text-gray-600 text-sm">Tailored interactions to meet individual client needs.</p>
-                    </div>
-
-                    <!-- Feature 2 -->
-                    <div class="bg-white shadow-lg rounded-lg p-4" id="data-security">
-                        <img src="images/features/customers/dataSecurity.png" alt="Data Security"
-                            class="w-full h-48 object-cover rounded-md">
-                        <p class="text-blue-600 font-medium mt-3">Data Security:</p>
-                        <p class="text-gray-600 text-sm">Advanced encryption to protect sensitive financial information.
-                        </p>
-                    </div>
-
-                    <!-- Feature 3 -->
-                    <div class="bg-white shadow-lg rounded-lg p-4" id="multi-insurance-type-support">
-                        <img src="images/features/customers/meetGood.png" alt="Multi-Insurance Type Support"
-                            class="w-full h-48 object-cover rounded-md">
-                        <p class="text-blue-600 font-medium mt-3">Multi-Insurance Type Support:</p>
-                        <p class="text-gray-600 text-sm">Manage various insurance products within a single platform.</p>
-                    </div>
-
-                    <!-- Feature 4 -->
-                    <div class="bg-white shadow-lg rounded-lg p-4" id="calculate-funds-interest">
-                        <img src="images/features/customers/coins.png" alt="Calculate Funds / Interest"
-                            class="w-full h-48 object-cover rounded-md">
-                        <p class="text-blue-600 font-medium mt-3">Calculate Funds / Interest:</p>
-                        <p class="text-gray-600 text-sm">Automated calculations for accurate financial assessments.</p>
-                    </div>
-
-                    <!-- Feature 5 -->
-                    <div class="bg-white shadow-lg rounded-lg p-4" id="file-folder-management">
-                        <img src="images/features/customers/fileNFolder.png" alt="File/Folder Management"
-                            class="w-full h-48 object-cover rounded-md">
-                        <p class="text-blue-600 font-medium mt-3">File/Folder Management:</p>
-                        <p class="text-gray-600 text-sm">Organize and access documents efficiently.</p>
-                    </div>
-
-                    <!-- Feature 6 -->
-                    <div class="bg-white shadow-lg rounded-lg p-4" id="customer-support-and-assistance">
-                        <img src="images/features/customers/customerSupport.png" alt="Customer Support and Assistance"
-                            class="w-full h-48 object-cover rounded-md">
-                        <p class="text-blue-600 font-medium mt-3">Customer Support and Assistance:</p>
-                        <p class="text-gray-600 text-sm">Dedicated support to address client inquiries.</p>
-                    </div>
-                    <!-- Feature 1 -->
-                    <div class="bg-white shadow-lg rounded-lg p-4">
-                        <img src="images/features/customers/phone.png" alt="Personalized Experience"
-                            class="w-full h-48 object-cover rounded-md">
-                        <p class="text-blue-600 font-medium mt-3">Notifications & Alerts:</p>
-                        <p class="text-gray-600 text-sm">Our CRM is built to deliver customized customer service and
-                            support to address client questions
-                            promptly. Combined ticketing and communication functionalities allow your support team to
-                            monitor queries, respond efficiently, and not miss any client request. Based on a 360-degree
-                            customer view, comprising previous interactions, policies, and claims history,</p>
-                    </div>
-
-                    <!-- Feature 2 -->
-                    <div class="bg-white shadow-lg rounded-lg p-4">
-                        <img src="images/features/customers/policyManagement.png" alt="Data Security"
-                            class="w-full h-48 object-cover rounded-md">
-                        <p class="text-blue-600 font-medium mt-3">Policy Management:</p>
-                        <p class="text-gray-600 text-sm">Comprehensive tools for managing and storing policy
-                            information.
-                        </p>
-                    </div>
-
-                    <!-- Feature 3 -->
-                    <div class="bg-white shadow-lg rounded-lg p-4">
-                        <img src="images/features/customers/smartCalender.png" alt="Multi-Insurance Type Support"
-                            class="w-full h-48 object-cover rounded-md">
-                        <p class="text-blue-600 font-medium mt-3">Smart Calendar</p>
-                        <p class="text-gray-600 text-sm">Our financial CRM also provides you the facility of tracking
-                            your record, this can be done with the feature of our smart calendar With the smart calendar
-                            you can not only track your financial proceedings like Loans, EMIs, SIP, the due dates, and
-                            investments but also with this calendar, but you can also schedule meetings and manage your
-                            finance with ease. This feature helps you to stay updated with the dates and hence you are
-                            not prone to exceeding a deadline and due date.</p>
-                    </div>
-                </div>
             </div>
 
 
@@ -813,6 +693,8 @@
             }
         }
     </script>
+        <script src="./js/features.js" defer></script>
+        <script src="./js/index.js"></script>
 
 </body>
 

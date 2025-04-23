@@ -16,63 +16,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="./css/style.css">
 
-  
+    
+    
 </head>
 
 <body>
 
 
-    <main class="relative ">
+    <main class="relative  ">
         <!-- Navbar -->
-        <header class="relative w-full py-4 px-4 shadow bg-white fixed top-0 z-50">
-            <nav class="w-full flex justify-between items-center">
-                <div class="w-[100px]">
-                    <img src="images/logo1.png" alt="Shiven Technology" class="w-full">
-                </div>
-                <!-- <div id="serviceProviderList">Loading...</div> -->
 
-           
-                <div class="hidden md:flex gap-12 text-blue-800">
-                    <a href="/" class="hover:text-orange-500">Home</a>
-                    <a href="/about-us.html" class="hover:text-orange-500">About</a>
-                    <a href="/services.html" class="hover:text-orange-500">Services</a>
-                    <a href="/features-for-consultants.html" class="hover:text-orange-500">Features for Consultants</a>
-                    <a href="/features-for-customers.html" class="hover:text-orange-500">Features for Customers</a>
+        <header class="relative w-full py-4 px-4 shadow bg-white top-0 z-50" id="navbar">
 
-                    <!-- Dropdown Fix -->
-                    <!-- <div class="relative group">
-                        <button class="hover:text-orange-500">Our Features ▾</button>
-                        <div
-                            class="absolute left-0 top-full hidden group-hover:block bg-white shadow-md w-40 text-gray-800">
-                            <a href="/features-for-consultants.html" class="block px-4 py-2 hover:bg-gray-100">Features
-                                for Consultants</a>
-                            <a href="/features-for-customers.html" class="block px-4 py-2 hover:bg-gray-100">Features
-                                for
-                                Customers</a>
-                        </div>
-                    </div> -->
-
-                    <a href="/contact-us.html" class="hover:text-orange-500">Contact</a>
-                    <a href="/subscriptions.html" class="hover:text-orange-500">Subscriptions</a>
-
-                    <!-- Another Dropdown Fix -->
-                    <div class="relative group">
-                        <button class="hover:text-orange-500">More Info ▾</button>
-                        <div
-                            class="absolute left-0 top-full hidden group-hover:block bg-white shadow-md w-40 text-gray-800">
-                            <a href="/blogs.html" class="block px-4 py-2 hover:bg-gray-100">Blogs</a>
-                            <!-- <a href="/articles.html" class="block px-4 py-2 hover:bg-gray-100">Articles</a> -->
-                        </div>
-                    </div>
-
-
-
-                </div>
-                <a href="https://app.assetmanagment.in" class="bg-orange-400 text-white px-4 py-2 rounded-md">Get
-                    Started</a>
-            </nav>
         </header>
+   
 
+      
+            </div>
         <!-- Hero Section -->
         <section
             class="relative h-[65vh] flex items-center justify-start z-10 w-full bg-[url('/images/hero-bg.jpg')] bg-cover bg-center bg-no-repeat">
@@ -150,29 +110,7 @@
                 <div id="serviceProviderList" class="flex flex-row gap-20 rounded-full justify-center">
               
                 </div>
-              
-                <script>
-                  axios.get('https://api.assetmanagment.in/api/v1/serviceProvider')
-                    .then(response => {
-                      const providers = response.data?.data || [];
-                      const container = document.getElementById('serviceProviderList');
-                      container.innerHTML = ''; // Clear loading message
-              
-                      providers.forEach(provider => {
-                        const img = document.createElement('img');
-                        img.src = provider.logo.secure_url;
-                        img.alt = provider.serviceProviderName;
-                        img.className = 'provider-logo';
-                        img.style.width = '120px'; // Force size
-                        img.style.height = '120px'; // Force size
-                        container.appendChild(img);
-                      });
-                    }) 
-                    .catch(error => {
-                      document.getElementById('serviceProviderList').innerHTML = '<p>Error loading logos.</p>';
-                      console.error('Error fetching providers:', error);
-                    });
-                </script>
+             
 
 
 
@@ -211,43 +149,48 @@
                 <!-- Grid Layout for 3 Cards per Row -->
                 <div class="mt-8 grid mx-28 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <!-- Insurance -->
+                    <a href="https://app.assetmanagment.in/health-insurance">
                     <div class="bg-white p-4 rounded-lg " data-aos="fade-up" data-aos-duration="200">
-                        <h3 class="text-blue-600 font-semibold mt-2">Insurance</h3>
+                        <h3 class="text-blue-600 font-semibold mt-2">Health Insurance</h3>
                         <img src="images/services1.png" alt="Insurance" class="w-full h-40 object-cover rounded-md">
                         <p class="text-gray-600 text-sm mt-2">
                             Our insurance CRM streamlines customer interactions, policy management, and claims
                             processing for brokers and agents.
                         </p>
-                    </div>
+                    </div></a>
 
                     <!-- Mutual Fund -->
+                     <a href="https://app.assetmanagment.in/mutualfund">
                     <div class="bg-white p-4 rounded-lg " data-aos="fade-up" data-aos-duration="400">
                         <h3 class="text-blue-600 font-semibold mt-2">Mutual Fund</h3>
                         <img src="images/services2.png" alt="Mutual Fund" class="w-full h-40 object-cover rounded-md">
                         <p class="text-gray-600 text-sm mt-2">
                             Our CRM simplifies mutual fund client management, investment tracking, and compliance.
                         </p>
-                    </div>
+                    </div></a>
 
                     <!-- Loans -->
+               
                     <div class="bg-white p-4 rounded-lg " data-aos="fade-up" data-aos-duration="600">
                         <h3 class="text-blue-600 font-semibold mt-2">Loans</h3>
                         <img src="images/services3.png" alt="Loans" class="w-full h-40 object-cover rounded-md">
-                        <p class="text-gray-600 text-sm mt-2">
+                        <!-- <p class="text-gray-600 text-sm mt-2">
                             Our loan management CRM simplifies interactions and procedures, streamlining loan
                             applications.
-                        </p>
-                    </div>
+                        </p> -->
+                        <p class="text-gray-600 text-sm mt-2">If you've been searching for a way to get random questions, you've landed on the correct webpage. We created the Random Question Generator to ask you as many random questions as your heart desires.</p>
+                    </div></a>
 
                     <!-- Stocks/Exchange -->
+                     <a href="https://app.assetmanagment.in/motor-insurance">
                     <div class="bg-white p-4 rounded-lg " data-aos="fade-up" data-aos-duration="200">
-                        <h3 class="text-blue-600 font-semibold mt-2">Stocks/Exchange</h3>
-                        <img src="images/services4.png" alt="Stocks/Exchange"
+                        <h3 class="text-blue-600 font-semibold mt-2">Motor Insurance</h3>
+                        <img src="images/services/motor.jpg" alt="Stocks/Exchange"
                             class="w-full h-40 object-cover rounded-md">
                         <p class="text-gray-600 text-sm mt-2">
                             Our CRM solution is tailored for stock brokers, streamlining trade tracking and compliance.
                         </p>
-                    </div>
+                    </div></a>
 
                     <!-- Travel Insurance -->
                     <div class="bg-white p-4 rounded-lg " data-aos="fade-up" data-aos-duration="400">
@@ -265,7 +208,7 @@
                         <img src="images/services6.png" alt="Business Insurance"
                             class="w-full h-40 object-cover rounded-md">
                         <p class="text-gray-600 text-sm mt-2">
-                            Offers financial security for businesses against risks like property damage and liability.
+                            The questions in this generator are gender neutral and can be used to ask either male of females (or any other gender the person identifies with).
                         </p>
                     </div>
                 </div>
@@ -281,58 +224,61 @@
                 <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 ">
                     <!-- File/Folder Management -->
                     <a href="/features-for-consultants.html#file-folder-management">
-                        <div class="text-center p-3 bg-white  rounded-lg" data-aos="fade-up" data-aos-duration="200">
+                        <div class="bg-white shadow-lg rounded-lg p-4 ">
                             <img src="images/feature1.png" alt="File/Folder Management"
-                                class="w-full h-40 object-cover ">
-                            <p class="text-blue-600 font-medium mt-2">File/Folder Management</p>
+                                class="w-full h-48 object-cover rounded-md">
+                                <p class="text-blue-600 font-medium mt-3">File/Folder Management</p>
                         </div>
 
                     </a>
 
                     <!-- Calculate Funds / Interest -->
                     <a href="/features-for-consultants.html#Calculate-Funds-Interest">
-                    <div class="text-center p-3 bg-white  rounded-lg" data-aos="fade-up" data-aos-duration="400">
+                        <div class="bg-white shadow-lg rounded-lg p-4 ">
                         <img src="images/feature2.png" alt="Calculate Funds / Interest"
-                            class="w-full h-40 object-cover ">
-                        <p class="text-blue-600 font-medium mt-2">Calculate Funds / Interest</p>
+                        class="w-full h-48 object-cover rounded-md">
+                        <p class="text-blue-600 font-medium mt-3">Calculate Funds / Interest</p>
                     </div>
 </a>
                     <!-- Customer Data Management -->
                     <a href="/features-for-consultants.html#Customer-Data-Management">
-                    <div class="text-center p-3 bg-white  rounded-lg" data-aos="fade-up" data-aos-duration="600">
-                        <img src="images/feature3.png" alt="Customer Data Management" class="w-full h-40 object-cover ">
-                        <p class="text-blue-600 font-medium mt-2">Customer Data Management</p>
+                        <div class="bg-white shadow-lg rounded-lg p-4 ">
+                       <img src="images/feature3.png" alt="Customer Data Management"                 
+                       
+                       class="w-full h-48 object-cover rounded-md">
+              
+                       <p class="text-blue-600 font-medium mt-3">Customer Data Management</p>
                     </div></a>
 
 
                     <!-- Staff Management -->
                     <a href="/features-for-consultants.html#Staff-Management">
-                    <div class="text-center p-3 bg-white  rounded-lg" data-aos="fade-up" data-aos-duration="200">
-                        <img src="images/feature4.png" alt="Staff Management" class="w-full h-40 object-cover ">
+                        <div class="bg-white shadow-lg rounded-lg p-4 ">
+                            <img src="images/feature4.png" alt="Staff Management"    class="w-full h-48 object-cover rounded-md">
                         <p class="text-blue-600 font-medium mt-2">Staff Management</p>
                     </div>
 </a>
                     <!-- Ads Plan & Policy -->
                     <a href="/features-for-consultants.html#plan-policy">
 
-                    <div class="text-center p-3 bg-white  rounded-lg" data-aos="fade-up" data-aos-duration="400">
-                        <img src="images/feature5.png" alt="Ads Plan & Policy" class="w-full h-40 object-cover ">
+                        <div class="bg-white shadow-lg rounded-lg p-4 ">
+                            <img src="images/feature5.png" alt="Ads Plan & Policy"  class="w-full h-48 object-cover rounded-md">
                         <p class="text-blue-600 font-medium mt-2">Ads Plan & Policy</p>
                     </div></a>
 
                     <!-- Customized Reminders -->
                     <a href="/features-for-consultants.html#Customized-Reminders">
-                    <div class="text-center p-3 bg-white  rounded-lg" data-aos="fade-up" data-aos-duration="600">
-                        <img src="images/feature6.png" alt="Customized Reminders" class="w-full h-40 object-cover ">
+                        <div class="bg-white shadow-lg rounded-lg p-4 ">
+                            <img src="images/feature6.png" alt="Customized Reminders" class="w-full h-48 object-cover rounded-md">
                         <p class="text-blue-600 font-medium mt-2">Customized Reminders</p>
                     </div></a>
 
                     <!-- Extra Feature (Centered & Smaller) -->
                     <a href="/features-for-consultants.html#Extra-Feature-Centered ">
 
-                    <div class="text-center p-3 bg-white  rounded-lg w-full  " data-aos="fade-up"
-                        data-aos-duration="200" id="Extra-Feature-Centered">
-                        <img src="images/feature7.png" alt="Additional Feature" class="w-full h-40 object-cover ">
+                        <div class="bg-white shadow-lg rounded-lg p-4 ">
+
+                        <img src="images/feature7.png" alt="Additional Feature" class="w-full h-48 object-cover rounded-md">
                         <p class="text-blue-600 font-medium mt-2 ">
                          Extra Feature (Centered & Smaller) </p>
                     </div></a>
@@ -914,159 +860,18 @@
             </div>
 
             <!-- contact us -->
-            <div class="container mx-auto px-4 py-12 max-w-6xl">
-                <!-- Header -->
-                <div class="text-center mb-8">
-                    <h1 class="text-3xl font-bold text-gray-800">Contact</h1>
-                    <div class="w-12 h-1 bg-blue-600 mx-auto my-2"></div>
-
-                </div>
-
-                <!-- Contact Content -->
-                <div class="flex flex-col md:flex-row gap-6">
-                    <!-- Left Side - Contact Info -->
-                    <div class="w-full md:w-1/2 grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <!-- Address -->
-                        <div class="bg-gray-50 p-6 rounded-lg">
-                            <div class="text-blue-600  mb-4">
-                                <i class="fas fa-map-marker-alt text-2xl"></i>
-                            </div>
-                            <h3 class="text-blue-600 font-bold  mb-2">Address</h3>
-                            <p class="text-gray-600  text-sm">A108 Adam Street</p>
-                            <p class="text-gray-600  text-sm">New York, NY 535022</p>
-                        </div>
-
-                        <!-- Call Us -->
-                        <div class="bg-gray-50 p-6 rounded-lg">
-                            <div class="text-blue-600  mb-4">
-                                <i class="fas fa-phone text-2xl"></i>
-                            </div>
-                            <h3 class="text-blue-600 font-bold  mb-2">Call Us</h3>
-                            <p class="text-gray-600  text-sm">+1 5589 55488 55</p>
-                            <p class="text-gray-600  text-sm">+1 6678 254445 41</p>
-                        </div>
-
-                        <!-- Email Us -->
-                        <div class="bg-gray-50 p-6 rounded-lg">
-                            <div class="text-blue-600  mb-4">
-                                <i class="fas fa-envelope text-2xl"></i>
-                            </div>
-                            <h3 class="text-blue-600 font-bold  mb-2">Email Us</h3>
-                            <p class="text-gray-600  text-sm">info@example.com</p>
-                            <p class="text-gray-600  text-sm">contact@example.com</p>
-                        </div>
-
-                        <!-- Open Hours -->
-                        <div class="bg-gray-50 p-6 rounded-lg">
-                            <div class="text-blue-600  mb-4">
-                                <i class="fas fa-clock text-2xl"></i>
-                            </div>
-                            <h3 class="text-blue-600 font-bold  mb-2">Open Hours</h3>
-                            <p class="text-gray-600  text-sm">Monday - Friday</p>
-                            <p class="text-gray-600  text-sm">9:00AM - 05:00PM</p>
-                        </div>
-                    </div>
-
-                    <!-- Right Side - Contact Form -->
-                    <div class="w-full md:w-1/2">
-                        <div class="bg-gray-50 p-6 rounded-lg">
-                            <form>
-                                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                                    <input type="text" placeholder="Your Name"
-                                        class="w-full p-2 border border-gray-300 rounded">
-                                    <input type="email" placeholder="Your Email"
-                                        class="w-full p-2 border border-gray-300 rounded">
-                                </div>
-                                <div class="mb-4">
-                                    <input type="text" placeholder="Subject"
-                                        class="w-full p-2 border border-gray-300 rounded">
-                                </div>
-                                <div class="mb-4">
-                                    <textarea rows="6" placeholder="Message"
-                                        class="w-full p-2 border border-gray-300 rounded"></textarea>
-                                </div>
-                                <div class="text-center">
-                                    <button type="submit"
-                                        class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition-colors">Send
-                                        Message</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
+ 
+         
 
             </div>
+         
 
          
         </section>
+        <div id="featurecustomer" class="max-w-6xl mx-auto"></div>
 
-
-        <!-- Footer -->
-        <footer class="bg-gray-100 py-8">
-            <div class="container mx-auto px-4 md:px-8 lg:px-16">
-                <div
-                    class="flex flex-col md:flex-row justify-between items-center md:items-start space-y-6 md:space-y-0">
-
-                    <div class="text-center md:text-left">
-                        <h2 class="text-3xl text-gray-700 font-bold">Shiven Tech</h2>
-                        <div class="flex justify-center md:justify-start space-x-4 mt-3">
-                            <a href="#" class="py-2 px-4  bg-gray-200 rounded-full hover:bg-gray-300">
-                                <i class="fa-brands fa-x-twitter"></i>
-                            </a>
-                            <a href="#" class="py-2 px-4 bg-gray-200 rounded-full hover:bg-gray-300">
-                                <i class="fa-brands fa-facebook"></i>
-                            </a>
-                            <a href="#" class="py-2 px-4 bg-gray-200 rounded-full hover:bg-gray-300">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="#" class="py-2 px-4 bg-gray-200 rounded-full hover:bg-gray-300">
-                                <i class="fa-brands fa-linkedin"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="text-center md:text-left">
-                        <h2 class="text-lg text-gray-700 font-bold">Useful Links</h2>
-                        <ul class="space-y-2 mt-2 text-gray-600">
-                            <li><a href="/" class="hover:underline">Home</a></li>
-                            <li><a href="/about-us.html" class="hover:underline">About Us</a></li>
-                            <li><a href="/services.html" class="hover:underline">Services</a></li>
-                            <li><a href="/features-for-consultants.html" class="hover:underline">Features for
-                                    Consultants</a></li>
-                            <li><a href="/features-for-customers.html" class="hover:underline">Features for
-                                    Customers</a></li>
-                            <!-- <li><a href="#" class="hover:underline">Sitemap</a></li> -->
-                        </ul>
-                    </div>
-
-
-
-                    <div class="text-center
-                     md:text-left">
-                        <h2 class="text-lg text-gray-700 font-bold">Contact Us</h2>
-                        <ul class="space-y-2 mt-2 text-gray-600">
-                            <li><a href="/contact-us.html" class="text-gray-600 hover:underline">Address</a></li>
-                            <li><a href="/contact-us.html" class="text-gray-600 hover:underline">City</a></li>
-                            <li><a href="/contact-us.html" class="text-gray-600 hover:underline">Country</a></li>
-                            <br>
-                            <li><a href="#" class="text-gray-600 hover:underline"><span
-                                        class="font-bold text-black">Phone:</span> +91</a></li>
-                            <li><a href="#" class="text-gray-600 hover:underline"><span
-                                        class="font-bold text-black">Email:</span> info@example.com</a></li>
-                        </ul>
-
-                    </div>
-                </div>
-
-                <div class="mt-6 p-4 text-center bg-gray-300 text-gray-600 text-sm">
-                    <p>© Copyright <strong class="text-gray-700">Shiven Tech</strong> All Rights Reserved</p>
-                    <p>Designed by</p>
-                </div>
-            </div>
-        </footer>
-
+        <script src="./js/index.js"></script>
+        <script src="./js/features.js" defer></script>
     </main>
 
 
@@ -1093,6 +898,36 @@
             }
         }
     </script>
+
+
+
+   
+
+
+ 
+    <script>
+        axios.get('https://api.assetmanagment.in/api/v1/serviceProvider')
+          .then(response => {
+            const providers = response.data?.data || [];
+            const container = document.getElementById('serviceProviderList');
+            container.innerHTML = ''; // Clear loading message
+    
+            providers.forEach(provider => {
+              const img = document.createElement('img');
+              img.src = provider.logo.secure_url;
+              img.alt = provider.serviceProviderName;
+              img.className = 'provider-logo';
+              img.style.width = '120px'; // Force size
+              img.style.height = '120px'; // Force size
+              container.appendChild(img);
+            });
+          }) 
+          .catch(error => {
+            document.getElementById('serviceProviderList').innerHTML = '<p>Error loading logos.</p>';
+            console.error('Error fetching providers:', error);
+          });
+      </script>
+
 
 </body>
 
