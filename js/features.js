@@ -160,11 +160,6 @@ featureclass.innerHTML = `
     const feature = featureData.find(b => b.slug === slug);
     const featureclass = document.getElementById("featureclass");
   
-    if (!feature) {
-      featureclass.innerHTML = `<p class="text-red-600 text-lg">Feature not found.</p>`;
-      return;
-    }
-  
     featureclass.innerHTML = `
       <div class="py-12 px-6 max-w-6xl mx-auto">
         <div>
@@ -183,7 +178,7 @@ featureclass.innerHTML = `
   
   // Navigation
   function navigateToFeature(slug) {
-    const url = new URL(window.location.origin + "/features-detail.html");
+    const url = new URL(window.location.origin + "/features-consultant-details.html");
     url.searchParams.set("slug", slug);
     window.location.href = url.toString(); // full redirect
   }
@@ -242,35 +237,40 @@ featureclass.innerHTML = `
       </div>
     `;
   }
-function handleRouting() {
-  const params = new URLSearchParams(window.location.search);
-  const slug = params.get("slug");
-  const pathname = window.location.pathname;
-
-// ✅ Correct function
-
-
-  if (pathname.endsWith("features-detail.html")) {
-    if (slug) {
-      renderFeatureDetail(slug);
-    } else {
-      document.getElementById("features").innerHTML = "<p>No feature selected.</p>";
-    }
-  } else if (pathname.endsWith("feature-customer-deatails.html")) {
-    if (slug) {
-      
-      renderCustomerDetail(slug); // ✅ Correct function
-    } else {
-      document.getElementById("featurecustomer").innerHTML = "<p>No consultant selected</p>";
-    }
-  } else if (pathname.endsWith("features-for-customers.html")) { // Optional: If you have a list page
-    renderCustomerList(); // ✅ Correct function
-  } else {
-    renderFeatureList();
-  }
-}
-
+  function handleRouting() {
+    const params = new URLSearchParams(window.location.search);
+    const slug = params.get("slug");
+    const pathname = window.location.pathname;
   
+    // Consultant detail
+    if (pathname.endsWith("features-consultant-detail.html")) {
+      if (slug) {
+        renderFeatureDetail(slug);
+      } else {
+        document.getElementById("features").innerHTML = "<p>No feature selected.</p>";
+      }
+    }
+  
+
+    if (pathname.endsWith("feature-customer-deatails.html")) {
+      if (slug) {
+        renderCustomerDetail(slug);
+      } else {
+        document.getElementById("featurecustomer").innerHTML = "<p>No consultant selected</p>";
+      }
+    }
+  
+    if (pathname === "/" || pathname==="/about-us.html" || pathname.endsWith("features-for-consultants.html")) {
+      renderFeatureList();
+    }
+    
+    if (pathname === "/" || pathname==="/about-us.html" || pathname.endsWith("features-for-customers.html")) {
+      renderCustomerList();
+    }
+    
+  }
+  
+
   // Init
   window.addEventListener("load", handleRouting);
   window.addEventListener("popstate", handleRouting);
