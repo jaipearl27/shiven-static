@@ -260,11 +260,11 @@ featureclass.innerHTML = `
       }
     }
   
-    if (pathname === "/" || pathname==="/about-us.html" || pathname.endsWith("features-for-consultants.html")) {
+    if (pathname === "/"||pathname==="/index.html" || pathname==="/about-us.html" || pathname.endsWith("features-for-consultants.html")) {
       renderFeatureList();
     }
     
-    if (pathname === "/" || pathname==="/about-us.html" || pathname.endsWith("features-for-customers.html")) {
+    if (pathname === "/" || pathname==="/index.html" || pathname==="/about-us.html" || pathname.endsWith("features-for-customers.html")) {
       renderCustomerList();
     }
     
