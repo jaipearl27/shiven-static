@@ -144,27 +144,25 @@ function footer(){
 
 function contactForm() {
   const form = document.createElement("div");
-  form.className = "w-full mt-8 py-6 pb-10 bg-gradient-to-r from-white via-blue-50 to-white mb-0 pb-0" ;
+  form.className = "w-full mt-8 py-6 pb-0 bg-gradient-to-r from-white via-blue-50 to-white mb-0";
 
   form.innerHTML = `
-<div class="container mx-auto px-4 ">
+  <div class="container mx-auto px-4">
     <!-- Header -->
-    <div class="text-center ">
+    <div class="text-center">
       <h1 class="text-4xl font-bold text-gray-800 relative inline-block">
         Contact Us
-      
       </h1>
-        <div class="w-20 h-1 bg-blue-600 mx-auto my-3 rounded animate-pulse"></div>
+      <div class="w-20 h-1 bg-blue-600 mx-auto my-3 rounded animate-pulse"></div>
       <p class="text-gray-500 py-4">We'd love to hear from you!</p>
     </div>
 
     <!-- Contact Content -->
     <div class="flex flex-col md:flex-row items-center justify-center gap-10">
       <!-- Left Side - Contact Info -->
-      <div class="md:w-72  w-56 flex flex-col gap-6">
-        <!-- Phone -->
+      <div class="md:w-72 w-56 flex flex-col gap-6">
         <div class="flex items-start gap-4 bg-white shadow-md p-6 rounded-lg">
-<i class="fas fa-phone text-blue-600 text-2xl animate-pulse"></i>
+          <i class="fas fa-phone text-blue-600 text-2xl animate-pulse"></i>
           <div>
             <h3 class="text-blue-600 font-bold mb-1">Phone</h3>
             <p class="text-gray-600 text-sm">+1 5589 55488 55</p>
@@ -172,7 +170,6 @@ function contactForm() {
           </div>
         </div>
 
-        <!-- Open Hours -->
         <div class="flex items-start gap-4 bg-white shadow-md p-6 rounded-lg">
           <i class="fas fa-clock text-blue-600 text-2xl animate-pulse"></i>
           <div>
@@ -186,42 +183,30 @@ function contactForm() {
       <!-- Right Side - Contact Form -->
       <div class="w-full md:w-1/2 shadow-lg">
         <div class="bg-white shadow-lg p-8 rounded-lg">
-          <form>
+          <form id="contact-form">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
               <div class="relative">
-                <input type="text" id="name" placeholder=" " required
+                <input type="text" id="name" placeholder="Name " required
                   class="peer w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
-                <label for="name"
-                  class="absolute left-3 top-2 text-sm text-gray-500 transition-all peer-placeholder-shown:top-3.5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400">
-                  Your Name
-                </label>
+           
               </div>
               <div class="relative">
-                <input type="email" id="email" placeholder=" " required
+                <input type="email" id="email" placeholder="Email " required
                   class="peer w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
-                <label for="email"
-                  class="absolute left-3 top-2 text-sm text-gray-500 transition-all peer-placeholder-shown:top-3.5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400">
-                  Your Email
-                </label>
+            
               </div>
             </div>
 
             <div class="relative mb-6">
-              <input type="text" id="subject" placeholder=" " required
+              <input type="text" id="subject" placeholder="Subject " required
                 class="peer w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
-              <label for="subject"
-                class="absolute left-3 top-2 text-sm text-gray-500 transition-all peer-placeholder-shown:top-3.5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400">
-                Subject
-              </label>
+            
             </div>
 
             <div class="relative mb-6">
-              <textarea rows="5" id="message" placeholder=" " required
+              <textarea rows="5" id="message" placeholder="Message " required
                 class="peer w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
-              <label for="message"
-                class="absolute left-3 top-2 text-sm text-gray-500 transition-all peer-placeholder-shown:top-3.5 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400">
-                Message
-              </label>
+        
             </div>
 
             <div class="text-center">
@@ -234,19 +219,54 @@ function contactForm() {
         </div>
       </div>
     </div>
-
-    <!-- Optional Lottie -->
-    <!--
-    <div class="text-center mt-10">
-      <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_jcikwtux.json" background="transparent"
-        speed="1" style="width: 150px; height: 150px;" loop autoplay></lottie-player>
-    </div>
-    -->
   </div>
   `;
 
   document.body.appendChild(form);
+
+  // 🛡️ Submit handling with fake API call
+  const contactFormElement = document.getElementById("contact-form");
+  contactFormElement.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    // Collect form data
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const subject = document.getElementById("subject").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    const formData = {
+      name,
+      email,
+      subject,
+      message
+    };
+
+    console.log("Sending Form Data:", formData);
+
+    try {
+      // 🔥 Replace this URL with your actual backend endpoint
+      const response = await fetch("https://your-api-endpoint.com/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData)
+      });
+
+      if (response.ok) {
+        alert("Thank you for contacting us!");
+        contactFormElement.reset();
+      } else {
+        alert("Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error submitting contact form:", error);
+      alert("Failed to send. Please check your network.");
+    }
+  });
 }
+
 
 
 

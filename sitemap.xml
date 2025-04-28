@@ -1,23 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset 
-  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-  <url>
-    <loc>https://yourdomain.com/</loc>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  <url>
-    <loc>https://yourdomain.com/about.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://yourdomain.com/contact.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!--  created with Free Online Sitemap Generator www.xml-sitemaps.com  -->
+<url>
+<loc>https://assetmanagment.in/</loc>
+<lastmod>2025-04-03T11:13:01+00:00</lastmod>
+<priority>1.00</priority>
+</url>
+<url>
+<loc>https://assetmanagment.in/about-us.html</loc>
+<lastmod>2025-04-03T11:13:01+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://assetmanagment.in/services.html</loc>
+<lastmod>2025-04-03T11:13:01+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://assetmanagment.in/features-for-consultants.html</loc>
+<lastmod>2025-04-03T11:13:01+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://assetmanagment.in/features-for-customers.html</loc>
+<lastmod>2025-04-03T11:13:01+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://assetmanagment.in/contact-us.html</loc>
+<lastmod>2025-04-03T11:13:01+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://assetmanagment.in/subscriptions.html</loc>
+<lastmod>2025-04-03T11:13:01+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://assetmanagment.in/blogs.html</loc>
+<lastmod>2025-04-03T11:13:01+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://assetmanagment.in/.features-for-customers.html</loc>
+<lastmod>2025-04-03T11:13:01+00:00</lastmod>
+<priority>0.64</priority>
+</url>
+<url>
+<loc>https://assetmanagment.in/blog-details.html</loc>
+<lastmod>2025-04-03T11:13:01+00:00</lastmod>
+<priority>0.64</priority>
+</url>
 </urlset>
