@@ -1,179 +1,474 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asset-Managment</title>
-
-    <!-- aos -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Title will be set dynamically -->
+    <title>Blog Post | Asset Management</title>
 
     <!-- TailwindCSS -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- FontAwesome CDN (Free Version) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="/css/style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <!-- Link your custom CSS -->
+    <link rel="stylesheet" href="/css/style.css" />
 
-    <!--     global code below  -->
-    <meta name="google-site-verification" content="EiBP5TuIVdl3PHKAFDq-5M8cWqfTdcEOK4x4sVgGiDc" />
+    <!-- SEO / Meta Tags (Some will be updated dynamically) -->
+    <meta
+      name="description"
+      content="Read the full blog post from Asset Management."
+    />
+    <meta property="og:type" content="article" />
+    <meta property="og:site_name" content="Asset Management" />
+    <!-- Other meta tags (like OG image, title, description, canonical) will be updated via JS -->
+    <meta
+      name="google-site-verification"
+      content="EiBP5TuIVdl3PHKAFDq-5M8cWqfTdcEOK4x4sVgGiDc"
+    />
 
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-PJHGL5MGJM"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-PJHGL5MGJM"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-PJHGL5MGJM');
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-PJHGL5MGJM");
     </script>
+    <!-- Add any specific styles for blog content if needed -->
+    <style>
+      /* Loading state */
+      .content-loading::after {
+        content: "Loading content...";
+        display: block;
+        text-align: center;
+        padding: 4rem 0;
+        font-size: 1.125rem;
+        color: #6b7280; /* gray-500 */
+      }
 
-</head>
+      .blog-content-container :first-child {
+        margin-top: 0;
+      }
 
-<body>
+      /* List styles */
+      .blog-content-container ul,
+      .blog-content-container ol {
+        padding: 0 1rem;
+        margin: 1.25rem 1rem 1.25rem 0.4rem;
+      }
 
+      .blog-content-container ul li p,
+      .blog-content-container ol li p {
+        margin-top: 0.25em;
+        margin-bottom: 0.25em;
+      }
 
-    <main class="relative ">
-        <!-- Navbar -->
-        <header class="relative w-full py-4 px-4 shadow bg-white top-0 z-50" id="navbar">
-     
-        </header>
+      .blog-content-container ul {
+        list-style-type: disc;
+      }
 
-        <!-- Hero Section -->
-        <!-- <section
-            class="relative h-[65vh] flex items-center justify-start z-10 w-full bg-[url('/images/hero-bg.jpg')] bg-cover bg-center bg-no-repeat" >
-            
-            <div class="absolute inset-0 bg-black opacity-50"></div>
-            <div class="px-8 text-white max-w-2xl p-6 rounded-md text-left z-10" data-aos="fade-up">
-                <h1 class="text-4xl font-bold">Blogs</h1>
-                
+      .blog-content-container ol {
+        list-style-type: decimal;
+      }
+
+      .blog-content-container a {
+        color: #66437a;
+        text-decoration: underline;
+      }
+      .blog-content-container a:hover {
+        color: #66437a;
+        text-decoration: underline;
+      }
+
+      /* Heading styles */
+      .blog-content-container h1,
+      .blog-content-container h2,
+      .blog-content-container h3,
+      .blog-content-container h4,
+      .blog-content-container h5,
+      .blog-content-container h6 {
+        line-height: 1.1;
+        margin-top: 2.5rem;
+        text-wrap: pretty;
+      }
+
+      .blog-content-container h1,
+      .blog-content-container h2 {
+        margin-top: 3.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .blog-content-container h1 {
+        font-size: 3rem;
+      }
+
+      .blog-content-container h2 {
+        font-size: 2rem;
+      }
+
+      .blog-content-container h3 {
+        font-size: 1.5rem;
+      }
+
+      .blog-content-container h4,
+      .blog-content-container h5,
+      .blog-content-container h6 {
+        font-size: 1.2rem;
+      }
+
+      .blog-content-container em {
+        font-style: italic;
+      }
+
+      .blog-content-container strong {
+        font-weight: bold;
+      }
+
+      /* Code and preformatted text styles */
+      .blog-content-container code {
+        background-color: var(--purple-light);
+        border-radius: 0.4rem;
+        color: var(--black);
+        font-size: 0.85rem;
+        padding: 0.25em 0.3em;
+      }
+
+      .blog-content-container pre {
+        background: var(--black);
+        border-radius: 0.5rem;
+        color: var(--white);
+        font-family: "JetBrainsMono", monospace;
+        margin: 1.5rem 0;
+        padding: 0.75rem 1rem;
+      }
+
+      .blog-content-container pre code {
+        background: none;
+        color: inherit;
+        font-size: 0.8rem;
+        padding: 0;
+      }
+
+      .blog-content-container blockquote {
+        border-left: 3px solid var(--gray-3);
+        margin: 1.5rem 0;
+        padding-left: 1rem;
+      }
+
+      .blog-content-container hr {
+        border: none;
+        border-top: 1px solid var(--gray-2);
+        margin: 2rem 0;
+      }
+
+      /* Add this at the bottom of your CSS file */
+      .prose {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 1rem;
+      }
+
+      .prose :first-child {
+        margin-top: 0;
+      }
+
+      .prose img {
+        max-width: 100%;
+        height: auto;
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-100">
+    <header
+      class="relative w-full py-4 px-4 shadow bg-white fixed top-0 z-50"
+      id="navbar"
+    >
+      <!-- Navbar content loaded by index.js -->
+      <p class="text-center text-gray-500">Navbar Placeholder</p>
+    </header>
+
+    <main class="pt-24 pb-16">
+      <!-- Adjust pt based on navbar height -->
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <!-- Back Button -->
+        <div class="mb-6">
+          <a
+            href="blogs.html"
+            class="text-emerald-600 hover:text-emerald-800 inline-flex items-center"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5 mr-1"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            Back to Blog List
+          </a>
+        </div>
+
+        <article
+          id="blog-article"
+          class="bg-white p-6 sm:p-8 lg:p-10 rounded-lg shadow-lg"
+        >
+          <!-- Content will be loaded here -->
+          <div id="loading-indicator" class="text-center py-10 text-gray-600">
+            <i class="fas fa-spinner fa-spin mr-2 text-2xl"></i> Loading blog
+            post...
+          </div>
+          <div id="error-display" class="text-center py-10 text-red-600 hidden">
+            Error loading blog post.
+          </div>
+
+          <div id="blog-content-wrapper" class="hidden">
+            <!-- Hide until loaded -->
+            <!-- Meta Info -->
+            <div class="mb-4 text-sm text-gray-500">
+              <span id="blog-category" class="font-medium text-emerald-600"
+                >Category</span
+              >
+              <span class="mx-2">•</span>
+              <span id="blog-publish-date">Publish Date</span>
             </div>
-        </section> -->
 
-        <section class="py-2 px-16 md:px-16">
+            <!-- Title -->
+            <h1
+              id="blog-title"
+              class="text-3xl md:text-4xl font-bold text-gray-900 mb-5"
+            >
+              Blog Title Placeholder
+            </h1>
 
+            <!-- Featured Image -->
+            <img
+              id="blog-image"
+              src=""
+              alt=""
+              class="w-full h-auto max-h-[500px] object-cover rounded-lg mb-8 shadow-md"
+            />
 
-
-            <!-- blogs -->
-            <div class="py-12 px-6 max-w-6xl mx-auto">
-                <!-- Heading -->
-                <div class="">
-                    <h2 class="text-4xl font-bold gap-2">
-                        Test blog 1
-                    </h2>
-                    <p class="font-bold text-green-600 !text-base">MAR 24, 2025</p>
-                    <!-- <button class="bg-yellow-400 text-black px-4 py-2 font-semibold ">OUR BLOG</button> -->
-                </div>
-
-
-                <div class="mt-8 flex flex-col gap-6">
-                    <img src="images/blog1.png" alt="Blog 1" class="w-full object-cover">
-                    <div class="flex flex-col gap-4 text-lg">
-                        <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus quasi obcaecati nostrum
-                            perferendis rem, quibusdam quidem necessitatibus quas accusantium voluptatem consequatur
-                            fugit corrupti, nihil repellat facere provident nam, ducimus doloremque! Lorem ipsum dolor,
-                            sit amet consectetur adipisicing elit. Temporibus consectetur dolores officiis? Sunt vel
-                            officia voluptatem dignissimos quisquam iure harum accusantium aperiam nihil recusandae aut
-                            deserunt, provident cumque eos. Ipsum.
-                            Deserunt corporis beatae, doloremque, ipsa repellendus accusantium impedit culpa amet cum
-                            rerum inventore porro architecto voluptate alias harum sint cumque quae, quasi ullam.
-                            Aliquid enim at consequuntur aspernatur cumque sit.
-                            Assumenda quam, repellendus cumque temporibus facilis pariatur commodi nesciunt enim
-                            accusamus error ducimus ex quasi deserunt sapiente! Sint, dolores commodi! Ea consectetur
-                            corporis incidunt eveniet distinctio iste aspernatur perferendis aut?
-                            Rerum amet veritatis delectus quod, at, numquam vitae nostrum cumque quidem obcaecati
-                            maiores. Minima possimus nobis dignissimos ex nemo ducimus. Nihil, expedita! Pariatur
-                            voluptatum mollitia deserunt delectus! Laborum, id suscipit!
-                        <p> Inventore delectus, quod quam quaerat repudiandae rerum voluptas natus provident sit hic
-                            corrupti libero quidem nam quibusdam aliquid earum repellendus, nesciunt reiciendis
-                            incidunt, dignissimos quia. Cum dolorem sed sit maiores.
-                            Impedit mollitia, deserunt molestias, natus nostrum asperiores eligendi, quia odio officia
-                            minus sint id! Eos obcaecati aliquam provident placeat perferendis perspiciatis, saepe harum
-                            aut, inventore veniam unde debitis, laborum eligendi!
-                            Laboriosam, beatae illum pariatur ipsa illo provident. Esse, vitae! Harum sequi, nulla
-                            cumque voluptatem cum vel ipsa vero perferendis deleniti dolorem officiis nesciunt similique
-                            tempora, eius nam accusantium mollitia a?</p>
-                            <p>
-                                Ex ratione provident beatae dolor enim pariatur veritatis sunt expedita asperiores
-                                laudantium quis quaerat nihil soluta odio eius ipsum nobis vitae voluptates eum tempora,
-                                voluptas quasi? Explicabo ex quaerat labore?
-                                Enim molestias, temporibus id itaque quidem totam sint maxime accusantium corporis aliquam
-                                ea dignissimos consequatur earum in laborum dolores expedita voluptas laudantium eaque
-                                aperiam? Nisi facere et at dignissimos neque.
-                                Impedit rem ab excepturi deserunt quasi est delectus ipsam accusamus quia provident
-                                cupiditate incidunt, expedita consequuntur harum voluptatibus culpa optio dignissimos
-                                aliquam qui iste voluptatem ea fugit ut assumenda! Vero?
-                                Dicta fuga magni esse veritatis reiciendis debitis exercitationem nobis quisquam aut, odit
-                                quibusdam delectus neque nam modi provident temporibus ipsam reprehenderit consectetur?
-                                Ipsum sunt beatae itaque saepe tempora harum enim.
-                                Accusantium hic velit doloribus sint nostrum nihil, dolore dicta animi illo qui ullam iure,
-                                expedita minus suscipit, cumque tempora. Ipsum deserunt repellat asperiores explicabo iusto
-                                reprehenderit quia odio eligendi dolores.
-                            </p>
-
-                        </p>
-                       
-                        <p>
-                            odio qui excepturi quos aliquid ratione. Saepe laboriosam quos ipsa. Modi magni porro sed a
-                            recusandae corporis impedit? Doloribus.
-                            Esse quibusdam earum, reprehenderit unde vero incidunt alias odio nostrum officia adipisci
-                            labore quos debitis, impedit at quaerat iste corporis! Vel repellendus, temporibus fugit
-                            fuga quisquam odio optio ducimus itaque.
-                            Veniam voluptate quo, cupiditate harum laboriosam voluptatum esse nesciunt rerum consequatur
-                            sed at maxime fugit enim ut ratione eligendi laudantium voluptas reprehenderit, ullam dicta
-                            beatae? Magnam et dolore velit molestiae.
-                            Delectus pariatur quos similique veniam maxime id deserunt, aperiam maiores, eos nulla
-                            architecto est doloribus voluptatibus neque eveniet quisquam odit beatae asperiores
-                            molestiae numquam repudiandae officia suscipit, odio ab. In.
-                            Vero tenetur autem iste ullam, ipsum corporis odio. Quis reprehenderit itaque officia
-                            necessitatibus error laboriosam eum excepturi, nulla esse vitae qui. Id, architecto
-                            repudiandae consequatur quasi magni adipisci enim necessitatibus!
-                        </p>
-                    </div>
-                </div>
-
+            <!-- Main Content -->
+            <div id="blog-content-container" class="prose prose-lg max-w-none">
+              <!-- The fetched HTML content goes here -->
             </div>
-
-
-
-
-            </div>
-
-
-        </section>
-
-
-     
-
+          </div>
+        </article>
+      </div>
     </main>
 
+    <footer id="footer" class="bg-gray-800 text-white p-10">
+      <p class="text-center">Footer Placeholder</p>
+    </footer>
 
-    <!-- aos -->
     <script>
-        AOS.init();
-        function toggleFAQ(id) {
-            const content = document.getElementById(`faq-${id}`);
-            const icon = document.getElementById(`icon-${id}`);
-            const question = document.getElementById(`question-${id}`);
+      // Helper function to safely escape HTML (for setting text content, alt attributes etc.)
+      function escapeHTML(str) {
+        if (str === null || str === undefined) return "";
+        return String(str)
+          .replace(/&/g, "&")
+          .replace(/</g, "<")
+          .replace(/>/g, ">")
+          .replace(/"/g, '"');
+      }
 
-            if (content.classList.contains("hidden")) {
-                // Show answer, rotate icon, and change text color
-                content.classList.remove("hidden");
-                question.classList.add("text-blue-600");
-                icon.classList.add("rotate-90");
-                icon.classList.replace("text-black", "text-blue-600");
-            } else {
-                // Hide answer, reset icon, and text color
-                content.classList.add("hidden");
-                question.classList.remove("text-blue-600");
-                icon.classList.remove("rotate-90");
-                icon.classList.replace("text-blue-600", "text-black");
-            }
+      // Helper function to format date
+      function formatDate(dateString) {
+        if (!dateString) return "N/A";
+        try {
+          // More detailed format for the detail page
+          const options = { year: "numeric", month: "long", day: "numeric" };
+          return new Date(dateString).toLocaleDateString("en-US", options);
+        } catch (e) {
+          console.error("Error formatting date:", dateString, e);
+          return "Invalid Date";
         }
-    </script>
-      <script src="./js/index.js"></script>
- 
-</body>
+      }
 
+      // Function to update meta tags
+      function updateMetaTags(blog) {
+        const safeTitle = escapeHTML(blog.title);
+        // Create a simple text description from the beginning of the content
+        const tempDiv = document.createElement("div");
+        tempDiv.innerHTML = blog.content || "";
+        const plainTextContent = tempDiv.textContent || tempDiv.innerText || "";
+        const description = escapeHTML(
+          plainTextContent.substring(0, 160).replace(/\s+/g, " ").trim() + "..."
+        );
+
+        document.title = `${safeTitle} | Asset Management`;
+
+        // Update standard description meta tag
+        let metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) metaDesc.setAttribute("content", description);
+        else {
+          // Add if missing
+          metaDesc = document.createElement("meta");
+          metaDesc.setAttribute("name", "description");
+          metaDesc.setAttribute("content", description);
+          document.head.appendChild(metaDesc);
+        }
+
+        // Update OG tags
+        document
+          .querySelector('meta[property="og:title"]')
+          ?.setAttribute("content", safeTitle);
+        document
+          .querySelector('meta[property="og:description"]')
+          ?.setAttribute("content", description);
+        document
+          .querySelector('meta[property="og:image"]')
+          ?.setAttribute("content", escapeHTML(blog.featuredImage || "")); // Use featured image for OG
+        document
+          .querySelector('meta[property="og:url"]')
+          ?.setAttribute("content", window.location.href);
+
+        // Update Canonical tag
+        let canonicalLink = document.querySelector('link[rel="canonical"]');
+        if (canonicalLink)
+          canonicalLink.setAttribute("href", window.location.href);
+        else {
+          // Add if missing
+          canonicalLink = document.createElement("link");
+          canonicalLink.setAttribute("rel", "canonical");
+          canonicalLink.setAttribute("href", window.location.href);
+          document.head.appendChild(canonicalLink);
+        }
+
+        // Update Twitter card tags (optional, similar to OG)
+        document
+          .querySelector('meta[name="twitter:title"]')
+          ?.setAttribute("content", safeTitle);
+        document
+          .querySelector('meta[name="twitter:description"]')
+          ?.setAttribute("content", description);
+        document
+          .querySelector('meta[name="twitter:image"]')
+          ?.setAttribute("content", escapeHTML(blog.featuredImage || ""));
+      }
+
+      // Function to fetch and display blog details
+      async function loadBlogDetails() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const blogId = urlParams.get("id");
+
+        const loadingIndicator = document.getElementById("loading-indicator");
+        const errorDisplay = document.getElementById("error-display");
+        const contentWrapper = document.getElementById("blog-content-wrapper");
+
+        if (!blogId) {
+          console.error("Blog ID not found in URL.");
+          loadingIndicator.style.display = "none";
+          errorDisplay.textContent = "Error: Blog ID is missing in the URL.";
+          errorDisplay.classList.remove("hidden");
+          return;
+        }
+
+        // --- IMPORTANT: Choose ONE API strategy ---
+
+        // Strategy 1: Fetch the specific blog by ID (Requires API endpoint like /api/v1/blogs/:id)
+        const apiUrl = `http://localhost:8000/api/v1/blogs/${blogId}`;
+
+        // // Strategy 2: Fetch ALL published blogs and filter (Use if no specific endpoint exists)
+        // const apiUrl = 'http://localhost:8000/api/v1/blogs/publish';
+
+        try {
+          const response = await fetch(apiUrl);
+
+          if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+          }
+
+          let responseData = await response.json();
+
+          // // If using Strategy 2 (Fetch all), filter the result:
+          // if (Array.isArray(blogData)) {
+          //     const foundBlog = blogData.find(blog => blog._id === blogId);
+          //     if (!foundBlog) throw new Error('Blog post not found in the published list.');
+          //     blogData = foundBlog; // Use the found blog data
+          // } else if (!blogData || typeof blogData !== 'object' || !blogData._id) {
+          //      // Basic validation if fetching single (Strategy 1)
+          //      throw new Error('Invalid blog data received from API.');
+          // }
+          let blogData = responseData?.data; // Adjust based on your API response structure
+
+          console.log(blogData);
+          // --- Populate the page ---
+          if (!blogData || typeof blogData !== "object" || !blogData._id) {
+            // Basic validation (adjust if API returns data nested, e.g., result.data)
+            throw new Error("Invalid blog data received from API.");
+          }
+
+          document.getElementById("blog-category").textContent = escapeHTML(
+            blogData.category || "Uncategorized"
+          );
+          document.getElementById("blog-publish-date").textContent = formatDate(
+            blogData.publishedAt
+          );
+          document.getElementById("blog-title").textContent = escapeHTML(
+            blogData.title
+          );
+
+          const imgElement = document.getElementById("blog-image");
+          imgElement.src = escapeHTML(blogData.featuredImage || "");
+          imgElement.alt = escapeHTML(blogData.title || "Blog post image");
+          if (!blogData.featuredImage) {
+            imgElement.style.display = "none"; // Hide image if no URL
+          }
+
+          // Set the HTML content safely
+          // WARNING: Only use innerHTML if you TRUST the source of blogData.content.
+          // If the content comes from user input via a WYSIWYG editor stored in your DB,
+          // ensure it's properly sanitized server-side before saving to prevent XSS attacks.
+          document.getElementById("blog-content-container").innerHTML =
+            blogData.content || "<p>Content not available.</p>";
+
+          // Update Meta Tags for SEO and Sharing
+          updateMetaTags(blogData);
+
+          // Show content, hide loading/error
+          loadingIndicator.style.display = "none";
+          errorDisplay.classList.add("hidden");
+          contentWrapper.classList.remove("hidden");
+        } catch (error) {
+          console.error("Error fetching blog details:", error);
+          loadingIndicator.style.display = "none";
+          errorDisplay.textContent = `Error loading blog post: ${error.message}`;
+          errorDisplay.classList.remove("hidden");
+          contentWrapper.classList.add("hidden");
+        }
+      }
+
+      // Load common elements and then blog details
+      document.addEventListener("DOMContentLoaded", () => {
+        if (typeof loadCommonElements === "function") {
+          loadCommonElements()
+            .then(() => {
+              loadBlogDetails();
+            })
+            .catch((err) => {
+              console.error("Error loading common elements:", err);
+              loadBlogDetails();
+            });
+        } else {
+          loadBlogDetails();
+        }
+      });
+    </script>
+    <!-- Link to your existing index.js if it handles navbar/footer/mobile menu -->
+    <script src="./js/index.js"></script>
+  </body>
 </html>

@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asset-Managment</title>
+    <!-- Update Title appropriately -->
+    <title>Blog | Asset Management</title>
 
     <!-- aos -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -14,11 +15,18 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- FontAwesome CDN (Free Version) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 
-
-    <!--     global code below  -->
+    <!-- SEO and Meta Tags -->
+    <meta name="description" content="Read the latest insights and articles on financial management, CRM strategies, and industry news from Asset Management.">
     <meta name="google-site-verification" content="EiBP5TuIVdl3PHKAFDq-5M8cWqfTdcEOK4x4sVgGiDc" />
+    <!-- Add relevant Open Graph, Twitter Card tags for the blog list page -->
+    <meta property="og:title" content="Blog | Asset Management" />
+    <meta property="og:description" content="Read the latest insights and articles on financial management, CRM strategies, and industry news from Asset Management." />
+    <meta property="og:image" content="https://assetmanagment.in/images/blog-og-image.jpg" /> <!-- Optional: Add a generic blog OG image -->
+    <meta property="og:url" content="https://assetmanagment.in/blogs.html" /> <!-- Assuming this page is blogs.html -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="canonical" href="https://assetmanagment.in/blogs.html" />
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-PJHGL5MGJM"></script>
@@ -28,132 +36,240 @@
       gtag('js', new Date());
       gtag('config', 'G-PJHGL5MGJM');
     </script>
+
+    <style>
+        /* Optional: Add styles for loading state */
+        .loading-placeholder::before {
+            content: '';
+            display: block;
+            padding-top: 56.25%; /* Aspect ratio for image placeholder */
+            background-color: #e2e8f0; /* gray-300 */
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+            animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        .loading-placeholder div { background-color: #e2e8f0; height: 1rem; margin-bottom: 0.5rem; border-radius: 0.25rem; animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;}
+        .loading-placeholder div:last-child { width: 60%; }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: .5; }
+        }
+    </style>
 </head>
 
-<body>
-
+<body class="bg-gray-50">
 
     <main class="relative ">
         <!-- Navbar -->
-        <header class="relative w-full py-4 px-4 shadow bg-white top-0 z-50" id="navbar">
-
+        <header class="relative w-full py-4 px-4 shadow bg-white fixed top-0 z-50" id="navbar">
+            <!-- Navbar content loaded by index.js -->
+             <p class="text-center text-gray-500">Navbar Placeholder</p>
         </header>
-        <div id="featurecustomer"  ></div>   
+
+        <!-- Remove the empty div placeholder if it's not needed -->
+        <!-- <div id="featurecustomer"></div> -->
+
         <!-- Hero Section -->
         <section
-            class="relative h-[65vh] flex items-center justify-start z-10 w-full bg-[url('/images/hero-bg.jpg')] bg-cover bg-center bg-no-repeat" >
+            class="relative h-[55vh] md:h-[65vh] flex items-center justify-start z-10 w-full bg-[url('/images/hero-bg.jpg')] bg-cover bg-center bg-no-repeat mt-[72px]"> <!-- Adjust mt value based on actual navbar height -->
             <!-- Background Overlay -->
-            <div class="absolute inset-0 bg-black opacity-50"></div>
-            <div class="px-8 text-white max-w-2xl p-6 rounded-md text-left z-10" data-aos="fade-up">
-                <h1 class="text-4xl font-bold">Blogs</h1>
-                <!-- <h2 class="text-4xl font-bold mt-2">Asset Management Solutions</h2> -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-black/40"></div>
+            <div class="relative px-8 text-white max-w-2xl p-6 rounded-md text-left z-10" data-aos="fade-up">
+                <h1 class="text-4xl sm:text-5xl font-bold">Our Insights</h1>
+                <p class="mt-2 text-lg text-gray-200">Stay updated with the latest news and articles.</p>
             </div>
         </section>
-          
 
-        <section class="py-2 px-16 md:px-16">
-
-
-
-            <!-- blogs -->
-            <div class="py-12 px-6 max-w-6xl mx-auto">
+        <!-- Main Blog Section -->
+        <section class="py-16 px-4 md:px-8 lg:px-16">
+            <div class="max-w-7xl mx-auto">
                 <!-- Heading -->
-                <div class="flex justify-between items-center">
-                    <h2 class="text-3xl font-bold">Latest From the <span class="text-green-600">Blog</span></h2>
-                    <!-- <button class="bg-yellow-400 text-black px-4 py-2 font-semibold ">OUR BLOG</button> -->
+                <div class="mb-12 text-center md:text-left">
+                    <h2 class="text-3xl font-bold text-gray-800">Latest From the <span class="text-emerald-600">Blog</span></h2>
+                    <p class="text-gray-600 mt-2">Insights, news, and updates from the Asset Management team.</p>
                 </div>
 
-                <!-- Blog Grid -->
-                <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Blog Grid Container -->
+                <div id="blog-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Loading Skeletons (Optional but recommended) -->
+                    <div class="loading-placeholder bg-white shadow-md rounded-lg p-4"><div></div><div></div><div></div></div>
+                    <div class="loading-placeholder bg-white shadow-md rounded-lg p-4 hidden sm:block"><div></div><div></div><div></div></div>
+                    <div class="loading-placeholder bg-white shadow-md rounded-lg p-4 hidden lg:block"><div></div><div></div><div></div></div>
 
-                    <!-- Blog 1 -->
-                    <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                        <img src="images/blog1.png" alt="Blog 1" class="w-full h-48 object-cover">
-                        <div class="p-4">
-                            <p class="text-gray-500 text-sm">UI DESIGN <span class="text-red-500">•</span> MAY 24, 2022
-                            </p>
-                            <h3 class="font-semibold text-lg mt-1">Designers are meant to be loved, not to be
-                                understood.</h3>
-                            <a href="/blog-details.html" class="text-green-600 font-medium mt-2 flex items-center">
-                                READ MORE <span class="ml-2">→</span>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Blog 2 -->
-                    <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                        <img src="images/blog2.png" alt="Blog 2" class="w-full h-48 object-cover">
-                        <div class="p-4">
-                            <p class="text-gray-500 text-sm">UI DESIGN <span class="text-red-500">•</span> MAY 24, 2022
-                            </p>
-                            <h3 class="font-semibold text-lg mt-1">Designers are meant to be loved, not to be
-                                understood.</h3>
-                            <a href="/blog-details.html" class="text-green-600 font-medium mt-2 flex items-center">
-                                READ MORE <span class="ml-2">→</span>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Blog 3 -->
-                    <div class="bg-white shadow-md rounded-lg overflow-hidden">
-                        <img src="images/blog3.png" alt="Blog 3" class="w-full h-48 object-cover">
-                        <div class="p-4">
-                            <p class="text-gray-500 text-sm">UI DESIGN <span class="text-red-500">•</span> MAY 24, 2022
-                            </p>
-                            <h3 class="font-semibold text-lg mt-1">Designers are meant to be loved, not to be
-                                understood.</h3>
-                            <a href="/blog-details.html" class="text-green-600 font-medium mt-2 flex items-center">
-                                READ MORE <span class="ml-2">→</span>
-                            </a>
-                        </div>
-                    </div>
+                    <!-- Blog cards will be injected here by JavaScript -->
+                     <p id="no-blogs-message" class="text-center col-span-full text-gray-600 hidden">No blog posts found.</p>
+                     <p id="error-message" class="text-center col-span-full text-red-600 hidden">Could not load blog posts.</p>
 
                 </div>
             </div>
-
-
-            <!-- contact us -->
-       
-            
-
-
-
-            </div>
-
-
         </section>
 
-
-        
+        <!-- Contact Us section can remain here if needed -->
+        <!-- <section id="contact-us">...</section> -->
 
     </main>
 
+    <footer id="footer" class="bg-gray-800 text-white p-10">
+         <p class="text-center">Footer Placeholder</p>
+    </footer>
 
-    <!-- aos -->
+    <!-- AOS Init Script -->
     <script>
-        AOS.init();
-        function toggleFAQ(id) {
-            const content = document.getElementById(`faq-${id}`);
-            const icon = document.getElementById(`icon-${id}`);
-            const question = document.getElementById(`question-${id}`);
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
 
-            if (content.classList.contains("hidden")) {
-                // Show answer, rotate icon, and change text color
-                content.classList.remove("hidden");
-                question.classList.add("text-blue-600");
-                icon.classList.add("rotate-90");
-                icon.classList.replace("text-black", "text-blue-600");
-            } else {
-                // Hide answer, reset icon, and text color
-                content.classList.add("hidden");
-                question.classList.remove("text-blue-600");
-                icon.classList.remove("rotate-90");
-                icon.classList.replace("text-blue-600", "text-black");
+    <!-- Blog Loading Script -->
+    <script>
+        // Helper function to safely escape HTML
+        function escapeHTML(str) {
+            if (str === null || str === undefined) return '';
+            return String(str)
+                .replace(/&/g, '&')
+                .replace(/</g, '<')
+                .replace(/>/g, '>')
+                .replace(/"/g, '"')
+        }
+
+        // Helper function to format date
+        function formatDate(dateString) {
+            if (!dateString) return 'N/A';
+            try {
+                const options = { year: 'numeric', month: 'short', day: 'numeric' };
+                return new Date(dateString).toLocaleDateString('en-US', options).toUpperCase();
+            } catch (e) {
+                console.error("Error formatting date:", dateString, e);
+                return 'Invalid Date';
             }
         }
-    </script>
-    <script src="./js/index.js"></script>
-  
-</body>
 
+        // Function to create HTML for a single blog card
+        function createBlogCardHTML(blog) {
+            if (!blog || !blog._id || !blog.title || !blog.featuredImage) {
+                 console.warn("Skipping blog post due to missing essential data:", blog);
+                 return ''; // Don't render incomplete cards
+            }
+
+            const title = escapeHTML(blog.title);
+            const imageUrl = escapeHTML(blog.featuredImage);
+            const category = escapeHTML(blog.category || 'Uncategorized'); // Default category
+            const publishedDate = formatDate(blog.publishedAt);
+            const detailUrl = `blog-details.html?id=${blog._id}`; // Link to detail page with ID
+
+            // Use AOS data attribute for animation on each card
+            return `
+                <div class="bg-white shadow-lg rounded-lg overflow-hidden flex flex-col h-full transform hover:scale-[1.02] transition-transform duration-300" data-aos="fade-up">
+                    <a href="${detailUrl}" class="block">
+                        <img src="${imageUrl}" alt="${title}" class="w-full h-48 object-cover">
+                    </a>
+                    <div class="p-5 flex flex-col flex-grow">
+                        <p class="text-gray-500 text-xs font-medium mb-2">
+                            ${category} <span class="text-orange-500 mx-1">•</span> ${publishedDate}
+                        </p>
+                        <h3 class="font-semibold text-lg mt-1 text-gray-800 mb-3 clamp-2-lines"> <!-- Clamps title to 2 lines -->
+                            <a href="${detailUrl}" class="hover:text-emerald-600 transition-colors">${title}</a>
+                        </h3>
+                        <div class="mt-auto"> <!-- Pushes the link to the bottom -->
+                            <a href="${detailUrl}" class="text-emerald-600 font-medium text-sm inline-flex items-center group">
+                                READ MORE
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                  <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Function to fetch blogs and render them
+        async function loadBlogs() {
+            const gridContainer = document.getElementById('blog-grid');
+            const noBlogsMessage = document.getElementById('no-blogs-message');
+            const errorMessage = document.getElementById('error-message');
+            const apiUrl = 'http://localhost:8000/api/v1/blogs/publish'; // Your API endpoint
+
+            // Clear previous error/no blogs messages and keep loading indicators
+             errorMessage.classList.add('hidden');
+             noBlogsMessage.classList.add('hidden');
+
+            try {
+                const response = await fetch(apiUrl);
+
+                // Clear loading skeletons once fetch starts or finishes
+                gridContainer.querySelectorAll('.loading-placeholder').forEach(el => el.remove());
+
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+
+                const blogs = await response.json(); // Assuming API returns array directly
+
+                if (!Array.isArray(blogs)) {
+                     throw new Error('Invalid API response format. Expected an array.');
+                }
+
+                if (blogs.length === 0) {
+                    noBlogsMessage.classList.remove('hidden');
+                    gridContainer.innerHTML = ''; // Clear just in case
+                    gridContainer.appendChild(noBlogsMessage); // Append message inside grid
+                    return;
+                }
+
+                // Generate and append HTML for each blog
+                let blogHTML = '';
+                blogs.forEach(blog => {
+                    blogHTML += createBlogCardHTML(blog);
+                });
+                gridContainer.innerHTML = blogHTML; // Replace content efficiently
+
+                // Refresh AOS after content is added
+                setTimeout(() => {
+                    AOS.refresh();
+                }, 100);
+
+            } catch (error) {
+                console.error('Error fetching or rendering blogs:', error);
+                 gridContainer.innerHTML = ''; // Clear grid on error
+                 errorMessage.textContent = `Could not load blog posts. ${error.message}`;
+                 errorMessage.classList.remove('hidden');
+                 gridContainer.appendChild(errorMessage); // Append message inside grid
+            }
+        }
+
+        // Load common elements (navbar, footer) and then load blogs
+        document.addEventListener('DOMContentLoaded', () => {
+             // Call function from index.js if it loads navbar/footer
+             if (typeof loadCommonElements === 'function') {
+                 loadCommonElements().then(() => {
+                     loadBlogs(); // Load blogs after common elements are ready
+                 }).catch(err => {
+                    console.error("Error loading common elements:", err);
+                    loadBlogs(); // Still try to load blogs even if common fails
+                 });
+             } else {
+                 loadBlogs(); // If index.js doesn't handle it, load blogs directly
+             }
+             // Other initializations if needed
+        });
+
+    </script>
+     <!-- Add clamp-lines utility to your style.css or a style block if not using a utility library that provides it -->
+    <style>
+        .clamp-2-lines {
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2; /* Limit to 2 lines */
+            line-height: 1.4; /* Adjust line-height as needed */
+            max-height: 2.8em; /* line-height * number of lines */
+        }
+    </style>
+    <!-- Link to your existing index.js if it handles navbar/footer/mobile menu -->
+    <script src="./js/index.js"></script>
+
+</body>
 </html>
