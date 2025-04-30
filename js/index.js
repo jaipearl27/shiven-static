@@ -246,7 +246,7 @@ function contactForm() {
 
     try {
       // 🔥 Replace this URL with your actual backend endpoint
-      const response = await fetch("https://your-api-endpoint.com/contact", {
+      const response = await fetch("http://localhost:8000/api/v1/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -269,6 +269,146 @@ function contactForm() {
 
 
 
+async function getPrivacyPolicy() {
+  const privacyPolicyRef = document.getElementById("privacy-policy");
+
+  try {
+    const response = await fetch("http://localhost:8000/api/v1/compliance-document/privacy-policy", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json"
+      },
+    });
+
+    if (response.ok) {
+      const resData = await response.json(); // ✅ Correctly parse JSON
+      console.log("resData", resData);
+
+      // ✅ Assign actual document data to innerHTML
+      privacyPolicyRef.innerHTML = resData.data.documentData || "<p>No data available.</p>";
+
+    } else {
+      alert("Something went wrong. Please try again.");
+    }
+  } catch (error) {
+    console.error("Error fetching privacy policy:", error);
+   
+  }
+}
+async function getTermsAndCondition() {
+  const termsAndCondRef = document.getElementById("terms-&-condition");
+
+  try {
+    const response = await fetch("http://localhost:8000/api/v1/compliance-document/terms-&-conditions", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json"
+      },
+    });
+
+    if (response.ok) {
+      const resData = await response.json(); // ✅ Correctly parse JSON
+      console.log("resData", resData);
+
+      // ✅ Assign actual document data to innerHTML
+      termsAndCondRef.innerHTML = resData.data.documentData || "<p>No data available.</p>";
+
+    } else {
+      alert("Something went wrong. Please try again.");
+    }
+  } catch (error) {
+    console.error("Error fetching privacy policy:", error);
+   
+  }
+}
+
+
+
+async function getShippingPolicy() {
+  const shippingpolicyRef = document.getElementById("shipping-policy");
+
+  try {
+    const response = await fetch("http://localhost:8000/api/v1/compliance-document/shipping-policy", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json"
+      },
+    });
+
+    if (response.ok) {
+      const resData = await response.json(); // ✅ Correctly parse JSON
+      console.log("resData", resData);
+
+      // ✅ Assign actual document data to innerHTML
+      shippingpolicyRef.innerHTML = resData.data.documentData || "<p>No data available.</p>";
+
+    } else {
+      alert("Something went wrong. Please try again.");
+    }
+  } catch (error) {
+    console.error("Error fetching privacy policy:", error);
+   
+  }
+}
+
+async function getCancelationPolicy() {
+  const cancelationpolicyRef = document.getElementById("cancelation-policy");
+
+  try {
+    const response = await fetch("http://localhost:8000/api/v1/compliance-document/cancellation-policy", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json"
+      },
+    });
+
+    if (response.ok) {
+      const resData = await response.json(); // ✅ Correctly parse JSON
+      console.log("resData", resData);
+
+      // ✅ Assign actual document data to innerHTML
+      cancelationpolicyRef.innerHTML = resData.data.documentData || "<p>No data available.</p>";
+
+    } else {
+      alert("Something went wrong. Please try again.");
+    }
+  } catch (error) {
+    console.error("Error fetching privacy policy:", error);
+   
+  }
+}
+async function getRefundPolicy() {
+  const refundpolicyRef = document.getElementById("refund-policy");
+
+  try {
+    const response = await fetch("http://localhost:8000/api/v1/compliance-document/refund-policy", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json"
+      },
+    });
+
+    if (response.ok) {
+      const resData = await response.json(); // ✅ Correctly parse JSON
+      console.log("resData", resData);
+
+      // ✅ Assign actual document data to innerHTML
+      refundpolicyRef.innerHTML = resData.data.documentData || "<p>No data available.</p>";
+
+    } else {
+      alert("Something went wrong. Please try again.");
+    }
+  } catch (error) {
+    console.error("Error fetching privacy policy:", error);
+   
+  }
+}
+
+getPrivacyPolicy()
+getTermsAndCondition()
+getShippingPolicy()
+getCancelationPolicy()
+getRefundPolicy()
 
   Navbar()
   // if (window.location.pathname === "/" || window.location.pathname === "/contact-us.html") {

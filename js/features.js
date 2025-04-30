@@ -71,7 +71,7 @@ const customerData = [
   },
   {
     name: "Multi-Insurance Type Support",
-    slug: "multi-insurance-type-support",
+    slug: "multi-insurance-type-support", 
     role: "Investment Advisor",
     image: "images/features/customers/meetGood.png",
     description: "Manage various insurance products within a single platform.",
