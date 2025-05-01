@@ -2,7 +2,7 @@
 const featureData = [
     {
       title: "File/Folder Management",
-      slug: "file-folder-management",
+      id: "file-folder-management",
       content: "This is the content of the first feature.",
       image: "images/feature1.png",
       link:"/features-detail.html"
@@ -10,7 +10,7 @@ const featureData = [
     },
     {
       title: "Calculate Funds/Interest",
-      slug: "calculate-funds-interest",
+      id: "calculate-funds-interest",
       content: "Details of the second feature post.",
       image: "images/feature2.png",
       link:"/features-detail.html"
@@ -18,7 +18,7 @@ const featureData = [
     },
     {
       title: "Customer Data Management",
-      slug: "customer-data-management",
+      id: "customer-data-management",
       content: "Details of the third feature post.",
       image: "images/feature3.png",
       link:"/features-detail.html"
@@ -26,7 +26,7 @@ const featureData = [
     },
     {
       title: "Staff Management",
-      slug: "staff-management",
+      id: "staff-management",
       content: "Details of the fourth feature post.",
       image: "images/feature4.png",
       link:"/features-detail.html"
@@ -34,7 +34,7 @@ const featureData = [
     },
     {
       title: "Ads Plan & Policy",
-      slug: "ads-plan-policy",
+      id: "ads-plan-policy",
       content: "Details of the fifth feature post.",
       image: "images/feature5.png",
       link:"/features-detail.html"
@@ -42,7 +42,7 @@ const featureData = [
     },
     {
       title: "Customized Reminders",
-      slug: "customized-reminders",
+      id: "customized-reminders",
       content: "Details of the sixth feature post.",
       image: "images/feature6.png",
       link:"/features-detail.html"
@@ -51,11 +51,10 @@ const featureData = [
   
   // Render feature list
 
-  // Consultant Data
 const customerData = [
   {
     name: "Personalized Experience",
-    slug: "personalized-experience",
+    id: "personalized-experience",
     role: "Tax Consultant",
     image: "images/features/customers/wohoo.png",
     description: "Tailored interactions to meet individual client needs.",
@@ -63,7 +62,7 @@ const customerData = [
   },
   {
     name: "Data Security",
-    slug: "data-security",
+    id: "data-security",
     role: "Investment Advisor",
     image: "images/features/customers/dataSecurity.png",
     description: "Advanced encryption to protect sensitive financial information.",
@@ -71,7 +70,7 @@ const customerData = [
   },
   {
     name: "Multi-Insurance Type Support",
-    slug: "multi-insurance-type-support", 
+    id: "multi-insurance-type-support", 
     role: "Investment Advisor",
     image: "images/features/customers/meetGood.png",
     description: "Manage various insurance products within a single platform.",
@@ -79,7 +78,7 @@ const customerData = [
   },
   {
     name: "Calculate Funds / Interest",
-    slug: "calculate-funds-interest",
+    id: "calculate-funds-interest",
     role: "Investment Advisor",
     image: "images/features/customers/coins.png",
     description: "Automated calculations for accurate financial assessments.",
@@ -87,7 +86,7 @@ const customerData = [
   },
   {
     name: "File/Folder Management",
-    slug: "file-folder-management",
+    id: "file-folder-management",
     role: "Investment Advisor",
     image: "images/features/customers/fileNFolder.png",
     description: "Organize and access documents efficiently.",
@@ -96,7 +95,7 @@ const customerData = [
  
   {
     name: "Customer Support and Assistance",
-    slug: "customer-support-assistance",
+    id: "customer-support-assistance",
     role: "Investment Advisor",
     image: "images/features/customers/customerSupport.png",
     description: "Dedicated support to address client inquiries.",
@@ -104,7 +103,7 @@ const customerData = [
   },
   {
     name: "Notifications & Alerts",
-    slug: "notifications-alerts",
+    id: "notifications-alerts",
     role: "Investment Advisor",
     image: "images/features/customers/phone.png",
     description: "Timely updates on policy changes and important dates.",
@@ -112,7 +111,7 @@ const customerData = [
   },
   {
     name: "Policy Management",
-    slug: "policy-management:",
+    id: "policy-management:",
     role: "Investment Advisor",
     image: "images/features/customers/policyManagement.png",
     description: "Comprehensive tools for managing and storing policy information.",
@@ -121,7 +120,7 @@ const customerData = [
   
   {
     name: "Smart Calendar",
-    slug: "smart-calendar",
+    id: "smart-calendar",
     role: "Investment Advisor",
     image:"images/features/customers/smartCalender.png",
     description: "Our Smart Calender application for financial CRM makers scheduling, task management, and tracking of finances is a hassle-free affair with a smooth client interaction.",
@@ -129,11 +128,14 @@ const customerData = [
   }
 ];
 
+
+
+
 function renderFeatureList() {
   const featureclass = document.getElementById("featureclass");
 
 let featureCards = featureData.map(feature => {
-  const linkWithSlug = `/features-consultant-detail.html?slug=${feature.slug}`;
+  const linkWithSlug = `/features-for-consultants.html#${feature.id}`;
 
   return `
     <a href="${linkWithSlug}"
@@ -197,7 +199,7 @@ featureclass.innerHTML = `
     const customerClass = document.getElementById("featurecustomer");
   
     const customerCards = customerData.map(customer => {
-      const linkWithSlug = `/feature-customer-deatails.html?slug=${customer.slug}`;
+      const linkWithSlug = `/features-for-customers.html#${customer.id}`;
   
       return `
         <a href="${linkWithSlug}" class="block bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg transition">

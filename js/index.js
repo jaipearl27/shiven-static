@@ -26,13 +26,17 @@ function Navbar(targetId = "navbar") {
       <a href="/features-for-customers.html" class="hover:text-orange-500">Features for Customers</a>
       <a href="/contact-us.html" class="hover:text-orange-500">Contact</a>
       <a href="/subscriptions.html" class="hover:text-orange-500">Subscriptions</a>
+      
       <div class="relative group">
   <button class="hover:text-orange-500">More Info ▾</button>
   <div class="absolute left-0 top-full hidden group-hover:block bg-white shadow-md w-40 text-gray-800">
     <a href="/blogs.html" class="block px-4 py-2 hover:bg-gray-100">Blogs</a>
     <a href="/privacy-policy.html" class="block px-4 py-2 hover:bg-gray-100">Privacy Policy</a>
     <a href="/term&condition.html" class="block px-4 py-2 hover:bg-gray-100">Terms & Condition</a>
-  </div>
+    <a href="/refund-policy.html" class="block px-4 py-2 hover:bg-gray-100">Refund Policy</a>
+    <a href="/Shipping-POlicy.html" class="block px-4 py-2 hover:bg-gray-100">Shipping Policy</a>
+    <a href="/cancelation-policy.html" class="block px-4 py-2 hover:bg-gray-100">Cancellation Policy</a>
+ </div>
 </div>
 
     </div>
