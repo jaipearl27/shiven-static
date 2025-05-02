@@ -12,7 +12,7 @@ const featureData = [
       title: "Calculate Funds/Interest",
       id: "calculate-funds-interest",
       content: "Details of the second feature post.",
-      image: "images/feature2.png",
+      image: "images/features/consultants/calculate-Funds-Interest.png",
       link:"/features-detail.html"
 
     },
@@ -20,7 +20,7 @@ const featureData = [
       title: "Customer Data Management",
       id: "customer-data-management",
       content: "Details of the third feature post.",
-      image: "images/feature3.png",
+      image: "images/feature6.png",
       link:"/features-detail.html"
 
     },
@@ -28,15 +28,15 @@ const featureData = [
       title: "Staff Management",
       id: "staff-management",
       content: "Details of the fourth feature post.",
-      image: "images/feature4.png",
+            image: "images/feature2.png",
       link:"/features-detail.html"
 
     },
     {
-      title: "Ads Plan & Policy",
-      id: "ads-plan-policy",
+      title: "Adds Plan & Policy",
+      id: "adds-plan-policy",
       content: "Details of the fifth feature post.",
-      image: "images/feature5.png",
+      image: "images/feature3.png",
       link:"/features-detail.html"
 
     },
@@ -44,7 +44,14 @@ const featureData = [
       title: "Customized Reminders",
       id: "customized-reminders",
       content: "Details of the sixth feature post.",
-      image: "images/feature6.png",
+         image: "images/feature4.png",
+      link:"/features-detail.html"
+    },
+    {
+      title: "Smart Calender:",
+      id: "smart-calender",
+      content: "Details of the sixth feature post.",
+      image: "images/feature5.png",
       link:"/features-detail.html"
     }
   ];
@@ -131,6 +138,7 @@ const customerData = [
 
 
 
+
 function renderFeatureList() {
   const featureclass = document.getElementById("featureclass");
 
@@ -139,7 +147,7 @@ let featureCards = featureData.map(feature => {
 
   return `
     <a href="${linkWithSlug}"
-       class="block bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg transition">
+       class="block bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg transition bg-red-500 ">
       <img src="${feature.image}" alt="${feature.title}" class="w-full h-48 object-cover">
       <div class="p-4">
         <h2 class="text-xl font-semibold">${feature.title}</h2>
@@ -163,9 +171,9 @@ featureclass.innerHTML = `
     const featureclass = document.getElementById("featureclass");
   
     featureclass.innerHTML = `
-      <div class="py-12 px-6 max-w-6xl mx-auto">
+      <div class="py-12 px-6 max-w-6xl bg-red-500 mx-auto">
         <div>
-          <h2 class="text-4xl font-bold mb-4">${feature.title}</h2>
+          <h2 class="text-4xl font-bold mb-4 bg-red-500">${feature.title}</h2>
         </div>
         <div class="mt-8 flex flex-col gap-6">
           <img src="${feature.image}" alt="${feature.title}" class="w-full h-64 object-cover rounded">
@@ -277,3 +285,80 @@ featureclass.innerHTML = `
   window.addEventListener("load", handleRouting);
   window.addEventListener("popstate", handleRouting);
   
+
+
+  const BenefitsInsuranceSec = [
+    {
+      name: "Improved lead and customer management",
+      id: "Improved-lead-and-customer-management",
+      image: "images/Insurance/Increased customer.png",
+      description: "Tailored interactions to meet individual client needs.",
+      link: "/consultant-detail.html"
+    },
+    {
+      name: "Single version of the truth for ease of access and collaboration",
+      id: "Single-version-of-the-truth-for-ease-of-access-and-collaboration",
+      image: "images/features/customers/dataSecurity.png",
+      description: "Advanced encryption to protect sensitive financial information.",
+      link: "/consultant-detail.html"
+    },
+    {
+      name: "Automating mundane tasks",
+      id: "Automating-mundane-tasks",
+      image: "images/features/customers/coins.png",
+      description: "Automated calculations for accurate financial assessments.",
+      link: "/consultant-detail.html"
+    },
+    {
+      name: "Increased customer communication",
+      id: "Increased-customer-communication", 
+      image: "images/features/customers/meetGood.png",
+      description: "Manage various insurance products within a single platform.",
+      link: "/consultant-detail.html"
+    },
+    {
+      name: "Data-driven insight to inform business decisions",
+      id: "Data-driven-insight-inform-business-decisions",
+      image: "images/features/customers/fileNFolder.png",
+      description: "Organize and access documents efficiently.",
+      link: "/consultant-detail.html"
+    },
+    {
+      name: "Increased monitoring and reporting of regulatory compliance.",
+      id: "Increased-monitoring-reporting-regulator-compliance",
+      image: "images/features/customers/customerSupport.png",
+      description: "Dedicated support to address client inquiries.",
+      link: "/consultant-detail.html"
+    },
+  ];
+  
+  const insuranceData = document.getElementById("insuranceClass");
+  
+  if (insuranceData) {
+    const insuranceCardHTML = BenefitsInsuranceSec.map((insData) => {
+      return `
+        <div class="bg-white shadow-md rounded-lg p-4 text-center hover:shadow-lg transition duration-300">
+          <a href="${insData.link}#${insData.id}">
+            <img src="${insData.image}" alt="${insData.name}" class="class="w-full h-48 object-cover">
+            <h3  class="text-gray-600 text-sm">${insData.name}</h3>
+          
+          </a>
+        </div>
+      `;
+    }).join("");
+  
+    insuranceData.innerHTML = `
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-28">
+        ${insuranceCardHTML}
+      </div>
+    `;
+  }
+  
+
+
+
+  
+
+
+  
+

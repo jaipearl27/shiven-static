@@ -315,15 +315,18 @@
                 </p>
 
                 <!-- Grid Layout for 3 Cards per Row -->
-                <div class="mt-8 grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="mt-8 grid  grid-cols-1 md:grid-cols-2 lg:grid-cols-2 max-w-2xl mx-auto gap-6">
                     <!-- Insurance -->
                     <a href="https://app.assetmanagment.in/health-insurance">
                     <div class="bg-white p-4 rounded-lg " data-aos="fade-up" data-aos-duration="200">
-                        <h3 class="text-blue-600 font-semibold mt-2">Health Insurance</h3>
+                        <h3 class="text-blue-600 font-semibold mt-2">Insurance</h3>
                         <img src="images/services1.png" alt="Insurance" class="w-full h-40 object-cover rounded-md">
                         <p class="text-gray-600 text-sm mt-2">
                             Our insurance CRM streamlines customer interactions, policy management, and claims
-                            processing for brokers and agents.
+                            processing for brokers and agents. Tailored for health, travel, and auto insurance, it optimizes
+                            workflows from lead acquisition to policy 
+                            renewal. The intuitive interface enhances agent-client
+                            communication and simplifies daily tasks.
                         </p>
                     </div></a>
 
@@ -333,8 +336,8 @@
                         <h3 class="text-blue-600 font-semibold mt-2">Mutual Fund</h3>
                         <img src="images/services2.png" alt="Mutual Fund" class="w-full h-40 object-cover rounded-md">
                         <p class="text-gray-600 text-sm mt-2">
-                            Our CRM simplifies mutual fund client management, investment tracking, and compliance.
-                        </p>
+                            Our CRM solution simplifies mutual fund client management, investment tracking, and
+                            compliance, enhancing advisor-client communication and streamlining daily operations.                        </p>
                     </div></a>
 
                     <!-- Loans -->
@@ -346,39 +349,43 @@
                             Our loan management CRM simplifies interactions and procedures, streamlining loan
                             applications.
                         </p> -->
-                        <p class="text-gray-600 text-sm mt-2">If you've been searching for a way to get random questions, you've landed on the correct webpage. We created the Random Question Generator to ask you as many random questions as your heart desires.</p>
+                        <p class="text-gray-600 text-sm mt-2">For financial advisers, our loan management CRM simplifies customer interactions and loan procedures. It streamlines processes for corporate, home, and personal loans from application
+                            to payment. The user-friendly interface improves communication between advisors and clients
+                            while also simplifying daily duties.</p>
                     </div></a>
 
                     <!-- Stocks/Exchange -->
                      <a href="https://app.assetmanagment.in/motor-insurance">
                     <div class="bg-white p-4 rounded-lg " data-aos="fade-up" data-aos-duration="200">
-                        <h3 class="text-blue-600 font-semibold mt-2">Motor Insurance</h3>
+                        <h3 class="text-blue-600 font-semibold mt-2">Stock Exchange</h3>
                         <img src="images/services/motor.jpg" alt="Stocks/Exchange"
                             class="w-full h-40 object-cover rounded-md">
                         <p class="text-gray-600 text-sm mt-2">
-                            Our CRM solution is tailored for stock brokers, streamlining trade tracking and compliance.
-                        </p>
+                            Our CRM solution is tailored for stock brokers, streamlining client management, trade tracking,
+                            and compliance. Designed for equity, commodity, and fore markets, it optimizes workflows
+                            from lead acquisition to trade execution. The intuitive interface enhances broker-client
+                            communication and simplifies daily operations.                        </p>
                     </div></a>
 
                     <!-- Travel Insurance -->
-                    <div class="bg-white p-4 rounded-lg " data-aos="fade-up" data-aos-duration="400">
+                    <!-- <div class="bg-white p-4 rounded-lg " data-aos="fade-up" data-aos-duration="400">
                         <h3 class="text-blue-600 font-semibold mt-2">Travel Insurance</h3>
                         <img src="images/services5.png" alt="Travel Insurance"
                             class="w-full h-40 object-cover rounded-md">
                         <p class="text-gray-600 text-sm mt-2">
                             Provides extensive coverage options for travelers, ensuring financial protection.
                         </p>
-                    </div>
+                    </div> -->
 
                     <!-- Business Insurance -->
-                    <div class="bg-white p-4 rounded-lg " data-aos="fade-up" data-aos-duration="600">
+                    <!-- <div class="bg-white p-4 rounded-lg " data-aos="fade-up" data-aos-duration="600">
                         <h3 class="text-blue-600 font-semibold mt-2">Business Insurance</h3>
                         <img src="images/services6.png" alt="Business Insurance"
                             class="w-full h-40 object-cover rounded-md">
                         <p class="text-gray-600 text-sm mt-2">
                             The questions in this generator are gender neutral and can be used to ask either male of females (or any other gender the person identifies with).
                         </p>
-                    </div>
+                    </div> -->
                 </div>
             </div>
 
@@ -468,14 +475,14 @@
                             <!-- Active Financial Consultants -->
                             <div class="flex flex-col items-center">
                                 <i class="fas fa-file-alt text-2xl mb-2"></i>
-                                <h2 class="text-4xl font-bold mb-1">200 +</h2>
-                                <p class="text-sm">Active Financial Consultants</p>
+                                <h2 class="count text-4xl font-bold mb-1" data-target="200">0</h2>
+                                                <p class="text-sm">Active Financial Consultants</p>
                             </div>
 
                             <!-- Asset under Management -->
                             <div class="flex flex-col items-center">
                                 <i class="fas fa-chart-line text-2xl mb-2"></i>
-                                <h2 class="text-4xl font-bold mb-1">1000 +</h2>
+                                <h2 class="count text-4xl font-bold mb-1" data-target="1000">0</h2>
                                 <p class="text-sm">Asset under Management</p>
                             </div>
 
@@ -488,14 +495,14 @@
                                     <i class="fas fa-star"></i>
                                     <i class="fas fa-star"></i>
                                 </div>
-                                <h2 class="text-4xl font-bold mb-1">1200 +</h2>
+                                <h2 class="count text-4xl font-bold mb-1" data-target="1200">0</h2>
                                 <p class="text-sm">Policy Sold</p>
                             </div>
 
                             <!-- Happy Customers -->
                             <div class="flex flex-col items-center">
                                 <i class="fas fa-user text-2xl mb-2"></i>
-                                <h2 class="text-4xl font-bold mb-1">1000 +</h2>
+                                <h2 class="count text-4xl font-bold mb-1" data-target="1000">0</h2>
                                 <p class="text-sm">Happy Customers</p>
                             </div>
                         </div>
@@ -888,7 +895,7 @@
          
         </section>
 
-
+      
         <script src="./js/index.js"></script>
         <script src="./js/features.js"  ></script>
     </main>
@@ -920,7 +927,40 @@
 
 
 
-   
+<script>
+    const counters = document.querySelectorAll('.count');
+  
+    function animateCounter(counter) {
+      const target = parseInt(counter.getAttribute('data-target'));
+      let count = 0;
+      const speed = 20; // smaller = faster
+      const increment = Math.ceil(target / 100);
+  
+      const interval = setInterval(() => {
+        if (count < target) {
+          count = Math.min(count + increment, target);
+          counter.innerText = count;
+        } else {
+          counter.innerText = target + '+';
+          clearInterval(interval);
+        }
+      }, speed);
+    }
+  
+    counters.forEach(counter => {
+      // First run immediately
+      animateCounter(counter);
+  
+  
+      setInterval(() => {
+        counter.innerText = '0'; 
+        animateCounter(counter);
+      }, 5000);
+    });
+  </script>
+  
+  
+  
 
 
  
@@ -947,7 +987,6 @@
           });
         
       </script>
-
 
 </body>
 
