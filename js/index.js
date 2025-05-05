@@ -36,6 +36,7 @@ function Navbar(targetId = "navbar") {
     <a href="/refund-policy.html" class="block px-4 py-2 hover:bg-gray-100">Refund Policy</a>
     <a href="/Shipping-POlicy.html" class="block px-4 py-2 hover:bg-gray-100">Shipping Policy</a>
     <a href="/cancelation-policy.html" class="block px-4 py-2 hover:bg-gray-100">Cancellation Policy</a>
+         <a href="/insurance.html" class="block px-4 py-2 hover:bg-gray-100">Insurance</a>
  </div>
 </div>
 
