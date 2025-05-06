@@ -3,22 +3,24 @@ function Navbar(targetId = "navbar") {
 
   const nav = document.createElement("nav");
   nav.className = `
-    w-full flex justify-between items-center 
+    w-full max-w-screen flex justify-between items-center 
     fixed top-0 left-0 bg-white shadow-md p-4 z-50
   `.replace(/\s+/g, ' ').trim();
 
   nav.innerHTML = `
     <div class="w-[100px]">
+    <a href="/" alt="home page link">
       <img src="images/logo1.png" alt="Shiven Technology" class="w-full">
+    </a>
     </div>
 
     <!-- Hamburger Icon for mobile -->
-    <button id="mobile-menu-button" class="md:hidden focus:outline-none text-blue-800">
+    <button id="mobile-menu-button" class="xl:hidden focus:outline-none text-blue-800">
       ☰
     </button>
 
     <!-- Desktop Nav -->
-    <div class="hidden md:flex gap-8 text-blue-800 items-center">
+    <div class="hidden xl:flex gap-8 text-blue-800 items-center">
       <a href="/" class="hover:text-orange-500">Home</a>
       <a href="/about-us.html" class="hover:text-orange-500">About</a>
       <a href="/services.html" class="hover:text-orange-500">Services</a>
@@ -147,8 +149,8 @@ using the software.</div>
                 </div>
 
                 <div class="mt-6 p-4 text-center bg-gray-300 text-gray-600 text-sm">
-                    <p>© Copyright <strong class="text-gray-700">Shiven Tech</strong> All Rights Reserved</p>
-                    <p>Designed by</p>
+                    <p>© Copyright <strong class="text-gray-700"><a href="assetmanagment.com" alt="Asset Management website link">Shiven Tech</a></strong> All Rights Reserved</p>
+                    <p>Powered by <a href="https://pearlorganisation.com" alt="pearl organisation website link" target="_blank">Pearl Organisation</a></p>
                 </div>
             </div>
         </footer>
