@@ -1,3 +1,5 @@
+@import 'node_modules/vanilla-infinite-marquee/infinite-marquee.css';
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
 * {
@@ -18,3 +20,29 @@
     justify-content: center;
     gap: 15px;
   }
+
+
+  .marquee-text {
+    overflow: clip;
+  }
+  
+  .marquee-text-track {
+    display: flex;
+    padding-left: 4.8rem;
+    gap: 4.8rem;
+    width: max-content;
+    animation: marquee-move-text var(--speed, 25s) linear infinite var(
+        --direction,
+        forwards
+      );
+  }
+  
+  
+  @keyframes marquee-move-text {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+
+  

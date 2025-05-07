@@ -16,26 +16,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="/css/style.css">
 
-      <!--     global code below  -->
+    <!--     global code below  -->
     <meta name="google-site-verification" content="EiBP5TuIVdl3PHKAFDq-5M8cWqfTdcEOK4x4sVgGiDc" />
 
-    <!-- glide css -->
-    <link rel="stylesheet" href="/css/glide.core.min.css">
-    <link rel="stylesheet" href="/css/glide.theme.min.css">
-    
 
-    <!-- glide js -->
-     <script src="/js/glide.min.js"></script>
 
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-PJHGL5MGJM"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-PJHGL5MGJM');
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-PJHGL5MGJM');
     </script>
+
+    <!-- axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
 
 </head>
 
@@ -45,7 +43,7 @@
     <main class="relative ">
         <!-- Navbar -->
         <header class="relative w-full py-4 px-4 shadow bg-white top-0 z-50" id="navbar">
-     
+
         </header>
 
         <!-- Hero Section -->
@@ -63,85 +61,16 @@
 
 
 
-            <!-- blogs -->
-            <div class="py-12 px-6 max-w-6xl mx-auto">
-                <!-- Heading -->
-                <div class="">
-                    <h2 class="text-4xl font-bold gap-2">
-                        Test blog 1
-                    </h2>
-                    <p class="font-bold text-green-600 !text-base">MAR 24, 2025</p>
-                    <!-- <button class="bg-yellow-400 text-black px-4 py-2 font-semibold ">OUR BLOG</button> -->
+            <!-- blog -->
+            <div class="py-12 px-6 max-w-6xl mx-auto" id="blogContent">
+                <div>
+                    <h2 id="blogTitle" class="text-4xl font-bold gap-2"></h2>
+                    <p id="blogDate" class="font-bold text-green-600 !text-base"></p>
                 </div>
-
-
                 <div class="mt-8 flex flex-col gap-6">
-                    <img src="images/blog1.png" alt="Blog 1" class="w-full object-cover">
-                    <div class="flex flex-col gap-4 text-lg">
-                        <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloribus quasi obcaecati nostrum
-                            perferendis rem, quibusdam quidem necessitatibus quas accusantium voluptatem consequatur
-                            fugit corrupti, nihil repellat facere provident nam, ducimus doloremque! Lorem ipsum dolor,
-                            sit amet consectetur adipisicing elit. Temporibus consectetur dolores officiis? Sunt vel
-                            officia voluptatem dignissimos quisquam iure harum accusantium aperiam nihil recusandae aut
-                            deserunt, provident cumque eos. Ipsum.
-                            Deserunt corporis beatae, doloremque, ipsa repellendus accusantium impedit culpa amet cum
-                            rerum inventore porro architecto voluptate alias harum sint cumque quae, quasi ullam.
-                            Aliquid enim at consequuntur aspernatur cumque sit.
-                            Assumenda quam, repellendus cumque temporibus facilis pariatur commodi nesciunt enim
-                            accusamus error ducimus ex quasi deserunt sapiente! Sint, dolores commodi! Ea consectetur
-                            corporis incidunt eveniet distinctio iste aspernatur perferendis aut?
-                            Rerum amet veritatis delectus quod, at, numquam vitae nostrum cumque quidem obcaecati
-                            maiores. Minima possimus nobis dignissimos ex nemo ducimus. Nihil, expedita! Pariatur
-                            voluptatum mollitia deserunt delectus! Laborum, id suscipit!
-                        <p> Inventore delectus, quod quam quaerat repudiandae rerum voluptas natus provident sit hic
-                            corrupti libero quidem nam quibusdam aliquid earum repellendus, nesciunt reiciendis
-                            incidunt, dignissimos quia. Cum dolorem sed sit maiores.
-                            Impedit mollitia, deserunt molestias, natus nostrum asperiores eligendi, quia odio officia
-                            minus sint id! Eos obcaecati aliquam provident placeat perferendis perspiciatis, saepe harum
-                            aut, inventore veniam unde debitis, laborum eligendi!
-                            Laboriosam, beatae illum pariatur ipsa illo provident. Esse, vitae! Harum sequi, nulla
-                            cumque voluptatem cum vel ipsa vero perferendis deleniti dolorem officiis nesciunt similique
-                            tempora, eius nam accusantium mollitia a?</p>
-                            <p>
-                                Ex ratione provident beatae dolor enim pariatur veritatis sunt expedita asperiores
-                                laudantium quis quaerat nihil soluta odio eius ipsum nobis vitae voluptates eum tempora,
-                                voluptas quasi? Explicabo ex quaerat labore?
-                                Enim molestias, temporibus id itaque quidem totam sint maxime accusantium corporis aliquam
-                                ea dignissimos consequatur earum in laborum dolores expedita voluptas laudantium eaque
-                                aperiam? Nisi facere et at dignissimos neque.
-                                Impedit rem ab excepturi deserunt quasi est delectus ipsam accusamus quia provident
-                                cupiditate incidunt, expedita consequuntur harum voluptatibus culpa optio dignissimos
-                                aliquam qui iste voluptatem ea fugit ut assumenda! Vero?
-                                Dicta fuga magni esse veritatis reiciendis debitis exercitationem nobis quisquam aut, odit
-                                quibusdam delectus neque nam modi provident temporibus ipsam reprehenderit consectetur?
-                                Ipsum sunt beatae itaque saepe tempora harum enim.
-                                Accusantium hic velit doloribus sint nostrum nihil, dolore dicta animi illo qui ullam iure,
-                                expedita minus suscipit, cumque tempora. Ipsum deserunt repellat asperiores explicabo iusto
-                                reprehenderit quia odio eligendi dolores.
-                            </p>
-
-                        </p>
-                       
-                        <p>
-                            odio qui excepturi quos aliquid ratione. Saepe laboriosam quos ipsa. Modi magni porro sed a
-                            recusandae corporis impedit? Doloribus.
-                            Esse quibusdam earum, reprehenderit unde vero incidunt alias odio nostrum officia adipisci
-                            labore quos debitis, impedit at quaerat iste corporis! Vel repellendus, temporibus fugit
-                            fuga quisquam odio optio ducimus itaque.
-                            Veniam voluptate quo, cupiditate harum laboriosam voluptatum esse nesciunt rerum consequatur
-                            sed at maxime fugit enim ut ratione eligendi laudantium voluptas reprehenderit, ullam dicta
-                            beatae? Magnam et dolore velit molestiae.
-                            Delectus pariatur quos similique veniam maxime id deserunt, aperiam maiores, eos nulla
-                            architecto est doloribus voluptatibus neque eveniet quisquam odit beatae asperiores
-                            molestiae numquam repudiandae officia suscipit, odio ab. In.
-                            Vero tenetur autem iste ullam, ipsum corporis odio. Quis reprehenderit itaque officia
-                            necessitatibus error laboriosam eum excepturi, nulla esse vitae qui. Id, architecto
-                            repudiandae consequatur quasi magni adipisci enim necessitatibus!
-                        </p>
-                    </div>
+                    <img id="blogImage" src="" alt="Blog Image" class="w-full object-cover">
+                    <div id="blogBody" class="flex flex-col gap-4 text-lg"></div>
                 </div>
-
             </div>
 
 
@@ -153,7 +82,7 @@
         </section>
 
 
-     
+
 
     </main>
 
@@ -181,8 +110,45 @@
             }
         }
     </script>
-      <script src="./js/index.js"></script>
- 
+    <script src="./js/index.js"></script>
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const params = new URLSearchParams(window.location.search);
+            const slug = params.get('slug');
+            console.log(slug)
+            if (!slug) {
+                document.getElementById('blogContent').innerHTML = '<p class="text-red-500">No blog slug provided.</p>';
+                return;
+            }
+
+            axios.get(`https://api.assetmanagment.in/api/v1/blogs/${slug}`)
+                .then(response => {
+                    const blog = response.data?.data;
+
+                    if (!blog) {
+                        document.getElementById('blogContent').innerHTML = '<p class="text-red-500">Blog not found.</p>';
+                        return;
+                    }
+
+                    document.getElementById('blogTitle').textContent = blog.title;
+                    document.getElementById('blogDate').textContent = new Date(blog.publishedAt).toDateString().toUpperCase();
+                    document.getElementById('blogImage').src = blog.featuredImage;
+                    document.getElementById('blogImage').alt = blog.title;
+
+                    // Inject blog content (already HTML from DB)
+                    document.getElementById('blogBody').innerHTML = blog.content;
+                })
+                .catch(error => {
+                    console.error("Error fetching blog:", error);
+                    document.getElementById('blogContent').innerHTML = '<p class="text-red-500">No Blog Found with this slug.</p>';
+                });
+        });
+    </script>
+
+
 </body>
 
 </html>

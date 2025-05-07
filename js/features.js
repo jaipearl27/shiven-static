@@ -65,6 +65,7 @@ const customerData = [
     role: "Tax Consultant",
     image: "images/features/customers/wohoo.png",
     description: "Tailored interactions to meet individual client needs.",
+    detailedDesc: "All our features are as per the recruitment of the users. Our CRM ensures that all the features are hand-crafted as per the requirement and nothing is missed that is not crafted for the user.",
     link: "/consultant-detail.html"
   },
   {
@@ -73,6 +74,7 @@ const customerData = [
     role: "Investment Advisor",
     image: "images/features/customers/dataSecurity.png",
     description: "Advanced encryption to protect sensitive financial information.",
+    detailedDesc: "With our file management system, which comes with encryption, all the data of the customer remains safe, and there is no issue of data loss, data damage. Our CRM offers an advanced level of security for this matter.",
     link: "/consultant-detail.html"
   },
   {
@@ -81,6 +83,7 @@ const customerData = [
     role: "Investment Advisor",
     image: "images/features/customers/meetGood.png",
     description: "Manage various insurance products within a single platform.",
+    detailedDesc: "Our CRM is not limited to a singular type of issue, but it enables you to manage different types of policies with a single dashboard.",
     link: "/consultant-detail.html"
   },
   {
@@ -89,6 +92,7 @@ const customerData = [
     role: "Investment Advisor",
     image: "images/features/customers/coins.png",
     description: "Automated calculations for accurate financial assessments.",
+    detailedDesc: "Our CRM enables you to manage and calculate funds without making you use any other platform. Our CRM is capable of performing complex calculations regarding Loans and interests in no time. This saves you from the additional mathematical burdens of doing unnecessary calculations.",
     link: "/consultant-detail.html"
   },
   {
@@ -97,6 +101,7 @@ const customerData = [
     role: "Investment Advisor",
     image: "images/features/customers/fileNFolder.png",
     description: "Organize and access documents efficiently.",
+    detailedDesc: "Our file management system provides easy access. With our state-of-the-art Financial CRM, client relationships have never been easier to manage and portfolios have never been simpler to track. No matter where you are — in the office, on the road, or working remotely, access your complete financial portfolio instantly from any device, desktop, tablet, or smartphone.",
     link: "/consultant-detail.html"
   },
 
@@ -106,6 +111,7 @@ const customerData = [
     role: "Investment Advisor",
     image: "images/features/customers/customerSupport.png",
     description: "Dedicated support to address client inquiries.",
+    detailedDesc: "Our CRM is developed to deliver one-on-one customer care and support to solve client inquiries quickly. Ticketing and communication integrations enable your support staff to monitor inquiries, answer quickly, and make sure that no client request goes unnoticed.",
     link: "/consultant-detail.html"
   },
   {
@@ -114,6 +120,7 @@ const customerData = [
     role: "Investment Advisor",
     image: "images/features/customers/phone.png",
     description: "Timely updates on policy changes and important dates.",
+    detailedDesc: "Our CRM is built to deliver customized customer service and support to address client questions promptly. Combined ticketing and communication functionalities allow your support team to monitor queries, respond efficiently, and not miss any client request. Based on a 360-degree customer view, comprising previous interactions, policies, and claims history,",
     link: "/consultant-detail.html"
   },
   {
@@ -122,6 +129,7 @@ const customerData = [
     role: "Investment Advisor",
     image: "images/features/customers/policyManagement.png",
     description: "Comprehensive tools for managing and storing policy information.",
+    detailedDesc: "Advanced tools to manage and store policy details:Our CRM provides sophisticated Policy Management features that make it easier for you to manage and monitor client policies. From issuing new policies to renewals, endorsements, and tracking claims, each process is automated in a centralized system.",
     link: "/consultant-detail.html"
   },
 
@@ -131,12 +139,10 @@ const customerData = [
     role: "Investment Advisor",
     image: "images/features/customers/smartCalender.png",
     description: "Our Smart Calender application for financial CRM makers scheduling, task management, and tracking of finances is a hassle-free affair with a smooth client interaction.",
+    detailedDesc: "Our financial CRM also provides you the facility of tracking your record, this can be done with the feature of our smart calendar With the smart calendar you can not only track your financial proceedings like Loans, EMIs, SIP, the due dates, and investments but also with this calendar, but you can also schedule meetings and manage your finance with ease. This feature helps you to stay updated with the dates and hence you are not prone to exceeding a deadline and due date.",
     link: "/consultant-detail.html"
   }
 ];
-
-
-
 
 
 function renderFeatureList() {
@@ -228,6 +234,33 @@ function renderCustomerList() {
     `;
 }
 
+
+function renderCustomerDetailedList() {
+  const customerClass = document.getElementById("detailedCustomerFeatureList");
+
+  const customerCards = customerData.map(customer => {
+    // const linkWithSlug = `/features-for-customers.html#${customer.id}`;
+
+    return `
+        <div href="#" id="${customer.id}" class="block bg-white rounded-lg shadow-md overflow-hidden cursor-pointer hover:shadow-lg transition">
+          <img src="${customer.image}" alt="${customer.name}" class="w-full h-48 object-cover">
+          <div class="p-4">
+           <p class="text-blue-600 font-medium mt-3">${customer.name}:</h2>
+             <p class="text-gray-600 text-sm">${customer.detailedDesc}</p>
+          </div>
+        </div>
+      `;
+  }).join("");
+
+  customerClass.innerHTML = `
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        ${customerCards}
+      </div>
+    `;
+}
+
+
 function renderCustomerDetail(slug) {
   const customer = customerData.find(c => c.slug === slug);
 
@@ -274,9 +307,15 @@ function handleRouting() {
     renderFeatureList();
   }
 
-  if (pathname === "/" || pathname === "/index.html" || pathname === "/about-us.html" || pathname.endsWith("features-for-customers.html")) {
+  
+  if (pathname === "/" || pathname === "/index.html" || pathname === "/about-us.html") {
     renderCustomerList();
   }
+
+  if(pathname.endsWith("features-for-customers.html")){
+    renderCustomerDetailedList()
+  }
+
 
 }
 

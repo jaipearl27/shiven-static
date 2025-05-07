@@ -1,3 +1,8 @@
+
+
+
+
+
 function Navbar(targetId = "navbar") {
   const container = document.getElementById(targetId);
 
