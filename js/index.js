@@ -82,26 +82,25 @@ function footer(){
     footer.innerHTML = `
           <footer class="bg-gray-100 py-8">
             <div class="container mx-auto px-4 md:px-8 lg:px-16">
-                <div
-                    class=" grid  grid-cols-1 md:grid-cols-[50%_20%_auto] space-y-6 gap-12 md:space-y-0">
-
+                <div class=" grid  grid-cols-1 md:grid-cols-[50%_20%_auto] space-y-6 gap-12 md:space-y-0">
                     <div class="text-center md:text-left">
                         <h2 class="text-3xl text-gray-700 font-bold">Shiven Tech</h2>
                         <div class="grid  grid-cols-[] justify-center md:justify-start space-x-4 mt-3">
                         <div>
-                            <a href="#" class="py-2 px-4  bg-gray-200 rounded-full hover:bg-gray-300">
+                            <a href="https://x.com/asset_managment" class="py-2 px-4  bg-gray-200 rounded-full hover:bg-gray-300">
                 
                             <i class="fa-brands fa-x-twitter"></i>
                             </a>
-                            <a href="#" class="py-2 px-4 bg-gray-200 rounded-full hover:bg-gray-300">
+                            <a href="https://www.facebook.com/people/Shiven-Technology/61575315676622/" class="py-2 px-4 bg-gray-200 rounded-full hover:bg-gray-300">
                                 <i class="fa-brands fa-facebook"></i>
                             </a>
-                            <a href="#" class="py-2 px-4 bg-gray-200 rounded-full hover:bg-gray-300">
+                            <a href="https://www.instagram.com/assetmanagment_/" class="py-2 px-4 bg-gray-200 rounded-full hover:bg-gray-300">
                                 <i class="fab fa-instagram"></i>
                             </a>
-                            <a href="#" class="py-2 px-4 bg-gray-200 rounded-full hover:bg-gray-300">
+                           <!--<a href="#" class="py-2 px-4 bg-gray-200 rounded-full hover:bg-gray-300">
                                 <i class="fa-brands fa-linkedin"></i>
-                            </a></div>
+                            </a> -->
+                            </div>
                             <div  class="mt-10">Disclaimer:
 
 Shiven Infotech provides Software Technology Platform for
