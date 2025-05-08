@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Features for Customers</title>
 
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/splide.min.css">
+
     <!-- aos -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -14,12 +17,13 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- FontAwesome CDN (Free Version) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="/css/style.css">
 
 
     <!--     global code below  -->
     <meta name="google-site-verification" content="EiBP5TuIVdl3PHKAFDq-5M8cWqfTdcEOK4x4sVgGiDc" />
 
+    <!-- axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
 
 
@@ -187,6 +191,17 @@
     }
     </script>
 
+
+
+    <style>
+        .splide__arrow--next {
+            right: -4em !important;
+        }
+
+        .splide__arrow--prev {
+            left: -4em !important;
+        }
+    </style>
 
 </head>
 
@@ -475,9 +490,9 @@
                 </div>
 
                 <!-- Features Grid -->
-                <div class="flex flex-wrap justify-center gap-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 justify-center gap-8">
                     <!-- Increased Efficiency -->
-                    <div class="w-[33%] bg-white p-6 rounded-lg shadow-md">
+                    <div class=" bg-white p-6 rounded-lg shadow-md">
                         <div class="flex items-start mb-4 min-h-14">
                             <div
                                 class="p-2 flex flex-col justify-center items-center mr-3 h-14 w-14 rounded-full bg-blue-100 text-blue-600">
@@ -495,7 +510,7 @@
                     </div>
 
                     <!-- Prompt Alerts & Notifications -->
-                    <div class="w-[33%] bg-white p-6 rounded-lg shadow-md">
+                    <div class=" bg-white p-6 rounded-lg shadow-md">
                         <div class="flex items-start mb-4 min-h-14">
                             <div
                                 class="p-2 flex flex-col justify-center items-center mr-3 h-14 w-14 rounded-full bg-blue-100 text-blue-600">
@@ -512,7 +527,7 @@
                     </div>
 
                     <!-- Improved Control Over Investments -->
-                    <div class="w-[33%] bg-white p-6 rounded-lg shadow-md">
+                    <div class=" bg-white p-6 rounded-lg shadow-md">
                         <div class="flex items-start mb-4 min-h-14">
                             <div
                                 class="p-2 flex flex-col justify-center items-center mr-3 h-14 w-14 rounded-full bg-blue-100 text-blue-600">
@@ -529,7 +544,7 @@
                     </div>
 
                     <!-- Simplified Loan & Insurance Management -->
-                    <div class="w-[33%] bg-white p-6 rounded-lg shadow-md">
+                    <div class=" bg-white p-6 rounded-lg shadow-md">
                         <div class="flex items-start mb-4 min-h-14">
                             <div
                                 class="p-2 flex flex-col justify-center items-center mr-3 h-14 w-14 rounded-full bg-blue-100 text-blue-600">
@@ -547,7 +562,7 @@
                     </div>
 
                     <!-- User-Friendly Interface -->
-                    <div class="w-[33%] bg-white p-6 rounded-lg shadow-md col-span-1 md:col-span-2">
+                    <div class=" bg-white p-6 rounded-lg shadow-md col-span-1 md:col-span-2">
                         <div class="flex items-start mb-4 min-h-14">
                             <div
                                 class="p-2 flex flex-col justify-center items-center mr-3 h-14 w-14 rounded-full bg-blue-100 text-blue-600">
@@ -589,36 +604,19 @@
                     <!-- <span class="w-14 bg-blue-700 h-[2px]"></span> -->
                 </div>
 
-                <!-- Testimonials Grid -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-                    <!-- Testimonial 1 -->
-                    <div class="shadow-lg col-span-1">
-                        <img src="/images/happyMan.png" alt="" src set="">
+                <div class="splide" role="group" aria-label="What Our Proud Customers Say">
+                    <div class="splide__track ">
+                        <ul class="splide__list" id="testimonial-slider">
+                            <!-- Testimonials will be injected here -->
+                        </ul>
+
                     </div>
-
-                    <!-- Testimonial 2 -->
-                    <div class="bg-white shadow-lg p-6 rounded-lg border border-gray-200 col-span-2">
-                        <i class="fas fa-quote-left text-3xl text-gray-900"></i>
-                        <p class="text-gray-600 mt-4">
-                            “With this CRM, we have changed the way we operate our insurance business. The system is so
-                            user-friendly and accommodates all forms of insurance products, making it convenient for us
-                            and our customers. I particularly like how it calculates funds and interest automatically —
-                            no more errors or time wastage!”
-                        </p>
-                        <div class="mt-4">
-                            <p class="font-bold">Saurav Raj</p>
-                            <div class="flex  items-center mt-2">
-                                <i class="fas fa-star text-yellow-500"></i>
-                                <i class="fas fa-star text-yellow-500"></i>
-                                <i class="fas fa-star text-yellow-500"></i>
-                                <i class="fas fa-star text-yellow-500"></i>
-                                <i class="fas fa-star text-yellow-500"></i>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
+
+
+                <!-- Testimonials Grid -->
+
 
 
             </div>
@@ -744,6 +742,90 @@
             }
         };
     </script>
+
+    <!-- splide -->
+
+
+    <script src="/js/splide.min.js"></script>
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", async () => {
+            const container = document.getElementById("testimonial-slider");
+
+            try {
+                const res = await axios.get("https://api.assetmanagment.in/api/v1/testimonial?category=testimonials");
+
+                if (res.data.success && Array.isArray(res.data.data)) {
+                    const testimonials = res.data.data;
+
+                    testimonials.forEach(item => {
+                        const stars = Array.from({ length: item.stars }, () =>
+                            `<i class="fas fa-star text-yellow-500"></i>`
+                        ).join("");
+
+                        const slide = document.createElement("li");
+                        slide.className = "splide__slide";
+                        slide.innerHTML = `
+                            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                <div class="col-span-1 flex justify-center items-center">
+                                    <img src="${item.featuredImage}" alt="${item.name}" class="shadow-lg w-48 h-48 object-cover">
+                                </div>
+                                <div class="bg-white shadow-lg p-6 rounded-lg border border-gray-200 col-span-2">
+                                    <i class="fas fa-quote-left text-3xl text-gray-900"></i>
+                                    <p class="text-gray-600 mt-4">"${item.content}"</p>
+                                    <div class="mt-4">
+                                        <p class="font-bold">${item.name}</p>
+                                        <div class="flex items-center mt-2">${stars}</div>
+                                    </div>
+                                </div>
+                            </div>
+                        `;
+
+                        container.appendChild(slide);
+                    });
+
+                    // Reinitialize Splide after adding slides
+                    new Splide('.splide').mount();
+                }
+            } catch (error) {
+                console.error("Failed to fetch testimonials:", error);
+            }
+        });
+    </script>
+
+
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('.splide').forEach(function (el) {
+                new Splide(el, {
+                    type: 'loop',
+                    perPage: 1,
+                    perMove: 1,
+                    gap: '1rem',
+                    arrows: true,
+                    autoplay: true,
+                    interval: 3000,
+                    speed: 800,
+                    pauseOnHover: false,
+                    pauseOnFocus: false,
+
+                }).mount();
+
+
+
+
+
+            });
+        });
+    </script>
+
+
+
 
 
 </body>
