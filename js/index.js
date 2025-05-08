@@ -79,16 +79,16 @@ function Navbar(targetId = "navbar") {
   });
 }
 
-  
 
-function footer(){
-    const footer = document.createElement("footer");
-    footer.className = "mt-24";
-    footer.innerHTML = `
+
+function footer() {
+  const footer = document.createElement("footer");
+  footer.className = "mt-24";
+  footer.innerHTML = `
           <footer class="bg-gray-100 py-8">
             <div class="container mx-auto px-4 md:px-8 lg:px-16">
-                <div class=" grid  grid-cols-1 md:grid-cols-[50%_20%_auto] space-y-6 gap-12 md:space-y-0">
-                    <div class="text-center md:text-left">
+                <div class=" grid grid-cols-1 md:grid-cols-2 xl:grid-cols-[50%_25%_auto] space-y-6 gap-12 md:space-y-0">
+                    <div class="text-center md:text-left md:col-span-2 xl:col-span-1">
                         <h2 class="text-3xl text-gray-700 font-bold">Shiven Tech</h2>
                         <div class="grid  grid-cols-[] justify-center md:justify-start space-x-4 mt-3">
                         <div>
@@ -142,9 +142,24 @@ using the software.</div>
                      md:text-left">
                         <h2 class="text-lg text-gray-700 font-bold">Contact Us</h2>
                         <ul class="space-y-2 mt-2 text-gray-600">
-                            <li><a href="/contact-us.html" class="text-gray-600 hover:underline">Address</a></li>
-                            <li><a href="/contact-us.html" class="text-gray-600 hover:underline">City</a></li>
-                            <li><a href="/contact-us.html" class="text-gray-600 hover:underline">Country</a></li>
+                            <li>
+                              <a href="/contact-us.html" class="text-gray-600 hover:underline">
+                                Phone: 
+                                <br /> 
+                                +1 5589 55488 55
+                                <br />
+                                +1 6678 254445 41
+                                </a>
+                              </li>
+                            <li>
+                              <a href="/contact-us.html" class="text-gray-600 hover:underline">
+                                Open Hours:
+                                <br />
+                                Monday - Friday
+                                <br />
+                                9:00 AM - 5:00 PM
+                              </a>
+                            </li>
                             <br>
                         
                         </ul>
@@ -159,7 +174,7 @@ using the software.</div>
             </div>
         </footer>
     `;
-    document.body.appendChild(footer);
+  document.body.appendChild(footer);
 }
 
 
@@ -313,7 +328,7 @@ async function getPrivacyPolicy() {
     }
   } catch (error) {
     console.error("Error fetching privacy policy:", error);
-   
+
   }
 }
 async function getTermsAndCondition() {
@@ -339,7 +354,7 @@ async function getTermsAndCondition() {
     }
   } catch (error) {
     console.error("Error fetching privacy policy:", error);
-   
+
   }
 }
 
@@ -368,7 +383,7 @@ async function getShippingPolicy() {
     }
   } catch (error) {
     console.error("Error fetching privacy policy:", error);
-   
+
   }
 }
 
@@ -395,7 +410,7 @@ async function getCancelationPolicy() {
     }
   } catch (error) {
     console.error("Error fetching privacy policy:", error);
-   
+
   }
 }
 async function getRefundPolicy() {
@@ -421,7 +436,7 @@ async function getRefundPolicy() {
     }
   } catch (error) {
     console.error("Error fetching privacy policy:", error);
-   
+
   }
 }
 
@@ -431,12 +446,12 @@ getShippingPolicy()
 getCancelationPolicy()
 getRefundPolicy()
 
-  Navbar()
-  // if (window.location.pathname === "/" || window.location.pathname === "/contact-us.html") {
+Navbar()
+// if (window.location.pathname === "/" || window.location.pathname === "/contact-us.html") {
 
-  // }
-  contactForm();
- 
-  footer()
-  
+// }
+contactForm();
+
+footer()
+
 
