@@ -45,4 +45,13 @@
   }
 
 
+  .splide__arrow--next {
+    right: -2em !important;
+  }
+
+  .splide__arrow--prev {
+    left: -2em !important;
+  }
+
+
   
