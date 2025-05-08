@@ -267,7 +267,7 @@ function contactForm() {
 
     try {
       // 🔥 Replace this URL with your actual backend endpoint
-      const response = await fetch("http://localhost:8000/api/v1/contact", {
+      const response = await fetch("https://api.assetmanagment.in/api/v1/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -294,7 +294,7 @@ async function getPrivacyPolicy() {
   const privacyPolicyRef = document.getElementById("privacy-policy");
 
   try {
-    const response = await fetch("http://localhost:8000/api/v1/compliance-document/privacy-policy", {
+    const response = await fetch("https://api.assetmanagment.in/api/v1/compliance-document/privacy-policy", {
       method: "GET",
       headers: {
         "Content-Type": "application/json"
@@ -320,7 +320,7 @@ async function getTermsAndCondition() {
   const termsAndCondRef = document.getElementById("terms-&-condition");
 
   try {
-    const response = await fetch("http://localhost:8000/api/v1/compliance-document/terms-&-conditions", {
+    const response = await fetch("https://api.assetmanagment.in/api/v1/compliance-document/terms-&-conditions", {
       method: "GET",
       headers: {
         "Content-Type": "application/json"
@@ -349,7 +349,7 @@ async function getShippingPolicy() {
   const shippingpolicyRef = document.getElementById("shipping-policy");
 
   try {
-    const response = await fetch("http://localhost:8000/api/v1/compliance-document/shipping-policy", {
+    const response = await fetch("https://api.assetmanagment.in/api/v1/compliance-document/shipping-policy", {
       method: "GET",
       headers: {
         "Content-Type": "application/json"
@@ -376,7 +376,7 @@ async function getCancelationPolicy() {
   const cancelationpolicyRef = document.getElementById("cancelation-policy");
 
   try {
-    const response = await fetch("http://localhost:8000/api/v1/compliance-document/cancellation-policy", {
+    const response = await fetch("https://api.assetmanagment.in/api/v1/compliance-document/cancellation-policy", {
       method: "GET",
       headers: {
         "Content-Type": "application/json"
@@ -402,7 +402,7 @@ async function getRefundPolicy() {
   const refundpolicyRef = document.getElementById("refund-policy");
 
   try {
-    const response = await fetch("http://localhost:8000/api/v1/compliance-document/refund-policy", {
+    const response = await fetch("https://api.assetmanagment.in/api/v1/compliance-document/refund-policy", {
       method: "GET",
       headers: {
         "Content-Type": "application/json"
