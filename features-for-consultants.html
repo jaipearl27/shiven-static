@@ -6,9 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Features for Consultants</title>
 
+    <link rel="stylesheet" href="/css/styles.css">
+    
     <!-- aos -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
 
     <!-- TailwindCSS -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -678,22 +682,14 @@
                     Our Happy Financial Consultants
                 </h2>
 
+               
                 <!-- Consultants List -->
                 <div class="space-y-6">
-                    <!-- Row 1 -->
-                    <div class="flex flex-wrap items-center justify-evenly space-x-1">
-                        <img src="images/consultants1.png" alt="Consultant 1" class="h-26 w-26 object-contain">
-                        <img src="images/consultants2.png" alt="Consultant 2" class="h-26 w-26 object-contain">
-                        <img src="images/consultants3.png" alt="Consultant 3" class="h-26 w-26 object-contain">
-                        <img src="images/consultants4.png" alt="Consultant 4" class="h-16 w-26 object-contain">
-                        <img src="images/consultants5.png" alt="Consultant 5" class="h-26 w-26 object-contain">
-                        <img src="images/consultants6.png" alt="Consultant 6" class="h-26 w-26 object-contain">
-                        <img src="images/consultants7.png" alt="Consultant 7" class="h-26 w-26 object-contain">
+                    <div class="marquee-text">
+                        <div id="consultantLogos" class="marquee-text-track ">
+
+                        </div>
                     </div>
-
-
-
-
                 </div>
             </div>
 
@@ -872,6 +868,64 @@
     </script>
    <script src="./js/index.js"></script>
    <script src="./js/features.js" defer></script>
+
+
+
+<!-- company logos API call -->
+<script>
+    axios.get('https://api.assetmanagment.in/api/v1/company-profile/logos')
+        .then(response => {
+            const data = response.data?.data || [];
+            const container = document.getElementById('consultantLogos');
+            container.innerHTML = ''; // Clear loading message
+
+            data.forEach(item => {
+                if (item.logoUrl) {
+
+
+                    const divEle = document.createElement('div');
+
+                    divEle.className = 'h-[120px] w-[120px] flex flex-col justify-center mx-6'
+
+                    const img = document.createElement('img');
+                    img.src = item.logoUrl;
+                    img.alt = "";
+                    img.className = 'h-[120px] w-[120px] object-contain';
+                    img.style.width = '120px';
+                    img.style.height = '120px';
+                    divEle.appendChild(img);
+                    container.appendChild(divEle);
+
+                }
+            });
+
+
+            data.forEach(item2 => {
+                if (item2.logoUrl) {
+                    const divEle = document.createElement('div');
+
+                    divEle.className = 'h-[120px] w-[120px] flex flex-col justify-center mx-6'
+
+                    const img = document.createElement('img');
+                    img.src = item2.logoUrl;
+                    img.alt = "";
+                    img.ariaHidden = "true"
+                    img.className = 'h-[120px] w-[120px] object-contain';
+                    img.style.width = '120px';
+                    img.style.height = '120px';
+                    divEle.appendChild(img);
+                    container.appendChild(divEle);
+                }
+            });
+
+        })
+        .catch(error => {
+            document.getElementById('consultantLogos').innerHTML = '<p>No logo found.</p>';
+            console.error('Error fetching data:', error);
+        });
+
+</script>
+
 </body>
 
 </html>
