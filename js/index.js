@@ -174,9 +174,6 @@ function footer() {
                         Refund Policy
                       </a>
                     </li>
-
-                    
-
                     <li>
                       <a href="/cancellation-policy.html" class="hover:underline">
                         Cancellation Policy
