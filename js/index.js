@@ -35,16 +35,11 @@ function Navbar(targetId = "navbar") {
       <a href="/subscriptions.html" class="hover:text-orange-500">Subscriptions</a>
       
       <div class="relative group">
-  <button class="hover:text-orange-500">More Info ▾</button>
-  <div class="absolute left-0 top-full hidden group-hover:block bg-white shadow-md w-40 text-gray-800">
-    <a href="/blogs.html" class="block px-4 py-2 hover:bg-gray-100">Blogs</a>
-    <a href="/privacy-policy.html" class="block px-4 py-2 hover:bg-gray-100">Privacy Policy</a>
-    <a href="/term&condition.html" class="block px-4 py-2 hover:bg-gray-100">Terms & Condition</a>
-    <a href="/refund-policy.html" class="block px-4 py-2 hover:bg-gray-100">Refund Policy</a>
-    <a href="/Shipping-POlicy.html" class="block px-4 py-2 hover:bg-gray-100">Shipping Policy</a>
-    <a href="/cancelation-policy.html" class="block px-4 py-2 hover:bg-gray-100">Cancellation Policy</a>
-         <a href="/insurance.html" class="block px-4 py-2 hover:bg-gray-100">Insurance</a>
- </div>
+      <button class="hover:text-orange-500">More Info ▾</button>
+      <div class="absolute left-0 top-full hidden group-hover:block bg-white shadow-md w-40 text-gray-800">
+        <a href="/blogs.html" class="block px-4 py-2 hover:bg-gray-100">Blogs</a>
+        
+      </div>
 </div>
 
     </div>
@@ -106,15 +101,15 @@ function footer() {
                                 <i class="fa-brands fa-linkedin"></i>
                             </a> -->
                             </div>
-                            <div  class="mt-10">Disclaimer:
-
-Shiven Infotech provides Software Technology Platform for
-stock advisors and brokers. We do not offer financial advice, stock
-recommendations, or consultancy services. Our CRM platform is designed to
-support client management and operational workflows. All investment decisions
-and regulatory compliance remain the responsibility of the individual or firm
-using the software.</div>
-                            
+                            <div  class="mt-10">
+                              Disclaimer:
+                              Shiven Infotech provides Software Technology Platform for
+                              stock advisors and brokers. We do not offer financial advice, stock
+                              recommendations, or consultancy services. Our CRM platform is designed to
+                              support client management and operational workflows. All investment decisions
+                              and regulatory compliance remain the responsibility of the individual or firm
+                              using the software.
+                            </div>
                         </div>
                     </div>
                     <div class="text-center md:text-left">
@@ -127,10 +122,9 @@ using the software.</div>
                                     Consultants</a></li>
                             <li><a href="/features-for-customers.html" class="hover:underline">Features for
                                     Customers</a></li>
-                                    <li><a href="/privacy-policy.html" class="hover:underline">Privacy Policy
-                              </a></li>
-                                    <li><a href="/term&condition.html" class="hover:underline">Term&Condition
-                                   </a></li>
+                            
+
+
                           
                             <!-- <li><a href="#" class="hover:underline">Sitemap</a></li> -->
                         </ul>
@@ -158,10 +152,40 @@ using the software.</div>
 
                     </div>
                 </div>
+               
+                <div class="mt-6 p-4 flex justify-between bg-gray-300 text-gray-600 text-sm">
 
-                <div class="mt-6 p-4 text-center bg-gray-300 text-gray-600 text-sm">
-                    <p>© Copyright <strong class="text-gray-700"><a href="assetmanagment.com" alt="Asset Management website link">Shiven Tech</a></strong> All Rights Reserved</p>
-                    <p>Powered by <a href="https://pearlorganisation.com" alt="pearl organisation website link" target="_blank">Pearl Organisation</a></p>
+                  <p>© Copyright <strong class="text-gray-700"><a href="assetmanagment.com" alt="Asset Management website link">Shiven Tech</a></strong> All Rights Reserved Powered by <a href="https://pearlorganisation.com" alt="pearl organisation website link" target="_blank">Pearl Organisation</a></p>
+
+                  <ul class="flex justify-center items-center gap-2">
+                    <li>
+                      <a href="/privacy-policy.html" class="hover:underline">
+                        Privacy Policy
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/term&condition.html" class="hover:underline">
+                        Term & Conditions
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="/refund-policy.html" class="hover:underline">
+                        Refund Policy
+                      </a>
+                    </li>
+
+                    
+
+                    <li>
+                      <a href="/cancellation-policy.html" class="hover:underline">
+                        Cancellation Policy
+                      </a>
+                    </li>
+                  </ul>
+
+                
+                    
                 </div>
             </div>
         </footer>
