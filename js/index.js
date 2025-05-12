@@ -142,15 +142,7 @@ using the software.</div>
                      md:text-left">
                         <h2 class="text-lg text-gray-700 font-bold">Contact Us</h2>
                         <ul class="space-y-2 mt-2 text-gray-600">
-                            <li>
-                              <a href="/contact-us.html" class="text-gray-600 hover:underline">
-                                Phone: 
-                                <br /> 
-                                +1 5589 55488 55
-                                <br />
-                                +1 6678 254445 41
-                                </a>
-                              </li>
+                           
                             <li>
                               <a href="/contact-us.html" class="text-gray-600 hover:underline">
                                 Open Hours:
@@ -196,15 +188,15 @@ function contactForm() {
     <!-- Contact Content -->
     <div class="flex flex-col md:flex-row items-center justify-center gap-10">
       <!-- Left Side - Contact Info -->
-      <div class="md:w-72 w-56 flex flex-col gap-6">
-        <div class="flex items-start gap-4 bg-white shadow-md p-6 rounded-lg">
+       <!-- <div class="md:w-72 w-56 flex flex-col gap-6">
+       <div class="flex items-start gap-4 bg-white shadow-md p-6 rounded-lg">
           <i class="fas fa-phone text-blue-600 text-2xl animate-pulse"></i>
           <div>
             <h3 class="text-blue-600 font-bold mb-1">Phone</h3>
             <p class="text-gray-600 text-sm">+1 5589 55488 55</p>
             <p class="text-gray-600 text-sm">+1 6678 254445 41</p>
           </div>
-        </div>
+        </div> 
 
         <div class="flex items-start gap-4 bg-white shadow-md p-6 rounded-lg">
           <i class="fas fa-clock text-blue-600 text-2xl animate-pulse"></i>
@@ -214,7 +206,7 @@ function contactForm() {
             <p class="text-gray-600 text-sm">9:00 AM - 5:00 PM</p>
           </div>
         </div>
-      </div>
+      </div> -->
 
       <!-- Right Side - Contact Form -->
       <div class="w-full md:w-1/2 shadow-lg">
@@ -222,25 +214,25 @@ function contactForm() {
           <form id="contact-form">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
               <div class="relative">
-                <input type="text" id="name" placeholder="Name " required
+                <input type="text" id="name" placeholder="Name" required
                   class="peer w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
            
               </div>
               <div class="relative">
-                <input type="email" id="email" placeholder="Email " required
+                <input type="email" id="email" placeholder="Email" required
                   class="peer w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
             
               </div>
             </div>
 
             <div class="relative mb-6">
-              <input type="text" id="subject" placeholder="Subject " required
+              <input type="text" id="subject" placeholder="Subject" maxlength="500" required
                 class="peer w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
             
             </div>
 
             <div class="relative mb-6">
-              <textarea rows="5" id="message" placeholder="Message " required
+              <textarea rows="5" id="message" maxlength="1000" placeholder="Message" required
                 class="peer w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
         
             </div>
