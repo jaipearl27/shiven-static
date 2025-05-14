@@ -53,6 +53,16 @@
     left: -2em !important;
   }
 
+  @media screen and (max-width: 425px) {
+    .splide__arrow--next {
+    right: -2em !important;
+  }
+
+  .splide__arrow--prev {
+    left: -2em !important;
+  }
+  }
+
 .splide__slide {
   max-width: 100% !important;
 }
