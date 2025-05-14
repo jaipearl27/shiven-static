@@ -53,5 +53,7 @@
     left: -2em !important;
   }
 
-
+.splide__slide {
+  max-width: 100%;
+}
   
