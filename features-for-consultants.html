@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Features for Consultants</title>
 
-<link rel="icon" type="image/x-icon" href="/images/favicon.png">
-    
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="/css/splide.min.css">
 
@@ -903,6 +903,11 @@
 
 
 
+    <!-- splide -->
+
+
+    <script src="/js/splide.min.js"></script>
+
 
 
     <script>
@@ -910,7 +915,7 @@
             const container = document.getElementById("successStories");
 
             try {
-                const res = await axios.get("https://api.assetmanagment.in/api/v1/testimonial?category=succese_story");
+                const res = await axios.get("https://api.assetmanagment.in/api/v1/testimonial?category=success_story");
 
                 if (res.data.success && Array.isArray(res.data.data)) {
                     const data = res.data.data;
@@ -921,8 +926,9 @@
                         const slide = document.createElement("li");
                         slide.className = "splide__slide";
                         slide.innerHTML = `
+                        
                         <li class="splide__slide">
-                            <div class="bg-white shadow-lg  p-6 rounded-lg border border-gray-200 h-[250px]">
+                            <div class="bg-white shadow-lg p-6 rounded-lg border border-gray-200 h-[250px]">
                                 <i class="fas fa-quote-left text-3xl text-gray-900 "></i>
                                 <p class="text-gray-600 mt-4 line-clamp-6" title="We've been partnering with SEOC for over a year now, and the results speak for themselves. Their comprehensive digital marketing solutions have helped us achieve measurable growth.">
                                     ${item?.content}
@@ -936,7 +942,29 @@
                     });
 
                     // Reinitialize Splide after adding slides
-                    new Splide('.splide').mount();
+                    document.querySelectorAll('.splide').forEach(function (el) {
+                        new Splide(el, {
+                            type: 'loop',
+                            perPage: 3,
+                            perMove: 1,
+                            gap: '1rem',
+                            arrows: true,
+                            breakpoints: {
+                                1024: {
+                                    perPage: 2,
+                                },
+                                640: {
+                                    perPage: 1,
+                                },
+                            },
+                            autoplay: true,
+                            interval: 3000,
+                            speed: 800,
+                            pauseOnHover: false,
+                            pauseOnFocus: false,
+                        }).mount();
+                    });
+
                 }
             } catch (error) {
                 console.error("Failed to fetch testimonials:", error);
@@ -946,36 +974,8 @@
 
 
 
-    <!-- splide -->
 
 
-    <script src="/js/splide.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            document.querySelectorAll('.splide').forEach(function (el) {
-                new Splide(el, {
-                    type: 'loop',
-                    perPage: 3,
-                    perMove: 1,
-                    gap: '1rem',
-                    arrows: true,
-                    breakpoints: {
-                        1024: {
-                            perPage: 2,
-                        },
-                        640: {
-                            perPage: 1,
-                        },
-                    },
-                    autoplay: true,
-                    interval: 3000,
-                    speed: 800,
-                    pauseOnHover: false,
-                    pauseOnFocus: false,
-                }).mount();
-            });
-        });
-    </script>
 
 
 </body>
