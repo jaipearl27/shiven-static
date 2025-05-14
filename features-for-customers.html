@@ -732,18 +732,6 @@
     <script src="./js/features.js" defer></script>
     <script src="./js/index.js"></script>
 
-    <script>
-        window.onload = function () {
-            if (window.location.hash) {
-                const id = window.location.hash.slice(1);
-                const scrollToElement = document.getElementById(id);
-
-                if (scrollToElement) {
-                    scrollToElement.scrollIntoView({ behavior: "smooth" });
-                }
-            }
-        };
-    </script>
 
     <!-- splide -->
 
@@ -754,6 +742,17 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", async () => {
+
+            if (window.location.hash) {
+                const id = window.location.hash.slice(1);
+                const scrollToElement = document.getElementById(id);
+
+                if (scrollToElement) {
+                    scrollToElement.scrollIntoView({ behavior: "smooth" });
+                }
+            }
+
+
             const container = document.getElementById("testimonial-slider");
 
             try {
