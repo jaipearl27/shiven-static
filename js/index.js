@@ -50,7 +50,7 @@ function Navbar(targetId = "navbar") {
     </a>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="absolute top-full left-0 w-full bg-white shadow-md flex-col text-blue-800 p-4 hidden md:hidden">
+    <div id="mobile-menu" class="absolute top-full left-0 w-full bg-white shadow-md flex-col text-blue-800 p-4 hidden xl:hidden">
       <a href="/" class="block py-2 hover:text-orange-500">Home</a>
       <a href="/about-us.html" class="block py-2 hover:text-orange-500">About</a>
       <a href="/services.html" class="block py-2 hover:text-orange-500">Services</a>
