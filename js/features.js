@@ -258,6 +258,9 @@ function renderCustomerDetailedList() {
         ${customerCards}
       </div>
     `;
+
+
+  scrollToHashElement()
 }
 
 
@@ -307,13 +310,14 @@ function handleRouting() {
     renderFeatureList();
   }
 
-  
+
   if (pathname === "/" || pathname === "/index.html" || pathname === "/about-us.html") {
     renderCustomerList();
   }
 
-  if(pathname.endsWith("features-for-customers.html")){
+  if (pathname.endsWith("features-for-customers.html")) {
     renderCustomerDetailedList()
+
   }
 
 
@@ -510,6 +514,17 @@ if (stockAdvisorFeaturesEle) {
     `;
 }
 
+
+
+function scrollToHashElement() {
+  if (window.location.hash) {
+    const id = window.location.hash.slice(1);
+    const scrollToElement = document.getElementById(id);
+    if (scrollToElement) {
+      scrollToElement.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+}
 
 
 

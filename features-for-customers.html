@@ -729,8 +729,11 @@
             }
         }
     </script>
-    <script src="./js/features.js"></script>
+    <script src="./js/features.js" defer></script>
     <script src="./js/index.js"></script>
+
+
+    
 
 
     <!-- splide -->
@@ -743,16 +746,7 @@
     <script>
         document.addEventListener("DOMContentLoaded", async () => {
 
-            setTimeout(() => {
-                if (window.location.hash) {
-                    const id = window.location.hash.slice(1);
-                    const scrollToElement = document.getElementById(id);
-    
-                    if (scrollToElement) {
-                        scrollToElement.scrollIntoView({ behavior: "smooth" });
-                    }
-                }
-            }, 100)
+
 
 
             const container = document.getElementById("testimonial-slider");
