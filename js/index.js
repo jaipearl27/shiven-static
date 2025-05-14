@@ -153,9 +153,9 @@ function footer() {
                     </div>
                 </div>
                
-                <div class="mt-6 p-4 flex flex-col justify-center lg:flex-row justify-between bg-gray-300 text-gray-600 text-sm">
+                <div class="mt-6 p-4 flex flex-col justify-center md:flex-row md:justify-between bg-gray-300 text-gray-600 text-sm">
 
-                  <p>© Copyright <strong class="text-gray-700"><a href="assetmanagment.com" alt="Asset Management website link">Shiven Tech</a></strong> All Rights Reserved Powered by <a href="https://pearlorganisation.com" alt="pearl organisation website link" target="_blank">Pearl Organisation</a></p>
+                  <p class="text-center md:text-left">© Copyright <strong class="text-gray-700"><a href="assetmanagment.com" alt="Asset Management website link">Shiven Tech</a></strong> All Rights Reserved Powered by <a href="https://pearlorganisation.com" alt="pearl organisation website link" target="_blank">Pearl Organisation</a></p>
 
                   <ul class="flex flex-wrap justify-center items-center gap-2">
                     <li>
