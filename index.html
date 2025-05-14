@@ -520,7 +520,7 @@
                 <div class="splide" role="group" aria-label="Splide Basic HTML Example">
                     <div class="splide__track ">
                         <ul class="splide__list" id="consultantReview">
-                            
+
                         </ul>
                     </div>
                 </div>
@@ -613,8 +613,8 @@
 
                 <div class="splide" role="group" aria-label="What Our Proud Customers Say">
                     <div class="splide__track ">
-                        <ul class="splide__list" id="customerReview"> 
-                           
+                        <ul class="splide__list" id="customerReview">
+
                         </ul>
                     </div>
                 </div>
@@ -998,7 +998,14 @@
                     const data = res.data.data;
 
                     data.forEach(item => {
-                        console.log(item)
+                        // console.log(item)
+
+                        const arr = new Array(item?.stars).fill(0)
+                        let stars = ""
+                        arr.forEach((item) => {
+                            stars += '<i class="fas fa-star text-yellow-500"></i>'
+                        })
+
 
                         const slide = document.createElement("li");
                         slide.className = "splide__slide";
@@ -1010,6 +1017,13 @@
                                 <p class="text-gray-600 mt-4 line-clamp-6" title="We've been partnering with SEOC for over a year now, and the results speak for themselves. Their comprehensive digital marketing solutions have helped us achieve measurable growth.">
                                     ${item?.content}
                                 </p>
+
+                                <div class="mt-4">
+                                        <p class="font-bold">${item?.name}</p>
+                                        <div class="flex  items-center mt-2">
+                                            ${stars}                                          
+                                        </div>
+                                    </div>
 
                             </div>
                         </li>
@@ -1027,6 +1041,15 @@
 
                         data.forEach(item => {
                             const slide = document.createElement("li");
+
+                            const arr = new Array(item?.stars).fill(0)
+                            let stars = ""
+                            arr.forEach((item) => {
+                                stars += '<i class="fas fa-star text-yellow-500"></i>'
+                            })
+
+
+
                             slide.className = "splide__slide";
                             slide.innerHTML = `
                         
@@ -1036,6 +1059,12 @@
                                 <p class="text-gray-600 mt-4 line-clamp-6" title="We've been partnering with SEOC for over a year now, and the results speak for themselves. Their comprehensive digital marketing solutions have helped us achieve measurable growth.">
                                     ${item?.content}
                                 </p>
+                                <div class="mt-4">
+                                        <p class="font-bold">${item?.name}</p>
+                                        <div class="flex  items-center mt-2">
+                                            ${stars}                                          
+                                        </div>
+                                    </div>
 
                             </div>
                         </li>
